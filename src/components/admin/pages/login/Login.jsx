@@ -111,22 +111,20 @@ const Login = () => {
     <div className="login_content">
       <div className="login_content_register">
         <h4>
-          Войти или зарегестрироваться
+          {t('login.title')}
         </h4>
         <InputMask
           mask="+998 (99) 999-99-99"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          placeholder="Номер телефона"
+          placeholder={t('login.title')}
         />
         <button>
-          Продолжить
+          {t('login.btn')}
         </button>
       </div>
       <p>
-        Никому не сообщайте код из СМС или свой пароль. Сотрудник сервиса никогда их не спросит. Убедитесь, что код
-        пришел от отправителя Aist или в push-уведомлении приложения. Проверяйте сайт сервиса в адресной строке:
-        id.aist.wallet.uz
+        {t('login.footer')}
       </p>
     </div>
   </div>);

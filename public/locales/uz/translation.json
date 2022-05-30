@@ -1,5 +1,8 @@
 {
-  "test": {
-    "p": "uzbek"
+  "login": {
+    "placeholder": "Telefon raqami",
+    "title": "Kirish yoki ro'yxatdan o'tish",
+    "btn": "davom etish",
+    "footer": "SMS-dan kelgan kodni yoki parolingizni hech kimga aytmang. Xizmat xodimi hech qachon ularni so'ramaydi. Kod Aist yuboruvchisidan yoki ilova push-bildirishnomasidan kelganligiga ishonch hosil qiling. Manzil satrida xizmat veb-saytini tekshiring: id.aist.wallet.uz"
   }
 }
