@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import TestLanguage from './testLanguage';
 import Login from './components/admin/pages/login/Login';
 import Main from './components/admin/pages/main/Main';
-
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 function App() {
   function ScrollToTop() {
     const { pathname } = useLocation();

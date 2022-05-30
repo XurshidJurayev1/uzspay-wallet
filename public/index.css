@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'VelaSans';
+  font-weight: 700;
+  src: local('MyFont'), url("./VelaSans/Static/Web/VelaSans-Bold.woff") format('woff');
+}
