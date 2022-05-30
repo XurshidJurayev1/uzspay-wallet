@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import logo from "../../../../assets/images/Logo.png" ;
+import user from "../../../../assets/images/user.png" ;
+import notify from "../../../../assets/images/notify.svg" ;
+import home1 from "../../../../assets/images/home 1.svg" ;
+import home2 from "../../../../assets/images/home 2.svg" ;
 import "./navbar.scss";
 import {
-    MDBContainer,
     MDBNavbar,
     MDBNavbarBrand,
     MDBNavbarToggler,
@@ -10,11 +14,6 @@ import {
     MDBNavbarItem,
     MDBNavbarLink,
     MDBBtn,
-    MDBDropdown,
-    MDBDropdownToggle,
-    MDBDropdownMenu,
-    MDBDropdownItem,
-    MDBDropdownLink,
     MDBCollapse
 } from 'mdb-react-ui-kit';
 
@@ -24,7 +23,9 @@ export default function Navbar() {
     return (
         <div className="mainNavbar">
             <MDBNavbar expand='lg'>
-                <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+                <MDBNavbarBrand href='#'>
+                    <img src={logo} alt="png" />
+                </MDBNavbarBrand>
                 <MDBNavbarToggler
                     aria-controls='navbarSupportedContent'
                     aria-expanded='false'
@@ -35,15 +36,20 @@ export default function Navbar() {
                 </MDBNavbarToggler>
 
                 <MDBCollapse navbar show={showBasic}>
-                    <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+                    <MDBNavbarNav className='mainNavbar__nav'>
+                        <MDBNavbarItem active>
+                            <MDBNavbarLink  href='#'><img src={home1} alt="svg" /> Главная</MDBNavbarLink>
+                        </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+                            <MDBNavbarLink href='#'><img src={home2} alt="svg" />  Платежи</MDBNavbarLink>
                         </MDBNavbarItem>
                     </MDBNavbarNav>
 
-                    <form className='d-flex input-group w-auto'>
-                        <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
-                        <MDBBtn color='primary'>Search</MDBBtn>
+                    <form className='d-flex mainNavbar__form'>
+                        <div className='mainNavbar__icon'>
+                            <img src={notify} alt="svg" />
+                        </div>
+                        <img src={user} alt="png" />
                     </form>
                 </MDBCollapse>
             </MDBNavbar>

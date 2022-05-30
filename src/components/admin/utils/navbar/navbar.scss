@@ -1,6 +1,36 @@
-.mainNavbar .navbar{
+.mainNavbar .navbar {
     padding: 25px 50px;
     background: rgba(250, 250, 250, 0.86);
     border: 1px solid #E6E6E6;
     backdrop-filter: blur(30px);
+}
+
+.mainNavbar__icon {
+    margin-right: 28px;
+    font-size: 25px;
+}
+
+.mainNavbar__nav {
+    justify-content: center;
+}
+
+.mainNavbar__nav .nav-item:hover {
+    background: white;
+}
+
+.mainNavbar__nav .nav-item {
+    border-radius: 62px;
+}
+
+.mainNavbar__nav .nav-item.active {
+    background: white;
+    border-radius: 62px;
+}
+
+.mainNavbar__nav .nav-item .nav-link {
+    font-family: 'Euclid Circular A';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #202020;
 }
