@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from '../../utils/navbar/Navbar';
 
 const Main = () => {
     return (
         <div>
-            <h1>Main</h1>
+            <Navbar/>
         </div>
     );
 }

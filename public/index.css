@@ -1,5 +1,21 @@
 @font-face {
   font-family: 'VelaSans';
+  font-weight: 300;
+  src: local('MyFont'), url("./VelaSans/Static/Web/VelaSans-Light.woff") format('woff');
+}
+@font-face {
+  font-family: 'VelaSans';
+  font-weight: 400;
+  src: local('MyFont'), url("./VelaSans/Static/Web/VelaSans-Regular.woff") format('woff');
+}
+@font-face {
+  font-family: 'VelaSans';
+  font-weight: 500;
+  src: local('MyFont'), url("./VelaSans/Static/Web/VelaSans-Medium.woff") format('woff');
+}
+@font-face {
+  font-family: 'VelaSans';
   font-weight: 700;
   src: local('MyFont'), url("./VelaSans/Static/Web/VelaSans-Bold.woff") format('woff');
 }
+
