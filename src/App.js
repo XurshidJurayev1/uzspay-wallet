@@ -16,10 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      <ul>
-          <li><Link to="/">Login</Link></li>
-          <li><Link to="/main">Main</Link></li>
-      </ul>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/main" element={<Main />} />

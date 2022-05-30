@@ -23,61 +23,29 @@ export default function Navbar() {
 
     return (
         <div className="mainNavbar">
-            <MDBNavbar expand='lg' light bgColor='light'>
-             
-                    <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+            <MDBNavbar expand='lg'>
+                <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+                <MDBNavbarToggler
+                    aria-controls='navbarSupportedContent'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                    onClick={() => setShowBasic(!showBasic)}
+                >
+                    <MDBIcon icon='bars' fas />
+                </MDBNavbarToggler>
 
-                    <MDBNavbarToggler
-                        aria-controls='navbarSupportedContent'
-                        aria-expanded='false'
-                        aria-label='Toggle navigation'
-                        onClick={() => setShowBasic(!showBasic)}
-                    >
-                        <MDBIcon icon='bars' fas />
-                    </MDBNavbarToggler>
+                <MDBCollapse navbar show={showBasic}>
+                    <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+                        </MDBNavbarItem>
+                    </MDBNavbarNav>
 
-                    <MDBCollapse navbar show={showBasic}>
-                        <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' href='#'>
-                                    Home
-                                </MDBNavbarLink>
-                            </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='#'>Link</MDBNavbarLink>
-                            </MDBNavbarItem>
-
-                            <MDBNavbarItem>
-                                <MDBDropdown>
-                                    <MDBDropdownToggle tag='a' className='nav-link'>
-                                        Dropdown
-                                    </MDBDropdownToggle>
-                                    <MDBDropdownMenu>
-                                        <MDBDropdownItem>
-                                            <MDBDropdownLink>Action</MDBDropdownLink>
-                                        </MDBDropdownItem>
-                                        <MDBDropdownItem>
-                                            <MDBDropdownLink>Another action</MDBDropdownLink>
-                                        </MDBDropdownItem>
-                                        <MDBDropdownItem>
-                                            <MDBDropdownLink>Something else here</MDBDropdownLink>
-                                        </MDBDropdownItem>
-                                    </MDBDropdownMenu>
-                                </MDBDropdown>
-                            </MDBNavbarItem>
-
-                            <MDBNavbarItem>
-                                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
-                                    Disabled
-                                </MDBNavbarLink>
-                            </MDBNavbarItem>
-                        </MDBNavbarNav>
-
-                        <form className='d-flex input-group w-auto'>
-                            <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
-                            <MDBBtn color='primary'>Search</MDBBtn>
-                        </form>
-                    </MDBCollapse>
+                    <form className='d-flex input-group w-auto'>
+                        <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
+                        <MDBBtn color='primary'>Search</MDBBtn>
+                    </form>
+                </MDBCollapse>
             </MDBNavbar>
         </div>
     );
