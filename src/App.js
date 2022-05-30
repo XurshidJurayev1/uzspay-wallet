@@ -1,6 +1,8 @@
-import { useLocation } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import TestLanguage from './testLanguage';
+import Login from './components/admin/pages/login/Login';
+import Main from './components/admin/pages/main/Main';
 
 function App() {
   function ScrollToTop() {
@@ -14,8 +16,16 @@ function App() {
 
   return (
     <div className="App">
-      Wallet
-      <TestLanguage />
+      <ul>
+          <li><Link to="/">Login</Link></li>
+          <li><Link to="/main">Main</Link></li>
+      </ul>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/main" element={<Main />} />
+      </Routes>
+      {/* {Wallet
+      <TestLanguage />} */}
     </div>
   );
 }
