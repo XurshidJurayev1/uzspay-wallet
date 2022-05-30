@@ -23,6 +23,7 @@
 }
 .mainNavbar__nav .nav-item:hover {
     background: #423AD0;
+    cursor: pointer;
 }
 .mainNavbar__nav .nav-item:hover .nav-link{
     color: white;
@@ -53,4 +54,10 @@
     font-size: 16px;
     letter-spacing: -0.01em;
     color: #202020;
+}
+
+@media (max-width: 991px) {
+    .mainNavbar__nav .nav-item{
+        margin: 5px 0;
+    }
 }
