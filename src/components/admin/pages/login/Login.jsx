@@ -6,9 +6,12 @@ import rus from '../../../../assets/images/rus.png';
 import uzb from '../../../../assets/images/uzb.png';
 import eng from '../../../../assets/images/eng.png';
 import caretdown from '../../../../assets/images/caretdown 1.png';
+import InputMask from 'react-input-mask';
+
 
 const Login = () => {
   const [select, setSelect] = useState(false);
+  const [phone, setPhone] = useState('+998');
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -110,7 +113,10 @@ const Login = () => {
         <h4>
           Войти или зарегестрироваться
         </h4>
-        <input
+        <InputMask
+          mask="+998 (99) 999-99-99"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           placeholder="Номер телефона"
         />
         <button>
