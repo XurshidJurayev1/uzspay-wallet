@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import logo from "../../../../assets/images/Logo.png" ;
 import user from "../../../../assets/images/user.png" ;
 import notify from "../../../../assets/images/notify.svg" ;
-import home1 from "../../../../assets/images/home 1.svg" ;
-import home2 from "../../../../assets/images/home 2.svg" ;
+import {ReactComponent as Home1} from "../../../../assets/images/home 1.svg" ;
+import {ReactComponent as Home} from "../../../../assets/images/home 2.svg" ;
 import "./navbar.scss";
 import {
     MDBNavbar,
@@ -13,7 +13,6 @@ import {
     MDBNavbarNav,
     MDBNavbarItem,
     MDBNavbarLink,
-    MDBBtn,
     MDBCollapse
 } from 'mdb-react-ui-kit';
 
@@ -38,10 +37,10 @@ export default function Navbar() {
                 <MDBCollapse navbar show={showBasic}>
                     <MDBNavbarNav className='mainNavbar__nav'>
                         <MDBNavbarItem active>
-                            <MDBNavbarLink  href='#'><img src={home1} alt="svg" /> Главная</MDBNavbarLink>
+                            <MDBNavbarLink  href='#'><Home1  className='icon_pay' /> Главная</MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href='#'><img src={home2} alt="svg" />  Платежи</MDBNavbarLink>
+                            <MDBNavbarLink href='#'><Home  className='icon_pay' />  Платежи</MDBNavbarLink>
                         </MDBNavbarItem>
                     </MDBNavbarNav>
 
