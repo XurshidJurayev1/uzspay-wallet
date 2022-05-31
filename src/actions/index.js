@@ -5,3 +5,10 @@
 //     payload: res.data,
 //   });
 // };
+export const sendPhone = (phone) => async (dispatch) => {
+  // const res = api
+  dispatch({
+    type: 'SEND',
+    payload: phone,
+  });
+};

@@ -1,9 +1,9 @@
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import TestLanguage from './testLanguage';
-import Login from './components/admin/pages/login/Login';
-import Main from './components/admin/pages/main/Main';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import 'react-tippy/dist/tippy.css';
+import AdminRoutes from './routes';
+
 function App() {
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -16,12 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/main" element={<Main />} />
-      </Routes>
-      {/* {Wallet
-      <TestLanguage />} */}
+      <AdminRoutes />
     </div>
   );
 }

@@ -132,7 +132,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 216px;
+    padding-top: 170px;
+    padding-bottom: 97px;
 
     &_register {
       display: flex;
@@ -229,7 +230,91 @@
 
     }
 
-    p {
+    &_confirm {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      padding: 50px 88px 48px 88px;
+      background: #FFFFFF;
+      box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      margin-bottom: 137px;
+
+      h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 37px;
+        color: #130F26;
+        margin-bottom: 10px;
+
+      }
+
+      &_code {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #738090;
+        margin-bottom: 34px;
+      }
+
+      input {
+        width: 450px;
+        padding: 23px 14px;
+        background: #FAFAFA;
+        border: 1px solid #E6E6E6;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        outline: none;
+
+        &::placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+        &:focus {
+          background: #FFFFFF;
+          border: 1px solid #3F3B4E;
+          border-radius: 10px;
+
+          &::placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+        }
+
+      }
+
+      &_resend {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #423AD0;
+        cursor: pointer;
+      }
+
+      &_notComingSms {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #2921BD;
+        cursor: pointer;
+      }
+
+    }
+
+    &_footer {
       text-align: center;
       width: 620px;
       margin: auto;
