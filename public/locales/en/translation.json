@@ -3,6 +3,19 @@
     "placeholder": "Phone number",
     "title": "Login or register",
     "btn": "continue",
+    "confirm": {
+      "title": "Code from SMS",
+      "text": "We sent an SMS with a code to the number",
+      "placeholder": "Code from SMS",
+      "resend": "Send code again",
+      "notComing": "SMS not coming",
+      "tippy": {
+        "title": "Possible reasons:",
+        "1": "1. You entered the phone number incorrectly, check if the number is correct.",
+        "2": "2. Problems may be from the mobile operator. Contact Support",
+        "3": "3. If all of the above is in order, contact the technical service. support:\n                 +998 (97) 733-30-06"
+      }
+    },
     "footer": "Do not tell anyone the code from SMS or your password. The service employee will never ask them. Make sure the code came from an Aist sender or in an app push notification. Check the service website in the address bar: id.aist.wallet.uz"
   }
 }

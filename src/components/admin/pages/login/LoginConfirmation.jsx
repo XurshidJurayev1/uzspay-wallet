@@ -15,7 +15,6 @@ const LoginConfirmation = (props) => {
   const navigate = useNavigate();
   const [select, setSelect] = useState(false);
   const [code, setCode] = useState('');
-  const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -32,9 +31,6 @@ const LoginConfirmation = (props) => {
 
   useEffect(() => {
     if (code.length === 4) {
-      setBtn(true);
-    } else {
-      setBtn(false);
 
     }
 
@@ -50,12 +46,6 @@ const LoginConfirmation = (props) => {
   const submit = () => {
     navigate('/main');
   };
-
-  const tippy =
-    <>
-      {t('login.confirm.placeholder')}
-    </>
-  ;
 
 
   return (<div className="login">
@@ -159,7 +149,26 @@ const LoginConfirmation = (props) => {
 
         <Tooltip
           // options
-          title={tippy}
+          html={(
+            <div>
+              <p>
+                {t('login.confirm.tippy.title')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.1')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.2')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.3')}
+              </p>
+              <br />
+            </div>
+          )}
           position="bottom"
           trigger="mouseenter"
           arrow={true}
