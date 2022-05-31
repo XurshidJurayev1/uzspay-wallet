@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 27px 50px 26px;
+    padding: 20px 43px 20px 50px;
     background: rgba(250, 250, 250, 0.86);
     border-bottom: 1px solid #E6E6E6;
     backdrop-filter: blur(30px);
@@ -174,9 +174,22 @@
           color: #8F99A6;
         }
 
+        &:focus {
+          background: #FFFFFF;
+          border: 1px solid #3F3B4E;
+          border-radius: 10px;
+
+          &::placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+        }
+
       }
 
-      button {
+      &_disabled {
         width: 100%;
         background: #EAECF0;
         border-radius: 12px;
@@ -188,6 +201,27 @@
         font-size: 16px;
         line-height: 22px;
         color: #8F99A6;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: not-allowed !important;
+      }
+
+      &_active {
+        width: 100%;
+        background: #423AD0;
+        border-radius: 12px;
+        padding: 20px;
+        gap: 10px;
+        border: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
         flex: none;
         order: 0;
         flex-grow: 0;

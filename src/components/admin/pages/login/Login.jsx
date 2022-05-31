@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './login.scss';
 import logo from '../../../../assets/images/Logo.png';
 import { useTranslation } from 'react-i18next';
@@ -8,17 +8,14 @@ import eng from '../../../../assets/images/eng.png';
 import caretdown from '../../../../assets/images/caretdown 1.png';
 import InputMask from 'react-input-mask';
 
-
 const Login = () => {
   const [select, setSelect] = useState(false);
   const [phone, setPhone] = useState('+998');
+  const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
-
-  console.log(t);
-  console.log(i18n.language);
 
   const showSelect = () => {
     setSelect(!select);
@@ -27,6 +24,23 @@ const Login = () => {
   const changeLang = (lang) => {
     setSelect(false);
     changeLanguage(lang);
+  };
+
+  useEffect(() => {
+    if (phone.length === 19) {
+      setBtn(true);
+    } else {
+      setBtn(false);
+
+    }
+
+  }, [phone]);
+
+  const onChange = (e) => {
+    // const countryCode = '+998';
+    // const concat = e.target.value;
+    // setPhone(countryCode.concat(concat));
+    setPhone(e.target.value);
   };
 
 
@@ -114,14 +128,27 @@ const Login = () => {
           {t('login.title')}
         </h4>
         <InputMask
+          label="asdasda"
+          maskChar={null}
           mask="+998 (99) 999-99-99"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          placeholder={t('login.title')}
+          onChange={(e) => onChange(e)}
+          placeholder={t('login.placeholder')}
         />
-        <button>
-          {t('login.btn')}
-        </button>
+
+
+        {
+          btn ?
+            <button className="login_content_register_active">
+              {t('login.btn')}
+            </button>
+            :
+            <button className="login_content_register_disabled">
+              {t('login.btn')}
+            </button>
+
+        }
+
       </div>
       <p>
         {t('login.footer')}
