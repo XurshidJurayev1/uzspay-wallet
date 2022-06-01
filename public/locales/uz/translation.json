@@ -16,6 +16,12 @@
         "3": "3. Yuqoridagilarning barchasi tartibda bo'lsa, texnik xizmatga murojaat qiling. qo'llab-quvvatlash xizmati:\n                  +998 (97) 733-30-06"
       }
     },
+    "password": {
+      "title": "Salom, yangi parol yarating",
+      "input": "Parol yarating",
+      "input2": "yana kiriting",
+      "btn": "Saqlash va tizimga kirish"
+    },
     "footer": "SMS-dan kelgan kodni yoki parolingizni hech kimga aytmang. Xizmat xodimi hech qachon ularni so'ramaydi. Kod Aist yuboruvchisidan yoki ilova push-bildirishnomasidan kelganligiga ishonch hosil qiling. Manzil satrida xizmat veb-saytini tekshiring: id.aist.wallet.uz"
   }
 }

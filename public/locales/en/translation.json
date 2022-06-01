@@ -16,6 +16,12 @@
         "3": "3. If all of the above is in order, contact the technical service. support:\n                 +998 (97) 733-30-06"
       }
     },
+    "password": {
+      "title": "Hello, create a password",
+      "input": "Create a password",
+      "input2": "Again",
+      "btn" : "Save and login"
+    },
     "footer": "Do not tell anyone the code from SMS or your password. The service employee will never ask them. Make sure the code came from an Aist sender or in an app push notification. Check the service website in the address bar: id.aist.wallet.uz"
   }
 }
