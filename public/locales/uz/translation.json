@@ -3,6 +3,19 @@
     "placeholder": "Telefon raqami",
     "title": "Kirish yoki ro'yxatdan o'tish",
     "btn": "davom etish",
+    "confirm": {
+      "title": "SMS kodi",
+      "text": "Biz raqamga kod bilan SMS yubordik",
+      "placeholder": "SMS kodi",
+      "resend": "Kodni qayta yuborish",
+      "notComing": "SMS kelmayapti",
+      "tippy": {
+        "title": "Mumkin sabablar:",
+        "1": "1. Siz telefon raqamini noto'g'ri kiritdingiz, raqam to'g'ri yoki yo'qligini tekshiring.",
+        "2": "2. Muammolar uyali aloqa operatoridan bo'lishi mumkin. Qo‘llab-quvvatlash xizmatiga murojaat qiling",
+        "3": "3. Yuqoridagilarning barchasi tartibda bo'lsa, texnik xizmatga murojaat qiling. qo'llab-quvvatlash xizmati:\n                  +998 (97) 733-30-06"
+      }
+    },
     "footer": "SMS-dan kelgan kodni yoki parolingizni hech kimga aytmang. Xizmat xodimi hech qachon ularni so'ramaydi. Kod Aist yuboruvchisidan yoki ilova push-bildirishnomasidan kelganligiga ishonch hosil qiling. Manzil satrida xizmat veb-saytini tekshiring: id.aist.wallet.uz"
   }
 }

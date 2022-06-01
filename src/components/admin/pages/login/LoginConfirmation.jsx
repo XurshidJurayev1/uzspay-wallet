@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './login.scss';
-import logo from '../../../../assets/images/Logo.png';
 import { useTranslation } from 'react-i18next';
+import logo from '../../../../assets/images/Logo.png';
 import rus from '../../../../assets/images/rus.png';
+import caretdown from '../../../../assets/images/caretdown 1.png';
 import uzb from '../../../../assets/images/uzb.png';
 import eng from '../../../../assets/images/eng.png';
-import caretdown from '../../../../assets/images/caretdown 1.png';
 import InputMask from 'react-input-mask';
-import { connect } from 'react-redux';
-import { sendPhone } from '../../../../actions';
 import { useNavigate } from 'react-router-dom';
+import { Tooltip } from 'react-tippy';
+import { connect } from 'react-redux';
 
-const Login = (props) => {
+const LoginConfirmation = (props) => {
   const navigate = useNavigate();
   const [select, setSelect] = useState(false);
-  const [phone, setPhone] = useState('+998');
-  const [btn, setBtn] = useState(false);
+  const [code, setCode] = useState('');
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -31,25 +30,21 @@ const Login = (props) => {
   };
 
   useEffect(() => {
-    if (phone.length === 19) {
-      setBtn(true);
-    } else {
-      setBtn(false);
+    if (code.length === 4) {
 
     }
 
-  }, [phone]);
+  }, [code]);
 
   const onChange = (e) => {
     // const countryCode = '+998';
     // const concat = e.target.value;
     // setPhone(countryCode.concat(concat));
-    setPhone(e.target.value);
+    setCode(e.target.value);
   };
 
   const submit = () => {
-    props.sendPhone(phone);
-    navigate('/confirmation');
+    navigate('/main');
   };
 
 
@@ -132,31 +127,57 @@ const Login = (props) => {
       </div>
     </div>
     <div className="login_content">
-      <div className="login_content_register">
+      <div className="login_content_confirm">
         <h4>
-          {t('login.title')}
+          {/*{t('login.title')}*/}
+          {t('login.confirm.title')}
         </h4>
-
+        <p className="login_content_confirm_code">{t('login.confirm.text')} {props.phone} </p>
         <InputMask
           maskChar={null}
-          mask="+998 (99) 999-99-99"
-          value={phone}
+          mask="9999"
+          type="password"
+          value={code}
           onChange={(e) => onChange(e)}
-          placeholder={t('login.placeholder')}
+          placeholder={t('login.confirm.placeholder')}
         />
 
 
-        {
-          btn ?
-            <button className="login_content_register_active" onClick={() => submit()}>
-              {t('login.btn')}
-            </button>
-            :
-            <button className="login_content_register_disabled">
-              {t('login.btn')}
-            </button>
+        <p className="login_content_confirm_resend">
+          {t('login.confirm.resend')}
+        </p>
 
-        }
+        <Tooltip
+          // options
+          html={(
+            <div>
+              <p>
+                {t('login.confirm.tippy.title')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.1')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.2')}
+              </p>
+              <br />
+              <p>
+                {t('login.confirm.tippy.3')}
+              </p>
+              <br />
+            </div>
+          )}
+          position="bottom"
+          trigger="mouseenter"
+          arrow={true}
+        >
+          <p className="login_content_confirm_notComingSms">
+            {t('login.confirm.notComing')}
+          </p>
+        </Tooltip>
+
 
       </div>
       <p className="login_content_footer">
@@ -167,7 +188,9 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    phone: state.send,
+  };
 };
 
-export default connect(mapStateToProps, { sendPhone })(Login);
+export default connect(mapStateToProps, {})(LoginConfirmation);
