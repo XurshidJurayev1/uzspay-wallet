@@ -1,34 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './login.scss';
-import logo from '../../../../assets/images/Logo.png';
 import { useTranslation } from 'react-i18next';
-import rus from '../../../../assets/images/rus.png';
-import uzb from '../../../../assets/images/uzb.png';
-import eng from '../../../../assets/images/eng.png';
-import caretdown from '../../../../assets/images/caretdown 1.png';
 import InputMask from 'react-input-mask';
 import { connect } from 'react-redux';
 import { sendPhone } from '../../../../actions';
 import { useNavigate } from 'react-router-dom';
+import LoginNavbar from './LoginNavbar';
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const [select, setSelect] = useState(false);
   const [phone, setPhone] = useState('+998');
   const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
 
-  const showSelect = () => {
-    setSelect(!select);
-  };
-
-  const changeLang = (lang) => {
-    setSelect(false);
-    changeLanguage(lang);
-  };
 
   useEffect(() => {
     if (phone.length === 19) {
@@ -47,92 +31,18 @@ const Login = (props) => {
     setPhone(e.target.value);
   };
 
-  const submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
     props.sendPhone(phone);
     navigate('/confirmation');
   };
 
 
   return (<div className="login">
-    <div className="login_navbar">
-      <div className="login_navbar_logo" style={{
-        backgroundImage: `url(${logo})`,
-      }} />
-      <div className="login_navbar_language">
-        <div className="login_navbar_language_active" onClick={() => showSelect()}>
-          {i18n.language === 'ru' && <>
-            <div className="login_navbar_language_active_flag" style={{
-              backgroundImage: `url(${rus})`,
-            }} />
-            <p>Русский</p>
-            <div className="login_navbar_language_active_icon"
-                 style={!select ? { backgroundImage: `url(${caretdown})` } : {
-                   backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
-                 }} />
-          </>}
-          {i18n.language === 'uz' && <>
-            <div className="login_navbar_language_active_flag" style={{
-              backgroundImage: `url(${uzb})`,
-            }} />
-            <p>O‘zbekcha</p>
-            <div className="login_navbar_language_active_icon"
-                 style={!select ? { backgroundImage: `url(${caretdown})` } : {
-                   backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
-                 }} />
-          </>}
-          {i18n.language === 'уз' && <>
-            <div className="login_navbar_language_active_flag" style={{
-              backgroundImage: `url(${uzb})`,
-            }} />
-            <p>Ӯзбекча</p>
-            <div className="login_navbar_language_active_icon"
-                 style={!select ? { backgroundImage: `url(${caretdown})` } : {
-                   backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
-                 }} />
-          </>}
-          {i18n.language === 'en' && <>
-            <div className="login_navbar_language_active_flag" style={{
-              backgroundImage: `url(${eng})`,
-            }} />
-            <p>English</p>
-            <div className="login_navbar_language_active_icon"
-                 style={!select ? { backgroundImage: `url(${caretdown})` } : {
-                   backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
-                 }} />
-          </>}
-
-        </div>
-        <div className="login_navbar_language_select" style={select ? { display: 'block' } : { display: 'none' }}>
-
-          <div className="login_navbar_language_select_item" onClick={() => changeLang('ru')}>
-            <div className="login_navbar_language_select_item_flag" style={{
-              backgroundImage: `url(${rus})`,
-            }} />
-            <p>Русский</p>
-          </div>
-          <div className="login_navbar_language_select_item" onClick={() => changeLang('uz')}>
-            <div className="login_navbar_language_select_item_flag" style={{
-              backgroundImage: `url(${uzb})`,
-            }} />
-            <p>O‘zbekcha</p>
-          </div>
-          <div className="login_navbar_language_select_item" onClick={() => changeLang('уз')}>
-            <div className="login_navbar_language_select_item_flag" style={{
-              backgroundImage: `url(${uzb})`,
-            }} />
-            <p>Ӯзбекча</p>
-          </div>
-          <div className="login_navbar_language_select_item" onClick={() => changeLang('en')}>
-            <div className="login_navbar_language_select_item_flag" style={{
-              backgroundImage: `url(${eng})`,
-            }} />
-            <p>English</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <LoginNavbar />
     <div className="login_content">
       <div className="login_content_register">
+
         <h4>
           {t('login.title')}
         </h4>
@@ -148,7 +58,7 @@ const Login = (props) => {
 
         {
           btn ?
-            <button className="login_content_register_active" onClick={() => submit()}>
+            <button className="login_content_register_active" onClick={(e) => submit(e)}>
               {t('login.btn')}
             </button>
             :
