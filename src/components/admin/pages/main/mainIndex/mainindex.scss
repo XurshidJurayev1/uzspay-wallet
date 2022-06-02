@@ -1,0 +1,17 @@
+$black : #130F26;
+$font : "VelaSans";
+
+.mainindex {
+    padding-bottom: 70px;
+}
+
+.mainindex__title-p {
+    font-family: $font ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: -0.25px;
+    color: $black ;
+    margin-bottom: 30px;
+}

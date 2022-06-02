@@ -1,0 +1,23 @@
+$black : #130F26;
+$font : "VelaSans";
+
+.recent h2 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: -0.25px;
+    color: $black ;
+    margin-bottom: 30px;
+}
+
+.recent__t {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #738090;
+    margin-bottom: 20px;
+    margin-top: 34px;
+}

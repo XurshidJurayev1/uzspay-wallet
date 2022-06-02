@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import logo from "../../../../assets/images/Logo.png" ;
 import user from "../../../../assets/images/user.png" ;
-import notify from "../../../../assets/images/notify.svg" ;
-import {ReactComponent as Home1} from "../../../../assets/images/home 1.svg" ;
-import {ReactComponent as Home} from "../../../../assets/images/home 2.svg" ;
+import notify from "../../../../assets/svg/notify.svg" ;
+import {ReactComponent as Home1} from "../../../../assets/svg/home 1.svg" ;
+import {ReactComponent as Home} from "../../../../assets/svg/home 2.svg" ;
 import "./navbar.scss";
 import {
     MDBNavbar,

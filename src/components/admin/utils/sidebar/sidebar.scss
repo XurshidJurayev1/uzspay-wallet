@@ -1,0 +1,178 @@
+$black : #130F26;
+$font : "VelaSans";
+.sidebar__b{
+    border-right: 1px solid #E6E6E6;
+    height: 100vh;
+}
+.sidebar {
+    background: rgba(250, 250, 250, 0.86);
+    backdrop-filter: blur(30px);
+    max-width: 423px;
+    padding: 0 30px 0 50px;
+    &__side {
+        overflow: auto;
+        height: 70vh;
+    }
+
+    &__button {
+        &-card{
+            padding-top: 25px;
+            border-top: 1px solid #E6E6E6;
+            display: flex;
+            justify-content: center;
+        }
+        &-btn {
+            background: #FAFAFA;
+            border: 0.5px solid #130F26;
+            border-radius: 12px;
+            padding: 15px 80px;
+            font-family: $font ;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__chek {
+        padding-top: 70px;
+        margin-bottom: 50px;
+
+        &-buttons {
+            margin-top: 10px;
+            display: inline-flex;
+
+            &-up {
+                background: #FFFFFF;
+                box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+                border-radius: 12px;
+                padding: 16px 26px;
+                color: $black;
+
+                &-active {
+                    background: #423AD0;
+                    color: #FFFFFF;
+                    margin-left: 11px;
+                }
+            }
+        }
+
+        &-count {
+            font-family: $font;
+            font-weight: 500;
+            font-size: 15px;
+            color: $black;
+            margin: 0;
+
+            span {
+                font-weight: 500;
+                font-size: 15px;
+                color: #848E98;
+                display: inline-block;
+                margin-left: 6px;
+            }
+        }
+
+        &-number {
+            font-family: $font;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: -0.05em;
+            color: $black;
+
+            span {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 41px;
+                letter-spacing: -0.02em;
+                color: $black;
+            }
+        }
+    }
+
+    &__acardion {
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 289px;
+            margin-left: auto;
+            border-top: 1px solid #E6E6E6;
+            padding: 20px 0;
+
+            &_s {
+                display: block;
+                font-family: $font;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                color: $black;
+            }
+
+            &_p {
+                display: block;
+                font-family: $font;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #848E98;
+            }
+        }
+
+        h2 {
+            font-family: $font;
+            font-weight: 700;
+            font-size: 25px;
+            color: $black;
+            margin-bottom: 20px;
+        }
+
+        &-item {
+            border-top: 1px solid #E6E6E6;
+            padding-top: 20px;
+        }
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        &-imgText {
+            display: flex;
+        }
+
+        &-text {
+            margin-left: 10px;
+
+            &_s {
+                display: block;
+                font-family: $font;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                color: $black;
+            }
+
+            &_p {
+                display: block;
+                font-family: $font;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #848E98;
+            }
+        }
+
+        &-img {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$black : #130F26;
+$font : "VelaSans";
+.mainindex__card {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+}
+.mainindex__title p {
+    margin: 0;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $black;
+    margin-top: 15px;
+}
