@@ -1,45 +1,69 @@
 $black : #130F26;
 $font : "VelaSans";
-.sidebar__b{
+
+.sidebar__b {
     border-right: 1px solid #E6E6E6;
     height: 100vh;
 }
+
 .sidebar {
     background: rgba(250, 250, 250, 0.86);
     backdrop-filter: blur(30px);
     max-width: 423px;
-    padding: 0 30px 0 50px;
+    padding: 70px 30px 0 50px;
+    &__plyu {
+        &-icon * {
+            stroke: #130F26;
+        }
+    }
     &__side {
-        overflow: auto;
-        height: 70vh;
+        height: 100%;
     }
 
     &__button {
-        &-card{
+      
+        &-circle{
+            display: inline-flex;
+            background: #DFE2E8;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        &-card {
+          
             padding-top: 25px;
             border-top: 1px solid #E6E6E6;
             display: flex;
             justify-content: center;
         }
+
         &-btn {
             background: #FAFAFA;
             border: 0.5px solid #130F26;
             border-radius: 12px;
-            padding: 15px 80px;
+            padding: 20px 12px;
             font-family: $font ;
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
             line-height: 22px;
             color: $black;
-            img{
+            transition: 500ms;
+            &:hover{
+                background: #423AD0;
+                color: #fff;
+                border: 0.5px solid #423AD0;
+            }
+            img {
                 margin-right: 10px;
             }
         }
     }
 
     &__chek {
-        padding-top: 70px;
         margin-bottom: 50px;
 
         &-buttons {
@@ -52,11 +76,25 @@ $font : "VelaSans";
                 border-radius: 12px;
                 padding: 16px 26px;
                 color: $black;
+                transition: 500ms;
+
+                &:hover {
+                    background: #423AD0;
+                    color: #FFFFFF;
+
+                    .icon__white * {
+                        stroke: white;
+                    }
+                }
 
                 &-active {
                     background: #423AD0;
                     color: #FFFFFF;
                     margin-left: 11px;
+
+                    .icon__white * {
+                        stroke: white;
+                    }
                 }
             }
         }
@@ -173,6 +211,52 @@ $font : "VelaSans";
                 max-width: 100%;
                 height: auto;
             }
+        }
+    }
+}
+
+.favorite {
+    &__title {
+        font-family: $font ;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 34px;
+        letter-spacing: -0.25px;
+        color: $black ;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #E6E6E6;
+        padding: 20px 0;
+    }
+
+    &__img {
+        margin-right: 13px;
+    }
+
+    &__text {
+        &-title {
+            font-family: $font ;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            color: $black ;
+            display: block;
+        }
+
+        &-grey {
+            font-family: $font ;
+            display: block;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: #848E98;
         }
     }
 }

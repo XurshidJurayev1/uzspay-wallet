@@ -1,4 +1,4 @@
-import phone from '../../../../../../assets/images/phone.png'
+import {ReactComponent as Phone} from "../../../../../../assets/svg/phone.svg" ;
 import React from 'react';
 import "./mphone.scss";
 const Mainphonecard = () => {
@@ -8,7 +8,7 @@ const Mainphonecard = () => {
                 Оплатить мобильный телефон
             </div>
             <div className="mainindex__icon">
-                <img src={phone} alt="png" />
+                <Phone className="main__cion"/>
             </div>
         </div>
     );

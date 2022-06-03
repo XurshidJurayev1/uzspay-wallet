@@ -1,6 +1,8 @@
 $black : #130F26;
 $font : "VelaSans";
-
+.main__cion *{
+    stroke: #596479;
+}
 .mainindex__phone {
     background: #FFFFFF;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
@@ -9,8 +11,19 @@ $font : "VelaSans";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 500ms;
 }
-
+.mainindex__phone:hover {
+    background: #423AD0;
+    cursor: pointer;
+    box-shadow:  0 0 5px grey;
+}
+.mainindex__phone:hover .mainindex__telephone{
+    color: #fff;
+}
+.mainindex__phone:hover .main__cion *{
+    stroke: #423AD0;
+}
 .mainindex__telephone {
     font-family: $font;
     font-style: normal;
