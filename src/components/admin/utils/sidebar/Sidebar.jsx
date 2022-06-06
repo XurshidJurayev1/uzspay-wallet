@@ -13,8 +13,9 @@ const Sidebar = (props) => {
                         </div>
                     })}
                 </div>
+                <Cardbutton title={props.title} />
+
             </div>
-            <Cardbutton title={props.title}  />
         </div>
     );
 }

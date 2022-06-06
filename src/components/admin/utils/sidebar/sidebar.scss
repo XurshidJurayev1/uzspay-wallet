@@ -52,6 +52,7 @@ $font : "VelaSans";
             line-height: 22px;
             color: $black;
             transition: 500ms;
+            width: 100%;
             &:hover{
                 background: #423AD0;
                 color: #fff;
@@ -134,6 +135,14 @@ $font : "VelaSans";
     }
 
     &__acardion {
+        &-icon{
+           &-active{
+               svg{
+                transition: 500ms;
+                 transform: rotate(90deg);
+               }
+           }     
+        }
         &-content {
             display: flex;
             justify-content: space-between;
@@ -172,6 +181,7 @@ $font : "VelaSans";
         &-item {
             border-top: 1px solid #E6E6E6;
             padding-top: 20px;
+            cursor: pointer;
         }
 
         &-title {
@@ -186,7 +196,14 @@ $font : "VelaSans";
 
         &-text {
             margin-left: 10px;
-
+            &_content{
+                height: 0px;
+                overflow: hidden;
+                transition:500ms;
+                &-show{
+                    height: 300px;
+                }
+            }
             &_s {
                 display: block;
                 font-family: $font;
