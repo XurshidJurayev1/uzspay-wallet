@@ -1,10 +1,9 @@
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Payments from '../components/admin/pages/paymets/Payments';
-import Cardnomber from '../components/admin/pages/transMony/Cardnomber/Cardnomber';
+import CardNumber from '../components/admin/pages/transMony/Cardnomber/Cardnomber';
 import Translate from '../components/admin/pages/transMony/Translate';
 // import Main from '../components/admin/pages/paymets/Main';
-
 
 
 const Login = lazy(() => import('../components/admin/pages/login/Login'));
@@ -17,16 +16,18 @@ const LoginPassword = lazy(() => import('../components/admin/pages/login/LoginPa
 
 const AdminRoutes = () => {
   return (<div>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/confirmation" element={<LoginConfirmation />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/paymet" element={<Payments />} />
-        <Route path="/trans" element={<Translate />} />
-        <Route path="/trans/phone" element={<Cardnomber />} />
-        <Route path="/trans/card" element={<Cardnomber />} />
-      </Routes>
-    </div>);
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/confirmation" element={<LoginConfirmation />} />
+      <Route path="/available" element={<LoginPassword />} />
+      <Route path="/password" element={<LoginNewUserPassword />} />
+      <Route path="/main" element={<Main />} />
+      <Route path="/paymet" element={<Payments />} />
+      <Route path="/trans" element={<Translate />} />
+      <Route path="/trans/phone" element={<CardNumber />} />
+      <Route path="/trans/card" element={<CardNumber />} />
+    </Routes>
+  </div>);
 };
 
 export default AdminRoutes;
