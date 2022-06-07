@@ -1,0 +1,110 @@
+$black : #130F26;
+$font : "VelaSans";
+.card__otk-select{
+  background: #EAECF0;
+  position: relative;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.card__otk-sel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 14px;
+}
+.card__otk-content{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: grey;
+}
+.card__otk{
+  display: flex;
+  align-items: center;
+}
+.card__otk-img{
+  margin-right: 11px;
+}
+.card__otk-text span{
+  display: block;
+}
+.card__otk-sch{
+   font-family: $font;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 13px;
+   line-height: 18px;
+   letter-spacing: 0.2px;
+   color: #3F3B4E;
+}
+.card__otk-num{
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #130F26;
+}
+.translate__otk h3{
+  font-family: $font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: -0.25px;
+  color: #130F26;
+  margin-bottom: 20px;
+}
+.translate__kamu h3{
+  font-family: $font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: -0.25px;
+  color: #130F26;
+  margin-bottom: 20px;
+}
+
+// translate__kamu-input
+.translate__kamu-input{
+  display: block;
+  width: 100%;
+  outline: none;
+  text-indent: 14px;
+  background: #EAECF0;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+}
+.translate__kamu-input{
+  position: relative;
+  height: 68px;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #130F26;
+}
+.translate__kamu-plac{
+  position: absolute;
+  top: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7D8A9A;
+  transition: 500ms;
+  pointer-events: none;
+}
+.translate__kamu-input:focus{
+  border: 1px solid #3F3B4E;
+}
+.translate__kamu-input:focus + .translate__kamu-plac{
+  top: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: #3F3B4E;
+}

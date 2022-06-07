@@ -24,6 +24,7 @@ const AdminRoutes = () => {
         <Route path="/paymet" element={<Payments />} />
         <Route path="/trans" element={<Translate />} />
         <Route path="/trans/phone" element={<Cardnomber />} />
+        <Route path="/trans/card" element={<Cardnomber />} />
       </Routes>
     </div>);
 };
