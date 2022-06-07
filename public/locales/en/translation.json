@@ -26,6 +26,7 @@
       "title": "Hello",
       "input": "Write a password",
       "input2": "Again",
+      "wrong": "I do not remember the password",
       "btn": "login"
     },
     "footer": "Do not tell anyone the code from SMS or your password. The service employee will never ask them. Make sure the code came from an Aist sender or in an app push notification. Check the service website in the address bar: id.aist.wallet.uz"

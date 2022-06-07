@@ -26,6 +26,7 @@
       "title": "Salom",
       "input": "Parolni kiriting",
       "input2": "yana kiriting",
+      "wrong": "Parolni eslay olmayapsizmi? ",
       "btn": "tizimga kirish"
     },
     "footer": "SMS-dan kelgan kodni yoki parolingizni hech kimga aytmang. Xizmat xodimi hech qachon ularni so'ramaydi. Kod Aist yuboruvchisidan yoki ilova push-bildirishnomasidan kelganligiga ishonch hosil qiling. Manzil satrida xizmat veb-saytini tekshiring: id.aist.wallet.uz"

@@ -15,6 +15,7 @@ import 'react-phone-input-2/lib/material.css';
 const Login = (props) => {
   const navigate = useNavigate();
   const [phone, setPhone] = useState('');
+  const [focus, setFocus] = useState(false);
   const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -39,7 +40,7 @@ const Login = (props) => {
     navigate('/confirmation');
   };
 
-  console.log(phone);
+  console.log(focus);
 
 
   return (<div className="login">
@@ -61,6 +62,8 @@ const Login = (props) => {
 
 
         <PhoneInput
+          // onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(true)}
           inputClass="login_content_register_input"
           dropdownClass="login_content_register_input_drop"
           searchClass="login_content_register_input_search"
@@ -75,7 +78,6 @@ const Login = (props) => {
           value={phone}
           onChange={setPhone}
           placeholder={t('login.placeholder')}
-          // placeholder=""
           masks={{ uz: '(..) ...-..-..', at: '(....) ...-....' }}
           regions={'asia'}
           country="uz"

@@ -385,7 +385,7 @@
       background: #FFFFFF;
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
-      margin-bottom: 125px;
+      margin-bottom: 151px;
       position: relative;
       min-width: 486px;
 
@@ -413,6 +413,67 @@
 
       }
 
+      &_available {
+
+        position: relative;
+
+        p {
+          margin: 12px 0 0;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          color: #423AD0;
+        }
+
+        svg {
+          position: absolute;
+          top: 25px;
+          right: 15px;
+          width: 22px;
+          height: 22px;
+          color: #8F99A6;
+          transition: all .2s ease;
+
+          &:hover {
+            color: #130F26;
+            transition: all .2s ease;
+          }
+        }
+
+        input {
+          width: 426px;
+          padding: 23px 14px;
+          background: #FAFAFA;
+          border: 1px solid #E6E6E6;
+          border-radius: 10px;
+          cursor: pointer;
+          outline: none;
+
+          &::placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &:focus {
+            background: #FFFFFF;
+            border: 1px solid #3F3B4E;
+            border-radius: 10px;
+
+            &::placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+          }
+
+        }
+      }
 
       &_password {
         margin-bottom: 16px;

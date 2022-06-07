@@ -54,7 +54,7 @@ const LoginPassword = (props) => {
         <h4>
           {t('login.password2.title')}, {name}
         </h4>
-        <div className="login_content_pass_password">
+        <div className="login_content_pass_available">
           <InputMask
             className="login_content_pass_password_input"
             maskChar={null}
@@ -63,6 +63,9 @@ const LoginPassword = (props) => {
             onChange={(e) => setCode(e.target.value)}
             placeholder={t('login.password2.input')}
           />
+          <p className="login_content_pass_wrongPassword">
+            {t('login.password2.wrong')}
+          </p>
           {
             shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} />
               :
