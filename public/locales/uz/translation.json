@@ -22,6 +22,12 @@
       "input2": "yana kiriting",
       "btn": "Saqlash va tizimga kirish"
     },
+    "password2": {
+      "title": "Salom",
+      "input": "Parolni kiriting",
+      "input2": "yana kiriting",
+      "btn": "tizimga kirish"
+    },
     "footer": "SMS-dan kelgan kodni yoki parolingizni hech kimga aytmang. Xizmat xodimi hech qachon ularni so'ramaydi. Kod Aist yuboruvchisidan yoki ilova push-bildirishnomasidan kelganligiga ishonch hosil qiling. Manzil satrida xizmat veb-saytini tekshiring: id.aist.wallet.uz"
   }
 }

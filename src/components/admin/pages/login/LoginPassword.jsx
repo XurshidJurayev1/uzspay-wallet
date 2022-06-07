@@ -21,7 +21,7 @@ const LoginPassword = (props) => {
 
 
   useEffect(() => {
-    if (code === code2 && code.length > 0) {
+    if (code.length > 0) {
       setBtn(true);
     } else {
       setBtn(false);
@@ -32,21 +32,13 @@ const LoginPassword = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [code]);
 
-  useEffect(() => {
-    if (code === code2 && code.length > 0) {
-      setBtn(true);
-    } else {
-      setBtn(false);
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [code2]);
-
 
   const submit = (e) => {
     e.preventDefault();
     navigate('/dashboard');
   };
+
+  const name = 'Axmed';
 
 
   return (<div className="login">
@@ -60,17 +52,16 @@ const LoginPassword = (props) => {
             backgroundImage: `url(${back})`,
           }} />
         <h4>
-          {t('login.password.title')}
+          {t('login.password2.title')}, {name}
         </h4>
         <div className="login_content_pass_password">
           <InputMask
             className="login_content_pass_password_input"
             maskChar={null}
-
             type={shown ? 'text' : 'password'}
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            placeholder={t('login.password.input')}
+            placeholder={t('login.password2.input')}
           />
           {
             shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} />
@@ -79,35 +70,16 @@ const LoginPassword = (props) => {
           }
 
         </div>
-        <div className="login_content_pass_password" style={{
-          marginBottom: '30px',
-        }}>
-          <InputMask
-            className="login_content_confirm_password_input"
-            maskChar={null}
-
-            type={shown2 ? 'text' : 'password'}
-            value={code2}
-            onChange={(e) => setCode2(e.target.value)}
-            placeholder={t('login.password.input2')}
-          />
-          {
-            shown2 ? <AiOutlineEyeInvisible onClick={() => setShown2(false)} />
-              :
-              <AiOutlineEye onClick={() => setShown2(true)} />
-          }
-
-        </div>
 
 
         {
           btn ?
             <button className="login_content_register_active" onClick={(e) => submit(e)}>
-              {t('login.password.btn')}
+              {t('login.password2.btn')}
             </button>
             :
             <button className="login_content_register_disabled">
-              {t('login.password.btn')}
+              {t('login.password2.btn')}
             </button>
 
         }

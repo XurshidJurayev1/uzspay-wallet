@@ -3,6 +3,11 @@
   min-height: 100vh;
   background: #FAFAFA;
   font-family: 'VelaSans', sans-serif;
+
+  button {
+    text-transform: capitalize;
+  }
+
   &_navbar {
     display: flex;
     justify-content: space-between;
@@ -143,6 +148,7 @@
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       margin-bottom: 137px;
+      width: 486px;
 
       h4 {
         font-style: normal;
@@ -154,15 +160,17 @@
 
       }
 
-      input {
-        width: 426px;
+      &_input {
+        //width: 426px;
         padding: 23px 14px;
-        background: #FAFAFA;
-        border: 1px solid #E6E6E6;
-        border-radius: 10px;
+        background: #FAFAFA !important;
+        border: 1px solid #E6E6E6 !important;
+        border-radius: 10px !important;
         cursor: pointer;
-        margin-bottom: 30px;
-        outline: none;
+        //margin-bottom: 30px;
+        //outline: none;
+        width: 100% !important;
+
 
         &::placeholder {
           font-style: normal;
@@ -186,6 +194,44 @@
           }
         }
 
+        &_drop {
+          width: 423px !important;
+
+          &::-webkit-scrollbar {
+            width: 3px;
+
+          }
+
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #E0E0E0;
+            border-radius: 29px;
+            height: 37px;
+          }
+
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+
+        }
+
+        &_search {
+          input {
+            background: #F3F3F5;
+            border: 0.5px solid #E6E6E6 !important;
+            border-radius: 8px !important;
+            padding: 12px 16px !important;
+            width: 94% !important;;
+          }
+        }
+
+
       }
 
 
@@ -208,9 +254,11 @@
         justify-content: center;
         align-items: center;
         cursor: not-allowed !important;
+        margin-top: 30px;
       }
 
       &_active {
+        margin-top: 30px;
         width: 100%;
         background: #423AD0;
         border-radius: 12px;
