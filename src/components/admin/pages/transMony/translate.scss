@@ -1,0 +1,105 @@
+$black : #130F26;
+$font : "VelaSans";
+
+.container__translate {
+    max-width: 802px;
+    margin: auto;
+    padding: 0 15px;
+}
+.translate_row{
+    margin-top: 20px;
+}
+.translate {
+   
+    &__card {
+        background: white;
+        display: flex;
+        padding: 28px 22px;
+        border-radius: 18px;
+        cursor: pointer;
+        h3 {
+            font-family: $font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+        }
+
+        .local__phone {
+            width: 52px;
+            height: 52px;
+            background: #E7EBF3;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__padd {
+        padding-top: 60px;
+    }
+
+    &__back {
+        margin-bottom: 40px;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: #738090;
+
+            &:hover {
+                color: black;
+            }
+
+            span {
+                background: #E8EBEF;
+                display: inline-flex;
+                width: 30px;
+                height: 30px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-right: 13px;
+            }
+        }
+    }
+
+    &__mont {
+        h2 {
+            font-family: $font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 49px;
+            letter-spacing: -0.25px;
+            color: $black ;
+            margin-bottom: 30px;
+        }
+    }
+}
+.form__main {
+    background: #E8EBEF;
+    border: 0.5px solid #E6E6E6;
+    border-radius: 10px;
+    padding: 15px 0 15px 15px;
+}
+
+.form__search_btn {
+    border: none;
+    background: transparent;
+}
+
+.form__corntrol {
+    background: transparent;
+    border: none;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8F99A6;
+    outline: none;
+    width: 300px;
+}

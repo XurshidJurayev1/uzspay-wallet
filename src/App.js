@@ -3,7 +3,7 @@
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import 'react-tippy/dist/tippy.css';
 import AdminRoutes from './routes';
-
+import "./app.scss";
 function App() {
   // function ScrollToTop() {
   //   const { pathname } = useLocation();

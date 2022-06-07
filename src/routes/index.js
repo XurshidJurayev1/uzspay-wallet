@@ -3,6 +3,8 @@ import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Main from '../components/admin/pages/main/Main';
 import Payments from '../components/admin/pages/paymets/Payments';
+import Cardnomber from '../components/admin/pages/transMony/Cardnomber/Cardnomber';
+import Translate from '../components/admin/pages/transMony/Translate';
 // import Main from '../components/admin/pages/paymets/Main';
 
 
@@ -22,6 +24,8 @@ const AdminRoutes = () => {
         <Route path="/confirmation" element={<LoginConfirmation />} />
         <Route path="/main" element={<Main />} />
         <Route path="/paymet" element={<Payments />} />
+        <Route path="/trans" element={<Translate />} />
+        <Route path="/trans/phone" element={<Cardnomber />} />
       </Routes>
     </div>);
 };
