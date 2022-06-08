@@ -82,6 +82,51 @@ $font: "VelaSans";
   margin-bottom: 20px;
 }
 
+
+.translate__kamu {
+
+  &-selected {
+    margin-top: 23px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+
+
+    &-cards {
+      width: 150px;
+      height: 91px;
+      background: #FAFAFA;
+      border: 1px solid #BDC3CA;
+      border-radius: 10px;
+      margin-right: 12px;
+      transition: all .2s ease;
+      padding: 12px 12px;
+
+      &-active {
+        width: 150px;
+        height: 91px;
+        margin-right: 12px;
+        background: rgba(254, 254, 254, 0.79);
+        box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid #423AD0;
+        filter: drop-shadow(0px 1px 26px rgba(0, 0, 0, 0.07));
+        border-radius: 12px;
+        transition: all .2s ease;
+        padding: 12px 12px;
+
+      }
+
+      &-icon {
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+  }
+}
+
 // translate__kamu-input
 .translate__kamu-input {
   display: block;
@@ -95,6 +140,7 @@ $font: "VelaSans";
 
 }
 
+
 .translate__kamu-input {
   position: relative;
   height: 68px;
@@ -104,6 +150,7 @@ $font: "VelaSans";
   font-size: 16px;
   line-height: 22px;
   color: #130F26;
+  z-index: 8;
 
   &-select {
     margin-top: 13px;
@@ -113,6 +160,7 @@ $font: "VelaSans";
     padding: 14px 12px;
     overflow-y: scroll;
     height: 200px;
+    z-index: 10;
 
     &::-webkit-scrollbar {
       width: 3px;
@@ -140,7 +188,7 @@ $font: "VelaSans";
       display: flex;
       justify-content: left;
       align-items: center;
-      padding: 12px 6px;
+      padding: 12px 12px;
       background: transparent;
 
 
@@ -161,7 +209,7 @@ $font: "VelaSans";
       &-people {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 88%;
 
         p {
           font-style: normal;
@@ -182,6 +230,29 @@ $font: "VelaSans";
           color: #8C929B;
         }
       }
+
+      &-back {
+        width: 28px !important;
+        height: 28px !important;
+        background: #D0D4DB;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover + .translate__kamu-input-select-option-back > svg {
+          color: #130F26;
+
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #738090;
+        }
+      }
     }
   }
 }
@@ -195,12 +266,24 @@ $font: "VelaSans";
   color: #7D8A9A;
   transition: 500ms;
   pointer-events: none;
+  z-index: 9;
 }
 
 .translate__kamu-input:focus {
   border: 1px solid #3F3B4E;
   background: #fff;
   transition: all .2s ease;
+}
+
+.translate__kamu-plac-active {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  transition: 500ms;
+  pointer-events: none;
+  top: 0px;
+  font-size: 13px;
+  color: #3F3B4E;
 }
 
 .translate__kamu-input:focus + .translate__kamu-plac {
@@ -210,3 +293,85 @@ $font: "VelaSans";
   font-size: 13px;
   color: #3F3B4E;
 }
+
+.translate__bank {
+  position: relative;
+  height: 68px;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #130F26;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  p {
+    margin-top: 12px;
+    margin-bottom: 29px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 124.5%;
+    color: #8C929B;
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    text-indent: 14px;
+    background: #EAECF0;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    transition: all .2s ease;
+
+
+    &:focus {
+      border: 1px solid #3F3B4E;
+      background: #fff;
+      transition: all .2s ease;
+    }
+
+    &:focus + .translate__bank-place {
+      position: absolute;
+      font-style: normal;
+      font-weight: 500;
+      transition: 500ms;
+      pointer-events: none;
+      top: 0px;
+      padding-left: 30px;
+      font-size: 13px;
+      color: #3F3B4E;
+    }
+
+
+  }
+
+  &-place {
+    position: absolute;
+    top: 25px;
+    padding-left: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #7D8A9A;
+    transition: 500ms;
+    pointer-events: none;
+
+    &-active {
+      position: absolute;
+      font-style: normal;
+      font-weight: 500;
+      transition: 500ms;
+      pointer-events: none;
+      top: 0px;
+      padding-left: 30px;
+      font-size: 13px;
+      color: #3F3B4E;
+    }
+  }
+}
+
+
