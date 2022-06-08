@@ -1,45 +1,57 @@
-$black : #130F26;
-$font : "VelaSans";
-.card__otk-select{
+$black: #130F26;
+$font: "VelaSans";
+.card__otk-select {
   background: #EAECF0;
   position: relative;
   border: 1px solid #E6E6E6;
   border-radius: 10px;
   margin-bottom: 40px;
 }
-.card__otk-sel{
+
+.card__otk-sel {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 14px;
 }
-.card__otk-content{
+
+.card__otk-content {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  background: grey;
+  background: #fff;
+  transition: all .3s ease;
 }
-.card__otk{
+
+.card__otk {
   display: flex;
   align-items: center;
 }
-.card__otk-img{
+
+.card__otk-icon {
+  transition: all .3s ease;
+}
+
+.card__otk-img {
   margin-right: 11px;
 }
-.card__otk-text span{
+
+.card__otk-text span {
   display: block;
 }
-.card__otk-sch{
-   font-family: $font;
-   font-style: normal;
-   font-weight: 500;
-   font-size: 13px;
-   line-height: 18px;
-   letter-spacing: 0.2px;
-   color: #3F3B4E;
+
+.card__otk-sch {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #3F3B4E;
 }
-.card__otk-num{
+
+.card__otk-num {
   font-family: $font;
   font-style: normal;
   font-weight: 500;
@@ -47,7 +59,8 @@ $font : "VelaSans";
   line-height: 22px;
   color: #130F26;
 }
-.translate__otk h3{
+
+.translate__otk h3 {
   font-family: $font;
   font-style: normal;
   font-weight: 600;
@@ -57,7 +70,8 @@ $font : "VelaSans";
   color: #130F26;
   margin-bottom: 20px;
 }
-.translate__kamu h3{
+
+.translate__kamu h3 {
   font-family: $font;
   font-style: normal;
   font-weight: 600;
@@ -69,7 +83,7 @@ $font : "VelaSans";
 }
 
 // translate__kamu-input
-.translate__kamu-input{
+.translate__kamu-input {
   display: block;
   width: 100%;
   outline: none;
@@ -77,8 +91,11 @@ $font : "VelaSans";
   background: #EAECF0;
   border: 1px solid #E6E6E6;
   border-radius: 10px;
+  transition: all .2s ease;
+
 }
-.translate__kamu-input{
+
+.translate__kamu-input {
   position: relative;
   height: 68px;
   font-family: $font;
@@ -87,8 +104,89 @@ $font : "VelaSans";
   font-size: 16px;
   line-height: 22px;
   color: #130F26;
+
+  &-select {
+    margin-top: 13px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    padding: 14px 12px;
+    overflow-y: scroll;
+    height: 200px;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #E0E0E0;
+      border-radius: 29px;
+      height: 37px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &-option {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 12px 6px;
+      background: transparent;
+
+
+      &:hover {
+        background: #F3F3F5;
+        border-radius: 10px;
+      }
+
+      &-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 10px;
+      }
+
+      &-people {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        p {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          text-transform: capitalize;
+          color: #333333;
+          margin-bottom: 0 !important;
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          letter-spacing: -0.2px;
+          color: #8C929B;
+        }
+      }
+    }
+  }
 }
-.translate__kamu-plac{
+
+.translate__kamu-plac {
   position: absolute;
   top: 25px;
   font-style: normal;
@@ -98,10 +196,14 @@ $font : "VelaSans";
   transition: 500ms;
   pointer-events: none;
 }
-.translate__kamu-input:focus{
+
+.translate__kamu-input:focus {
   border: 1px solid #3F3B4E;
+  background: #fff;
+  transition: all .2s ease;
 }
-.translate__kamu-input:focus + .translate__kamu-plac{
+
+.translate__kamu-input:focus + .translate__kamu-plac {
   top: 0px;
   font-style: normal;
   font-weight: 500;
