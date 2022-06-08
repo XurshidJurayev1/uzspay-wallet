@@ -1,0 +1,32 @@
+.mony__spros{
+  background: #EAECF0;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  position: relative;
+}
+.mony__pros-input{
+  width: 100%;
+  border: 1px solid #EAECF0;
+  background: transparent;
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: 10px;
+}
+.mony__pros-input:focus{
+  outline: none;
+  background: white;
+  border: 1px solid #3F3B4E;
+}
+.mony__pros-input:focus + .mony__card-labale{
+  top: 0;
+}
+.mony__card-labale{
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  transition: 500ms;
+  pointer-events: none;
+}
+.score__title__po-mony{
+  margin-top: 44px;
+}

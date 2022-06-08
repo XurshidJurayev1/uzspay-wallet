@@ -5,6 +5,8 @@ import CardNumber from '../components/admin/pages/transMony/Cardnomber/Cardnombe
 import Translate from '../components/admin/pages/transMony/Translate';
 import Telephone from '../components/admin/pages/transMony/phoncard/Telephone';
 import Score from '../components/admin/pages/transMony/scorenumber/Score';
+import Monycard from '../components/admin/pages/transMony/mony/Monycard';
+import Linkcard from '../components/admin/pages/transMony/link/Linkcard';
 // import Main from '../components/admin/pages/paymets/Main';
 
 
@@ -27,6 +29,8 @@ const AdminRoutes = () => {
         <Route path="/trans/phone" element={<Telephone />} />
         <Route path="/trans/card" element={<CardNumber />} />
         <Route path="/trans/score" element={<Score />} />
+        <Route path="/trans/mony" element={<Monycard />} />
+        <Route path="/trans/link" element={<Linkcard />} />
       </Routes>
     </div>);
 };

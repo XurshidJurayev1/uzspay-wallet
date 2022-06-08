@@ -23,7 +23,7 @@ const Score = () => {
             <div className="translate__mont">
               <h2>Пополнить счёт WSM через карту</h2>
             </div>
-
+            
 
             {/*translate__mont-title*/}
             <div className="translate__mont-title">
