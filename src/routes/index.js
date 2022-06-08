@@ -23,8 +23,8 @@ const AdminRoutes = () => {
         <Route path="/main" element={<Main />} />
         <Route path="/paymet" element={<Payments />} />
         <Route path="/trans" element={<Translate />} />
-        <Route path="/trans/phone" element={<Cardnomber />} />
-        <Route path="/trans/card" element={<Cardnomber />} />
+        <Route path="/trans/phone" element={<Telephone />} />
+        <Route path="/trans/card" element={<CardNumber />} />
       </Routes>
     </div>);
 };
