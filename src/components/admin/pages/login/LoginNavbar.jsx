@@ -45,7 +45,8 @@ const LoginNavbar = () => {
             <div className="login_navbar_language_active_flag" style={{
               backgroundImage: `url(${uzb})`,
             }} />
-            <p>O‘zbekcha</p>
+            <p className="d-none d-sm-block">O‘zbekcha</p>
+            <p className="d-block d-sm-none">Uz</p>
             <div className="login_navbar_language_active_icon"
                  style={!select ? { backgroundImage: `url(${caretdown})` } : {
                    backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
@@ -55,7 +56,8 @@ const LoginNavbar = () => {
             <div className="login_navbar_language_active_flag" style={{
               backgroundImage: `url(${uzb})`,
             }} />
-            <p>Ӯзбекча</p>
+            <p className="d-none d-sm-block">Ӯзбекча</p>
+            <p className="d-block d-sm-none">Уз</p>
             <div className="login_navbar_language_active_icon"
                  style={!select ? { backgroundImage: `url(${caretdown})` } : {
                    backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
@@ -65,7 +67,8 @@ const LoginNavbar = () => {
             <div className="login_navbar_language_active_flag" style={{
               backgroundImage: `url(${eng})`,
             }} />
-            <p>English</p>
+            <p className="d-none d-sm-block">English</p>
+            <p className="d-block d-sm-none">eng</p>
             <div className="login_navbar_language_active_icon"
                  style={!select ? { backgroundImage: `url(${caretdown})` } : {
                    backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
