@@ -1,8 +1,9 @@
-.react-tel-input .country-list{
+.react-tel-input .country-list {
   @media (max-width: 576px) {
     max-width: 100%;
   }
 }
+
 .login {
   width: 100%;
   min-height: 100vh;
@@ -141,6 +142,11 @@
     align-items: center;
     padding-top: 100px;
     padding-bottom: 97px;
+
+    @media screen and (max-width: 576px) {
+      padding-top: 50px;
+    }
+
     &_register {
       display: flex;
       flex-direction: column;
@@ -298,8 +304,9 @@
       position: relative;
       max-width: 486px;
       @media (max-width: 576px) {
-          box-shadow: none;
+        box-shadow: none;
       }
+
       &_back {
         cursor: pointer;
         position: absolute;
@@ -334,7 +341,7 @@
         color: #738090;
         margin-bottom: 34px;
         @media (max-width: 576px) {
-            text-align: center;
+          text-align: center;
         }
       }
 
@@ -403,7 +410,13 @@
       border-radius: 12px;
       margin-bottom: 151px;
       position: relative;
-      min-width: 486px;
+      max-width: 486px;
+
+      @media screen and (max-width: 576px) {
+        padding: 20px 16px;
+        margin-bottom: 75px;
+        z-index: -1;
+      }
 
       &_back {
         cursor: pointer;
@@ -414,11 +427,15 @@
         background-size: cover;
         width: 30px;
         height: 30px;
+
+        @media screen and(max-width: 576px) {
+          display: none;
+        }
       }
 
 
       h4 {
-        width: 340px;
+        max-width: 340px;
         text-align: center;
         font-style: normal;
         font-weight: 600;
@@ -458,7 +475,7 @@
         }
 
         input {
-          width: 426px;
+          max-width: 426px;
           padding: 23px 14px;
           background: #FAFAFA;
           border: 1px solid #E6E6E6;
@@ -494,6 +511,7 @@
       &_password {
         margin-bottom: 16px;
         position: relative;
+        width: 100%;
 
         svg {
           position: absolute;
@@ -511,13 +529,14 @@
         }
 
         input {
-          width: 426px;
+          max-width: 426px;
           padding: 23px 14px;
           background: #FAFAFA;
           border: 1px solid #E6E6E6;
           border-radius: 10px;
           cursor: pointer;
           outline: none;
+          width: 100%;
 
           &::placeholder {
             font-style: normal;
