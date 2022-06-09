@@ -1,7 +1,11 @@
+.react-tel-input .country-list{
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
+}
 .login {
   width: 100%;
   min-height: 100vh;
-  background: #FAFAFA;
   font-family: 'VelaSans', sans-serif;
 
   button {
@@ -137,7 +141,6 @@
     align-items: center;
     padding-top: 100px;
     padding-bottom: 97px;
-
     &_register {
       display: flex;
       flex-direction: column;
@@ -146,9 +149,14 @@
       padding: 35px 42px 45px 30px;
       background: #FFFFFF;
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+      @media (max-width: 576px) {
+        box-shadow: none;
+        padding: 0 16px;
+
+      }
       border-radius: 12px;
       margin-bottom: 137px;
-      width: 486px;
+      max-width: 486px;
 
       h4 {
         font-style: normal;
@@ -195,7 +203,7 @@
         }
 
         &_drop {
-          width: 423px !important;
+          max-width: 423px !important;
 
           &::-webkit-scrollbar {
             width: 3px;
@@ -288,8 +296,10 @@
       border-radius: 12px;
       margin-bottom: 137px;
       position: relative;
-      min-width: 486px;
-
+      max-width: 486px;
+      @media (max-width: 576px) {
+          box-shadow: none;
+      }
       &_back {
         cursor: pointer;
         position: absolute;
@@ -299,6 +309,9 @@
         background-size: cover;
         width: 30px;
         height: 30px;
+        @media (max-width: 576px) {
+          display: none;
+        }
       }
 
 
@@ -320,6 +333,9 @@
         line-height: 20px;
         color: #738090;
         margin-bottom: 34px;
+        @media (max-width: 576px) {
+            text-align: center;
+        }
       }
 
       input {
@@ -542,13 +558,16 @@
 
     &_footer {
       text-align: center;
-      width: 620px;
+      max-width: 620px;
       margin: auto;
       font-style: normal;
       font-weight: 400;
       font-size: 15px;
       line-height: 20px;
       color: #738090;
+      @media (max-width: 576px) {
+        padding: 0 16px;
+      }
     }
   }
 

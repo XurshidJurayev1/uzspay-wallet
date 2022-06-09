@@ -34,7 +34,8 @@ const LoginNavbar = () => {
             <div className="login_navbar_language_active_flag" style={{
               backgroundImage: `url(${rus})`,
             }} />
-            <p>Русский</p>
+            <p className="d-none d-sm-block">Русский</p>
+            <p className="d-block d-sm-none">Ру</p>
             <div className="login_navbar_language_active_icon"
                  style={!select ? { backgroundImage: `url(${caretdown})` } : {
                    backgroundImage: `url(${caretdown})`, transform: 'rotate(180deg)',
