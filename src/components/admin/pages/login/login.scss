@@ -144,7 +144,7 @@
     padding-bottom: 97px;
 
     @media screen and (max-width: 576px) {
-      padding-top: 50px;
+      padding-top: 225px;
     }
 
     &_register {
@@ -415,7 +415,8 @@
       @media screen and (max-width: 576px) {
         padding: 20px 16px;
         margin-bottom: 75px;
-        z-index: -1;
+        width: 100%;
+
       }
 
       &_back {
@@ -444,11 +445,16 @@
         color: #130F26;
         margin-bottom: 28px;
 
+        @media screen and(max-width: 576px) {
+          width: 100%;
+        }
+
       }
 
       &_available {
-
+        width: 100%;
         position: relative;
+
 
         p {
           margin: 12px 0 0;
@@ -482,6 +488,7 @@
           border-radius: 10px;
           cursor: pointer;
           outline: none;
+          width: 100%;
 
           &::placeholder {
             font-style: normal;
