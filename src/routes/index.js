@@ -20,21 +20,21 @@ const LoginPassword = lazy(() => import('../components/admin/pages/login/LoginPa
 
 const AdminRoutes = () => {
   return (<div>
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/confirmation" element={<LoginConfirmation />} />
-      <Route path="/main" element={<Main />} />
-      <Route path="/paymet" element={<Payments />} />
-      <Route path="/pass" element={<LoginPassword />} />
-      <Route path="/pass/new" element={<LoginNewUserPassword />} />
-      <Route path="/trans" element={<Translate />} />
-      <Route path="/trans/phone" element={<Telephone />} />
-      <Route path="/trans/card" element={<CardNumber />} />
-      <Route path="/trans/score" element={<Score />} />
-      <Route path="/trans/mony" element={<Monycard />} />
-      <Route path="/trans/link" element={<Linkcard />} />
-    </Routes>
-  </div>);
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/confirmation" element={<LoginConfirmation />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/paymet" element={<Payments />} />
+        <Route path="/pass" element={<LoginPassword />} />
+        <Route path="/pass/new" element={<LoginNewUserPassword />} />
+        <Route path="/trans" element={<Translate />} />
+        <Route path="/trans/phone" element={<Telephone />} />
+        <Route path="/trans/card" element={<CardNumber />} />
+        <Route path="/trans/score" element={<Score />} />
+        <Route path="/trans/mony" element={<Monycard />} />
+        <Route path="/trans/link" element={<Linkcard />} />
+      </Routes>
+    </div>);
 };
 
 export default AdminRoutes;
