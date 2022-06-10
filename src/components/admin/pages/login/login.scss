@@ -400,7 +400,7 @@
     }
 
     &_pass {
-      max-width: 800px !important;
+      max-width: 486px;
       display: flex;
       flex-direction: column;
       justify-content: left;
@@ -410,6 +410,9 @@
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       margin-bottom: 151px;
+      position: relative;
+      width: 100%;
+
       &_back {
         @media (max-width: 576px) {
           display: none;
@@ -513,6 +516,7 @@
         width: 100%;
         margin-bottom: 16px;
         position: relative;
+
         svg {
           position: absolute;
           top: 25px;
@@ -521,6 +525,7 @@
           height: 22px;
           color: #8F99A6;
           transition: all .2s ease;
+
           &:hover {
             color: #130F26;
             transition: all .2s ease;
@@ -588,9 +593,6 @@
       }
     }
   }
-
-
-
 
 
 }
