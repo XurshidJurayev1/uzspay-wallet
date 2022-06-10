@@ -8,7 +8,7 @@
   border-bottom: 1px solid #E6E6E6;
   backdrop-filter: blur(30px);
 
-  @media  (max-width: 576px) {
+  @media (max-width: 576px) {
     padding: 10px 30px;
     border-bottom: 0px;
     background: white;
@@ -31,6 +31,7 @@
   &_language {
     position: relative;
     font-family: 'Euclid Circular A', sans-serif;
+    z-index: 100;
 
     &_active {
       display: flex;

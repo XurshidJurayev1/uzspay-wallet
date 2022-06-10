@@ -70,19 +70,19 @@ const CardNumber = () => {
   const fakeApi = [{
     img: img1, name: 'Арсений морозов', phone: '+998 (97) 733-30-06',
     banks: [
-      { bank: 'WebSum', icon: wmsIcon },
-      { bank: 'Kapital Bank', icon: kapital },
+      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
+      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
     ],
   }, {
     img: img1, name: 'Дмитрий Лебедев', phone: '+998 (97) 733-30-06', banks: [
-      { bank: 'WebSum', icon: wmsIcon },
-      { bank: 'Kapital Bank', icon: kapital },
+      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
+      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
     ],
 
   }, {
     img: img1, name: 'Глеб Комаров', phone: '+998 (97) 733-30-06', banks: [
-      { bank: 'WebSum', icon: wmsIcon },
-      { bank: 'Kapital Bank', icon: kapital },
+      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
+      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
     ],
   }, // {
     //   img: '',
@@ -199,7 +199,12 @@ const CardNumber = () => {
                         onClick={() => setActiveCard(idx)}>
                         <div className="translate__kamu-selected-cards-icon"
                              style={{ backgroundImage: `url(${bank.icon})` }} />
-
+                        <p>
+                          {bank.bank}
+                        </p>
+                        <span>
+                          {bank.nm}
+                        </span>
                       </div>
                     );
                   })
