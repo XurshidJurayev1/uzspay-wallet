@@ -26,6 +26,7 @@ const AdminRoutes = () => {
         <Route path="/main" element={<Main />} />
         <Route path="/paymet" element={<Payments />} />
         <Route path="/pass" element={<LoginPassword />} />
+        <Route path="/pass/new" element={<LoginNewUserPassword />} />
         <Route path="/trans" element={<Translate />} />
         <Route path="/trans/phone" element={<Telephone />} />
         <Route path="/trans/card" element={<CardNumber />} />
