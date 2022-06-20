@@ -1,0 +1,141 @@
+$font: "VelaSans";
+
+.translate__mont-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h2 {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.25px;
+    color: #130F26;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card__otk-content {
+  &-phone {
+    background: transparent !important;
+
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border: 1px solid #3F3B4E;
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 18px 14px;
+    }
+  }
+}
+
+.card__inpit-erors {
+  border: none;
+  outline: none;
+  width: 100%;
+  //color: #F5095E;
+}
+
+.card__inpit-erors:focus {
+  outline: none;
+}
+
+.card__inpit-erors:focus + .card__labale-wsp {
+  top: 25px;
+}
+
+.card__labale-wsp {
+  position: absolute;
+  transition: 500ms;
+  pointer-events: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #3F3B4E;
+}
+
+.card__close-cirsle {
+  width: 28px;
+  height: 28px;
+  background: #EAECF0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.errors__card-span {
+  font-family: $font;
+  color: #F5095E;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.card__message-user {
+  input {
+    background: #EAECF0;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    width: 100%;
+    padding: 28px 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7D8A9A;
+  }
+
+  input:focus {
+    outline: none;
+    font-size: 18px;
+  }
+}
+
+.card__btn-otm {
+  padding: 20px 72px;
+}
+
+.card__btn-per {
+  padding: 20px 0;
+  width: calc((100% / 10) * 7);
+  background: #EAECF0;
+  border-radius: 12px;
+  color: #8F99A6;
+}
+
+.card__buttos-two {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+
+.card__btn:hover {
+  background: #423AD0;
+  color: white;
+}
+
+.card__btn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #130F26;
+  font-family: $font;
+  transition: 200ms;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

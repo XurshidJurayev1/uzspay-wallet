@@ -30,7 +30,7 @@ const Transfer = () => {
                   <Cards link="/wallet/trans/card" title={`По номеру\n                карты`} svg={svg2} />
                 </div>
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/phone" title="Между своими картами и счетами" svg={svg3} />
+                  <Cards link="/wallet/trans/fill" title="Между своими картами и счетами" svg={svg3} />
                 </div>
               </div>
             </div>
