@@ -38,9 +38,11 @@ export default function Navbar() {
   return (
     <div className="mainNavbar">
       <MDBNavbar expand="lg">
-        <MDBNavbarBrand href="#">
-          <img src={logo} alt="png" />
-        </MDBNavbarBrand>
+        <Link to="/wallet">
+          <MDBNavbarBrand href="#">
+            <img src={logo} alt="png" />
+          </MDBNavbarBrand>
+        </Link>
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
