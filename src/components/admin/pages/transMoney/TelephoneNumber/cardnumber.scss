@@ -2,7 +2,7 @@ $black: #130F26;
 $font: "VelaSans";
 .card__otk-select {
   background: #EAECF0;
-  position: relative;
+  //position: relative;
   border: 1px solid #E6E6E6;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -16,9 +16,10 @@ $font: "VelaSans";
 }
 
 .card__otk-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  //position: absolute;
+  //top: 100%;
+  //left: 0;
+  margin-bottom: 27px;
   width: 100%;
   background: #fff;
   transition: all .3s ease;

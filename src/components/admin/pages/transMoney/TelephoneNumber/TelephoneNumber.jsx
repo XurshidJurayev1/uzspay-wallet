@@ -104,7 +104,7 @@ const TelephoneNumber = () => {
       <div className="container__translate">
         <div className="translate__padd">
           <div className="translate__back">
-            <Link to="/trans"><span><ChevronLeftIcon /></span> Назад</Link>
+            <Link to="/wallet/trans"><span><ChevronLeftIcon /></span> Назад</Link>
           </div>
           <div className="translate__mont">
             <h2>Перевести деньги</h2>

@@ -1,12 +1,13 @@
-$font:  "VelaSans";
+$font: "VelaSans";
 
-.translate__mont-title{
+.translate__mont-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  h2{
-    font-family:$font;
+
+  h2 {
+    font-family: $font;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -14,14 +15,17 @@ $font:  "VelaSans";
     letter-spacing: -0.25px;
     color: #130F26;
   }
-  p{
+
+  p {
     margin-bottom: 0;
   }
 }
-.card__otk-content{
-  &-phone{
+
+.card__otk-content {
+  &-phone {
     background: transparent !important;
-    &-flex{
+
+    &-flex {
       display: flex;
       justify-content: space-between;
       background: #FFFFFF;
@@ -32,19 +36,23 @@ $font:  "VelaSans";
     }
   }
 }
-.card__inpit-erors{
+
+.card__inpit-erors {
   border: none;
   outline: none;
   width: 100%;
-  color: #F5095E;
+  //color: #F5095E;
 }
-.card__inpit-erors:focus{
+
+.card__inpit-erors:focus {
   outline: none;
 }
-.card__inpit-erors:focus + .card__labale-wsp{
+
+.card__inpit-erors:focus + .card__labale-wsp {
   top: 25px;
 }
-.card__labale-wsp{
+
+.card__labale-wsp {
   position: absolute;
   transition: 500ms;
   pointer-events: none;
@@ -55,7 +63,8 @@ $font:  "VelaSans";
   letter-spacing: 0.2px;
   color: #3F3B4E;
 }
-.card__close-cirsle{
+
+.card__close-cirsle {
   width: 28px;
   height: 28px;
   background: #EAECF0;
@@ -65,12 +74,14 @@ $font:  "VelaSans";
   align-items: center;
   cursor: pointer;
 }
-.errors__card-span{
-  font-family:$font;
+
+.errors__card-span {
+  font-family: $font;
   color: #F5095E;
   display: inline-block;
   margin-top: 10px;
 }
+
 .card__message-user {
   input {
     background: #EAECF0;
@@ -84,29 +95,35 @@ $font:  "VelaSans";
     line-height: 22px;
     color: #7D8A9A;
   }
-  input:focus{
+
+  input:focus {
     outline: none;
     font-size: 18px;
   }
 }
-.card__btn-otm{
+
+.card__btn-otm {
   padding: 20px 72px;
 }
-.card__btn-per{
+
+.card__btn-per {
   padding: 20px 0;
   width: calc((100% / 10) * 7);
 }
-.card__buttos-two{
+
+.card__buttos-two {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 
 }
-.card__btn:hover{
+
+.card__btn:hover {
   background: #423AD0;
   color: white;
 }
-.card__btn{
+
+.card__btn {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;

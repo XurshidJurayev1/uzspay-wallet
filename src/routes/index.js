@@ -11,7 +11,7 @@ const LoginPassword = lazy(() => import('../components/admin/pages/login/LoginPa
 const Payments = lazy(() => import('../components/admin/pages/paymets/Payments'));
 const TelephoneNumber = lazy(() => import('../components/admin/pages/transMoney/TelephoneNumber/TelephoneNumber'));
 const Transfer = lazy(() => import('../components/admin/pages/transMoney/Transfer'));
-const Telephone = lazy(() => import('../components/admin/pages/transMoney/phoncard/Telephone'));
+const Card = lazy(() => import('../components/admin/pages/transMoney/Card/Card'));
 const Score = lazy(() => import('../components/admin/pages/transMoney/scorenumber/Score'));
 const MoneyCard = lazy(() => import('../components/admin/pages/transMoney/mony/Monycard'));
 const LinkCard = lazy(() => import('../components/admin/pages/transMoney/link/Linkcard'));
@@ -34,7 +34,7 @@ const AdminRoutes = () => {
         <Route path="payment" element={<Payments />} />
         <Route path="trans">
           <Route index element={<Transfer />} />
-          <Route path="card" element={<Telephone  />} />
+          <Route path="card" element={<Card />} />
           <Route path="phone" element={<TelephoneNumber />} />
           <Route path="score" element={<Score />} />
           <Route path="money" element={<MoneyCard />} />
