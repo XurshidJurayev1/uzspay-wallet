@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Cards = (props) => {
   return (
     <Link to={props.link} className="translate__card">
-      <h3>По номеру телефона</h3>
+      <h3>{props.title}</h3>
       <div className="local__phone">
-        <LocalPhoneIcon />
+        <props.svg />
       </div>
     </Link>
   );

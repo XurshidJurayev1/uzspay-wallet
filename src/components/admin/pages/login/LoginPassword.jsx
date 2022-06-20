@@ -35,7 +35,7 @@ const LoginPassword = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
-    navigate('/dashboard');
+    navigate('/wallet');
   };
 
   const name = 'Axmed';

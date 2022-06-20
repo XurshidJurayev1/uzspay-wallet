@@ -4,7 +4,7 @@ $font: "VelaSans";
 .container__translate {
   max-width: 802px;
   margin: auto;
-  padding: 0 15px;
+  //padding: 0 15px;
 }
 
 .translate_row {
@@ -16,6 +16,8 @@ $font: "VelaSans";
   &__card {
     background: white;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 28px 22px;
     border-radius: 18px;
     cursor: pointer;
@@ -28,11 +30,13 @@ $font: "VelaSans";
       font-size: 16px;
       line-height: 22px;
       color: $black;
+      width: 75%;
+
     }
 
     .local__phone {
-      width: 52px;
-      height: 52px;
+      width: 52px !important;
+      height: 52px !important;
       background: #E7EBF3;
       border-radius: 50%;
       display: flex;

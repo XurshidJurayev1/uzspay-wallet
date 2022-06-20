@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import wmsIcon from '../../../../../assets/images/wms icon.png';
 import kapital from '../../../../../assets/images/Kapitalbank-Logo_Wh 1.png';
 
-const CardNumber = () => {
+const TelephoneNumber = () => {
   const [click, setClick] = useState(false);
   const [click2, setClick2] = useState(false);
   const [activeCard, setActiveCard] = useState('');
@@ -100,7 +100,7 @@ const CardNumber = () => {
 
   return (<div>
     <div className="translate">
-      <Navbar />
+      {/*<Navbar />*/}
       <div className="container__translate">
         <div className="translate__padd">
           <div className="translate__back">
@@ -225,7 +225,7 @@ const CardNumber = () => {
             </label>
             {
               summ.length > 0 ?
-                <p>Комиссия 0.3% или {(Number(summ) / 100) * 0.3} UZS</p>
+                <p>Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)} UZS</p>
                 :
 
                 <p>Размер комиссии будет уточнен после ввода реквизитов платежа.</p>
@@ -253,4 +253,4 @@ const CardNumber = () => {
   </div>);
 };
 
-export default CardNumber;
+export default TelephoneNumber;

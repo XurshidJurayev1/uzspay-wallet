@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../../../utils/navbar/Navbar';
-import style from './telephone.scss';
+import './telephone.scss';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import wsm from '../../../../../assets/images/wsm.png';
 import card from '../../../../../assets/images/card.png';
@@ -15,7 +15,7 @@ const Telephone = () => {
   return (
     <div>
       <div className="card__tranlate">
-        <Navbar />
+        {/*<Navbar />*/}
 
         <div className="container__translate">
 

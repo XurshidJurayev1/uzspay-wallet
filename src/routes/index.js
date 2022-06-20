@@ -1,13 +1,5 @@
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Payments from '../components/admin/pages/paymets/Payments';
-import CardNumber from '../components/admin/pages/transMony/Cardnomber/Cardnomber';
-import Translate from '../components/admin/pages/transMony/Translate';
-import Telephone from '../components/admin/pages/transMony/phoncard/Telephone';
-import Score from '../components/admin/pages/transMony/scorenumber/Score';
-import Monycard from '../components/admin/pages/transMony/mony/Monycard';
-import Linkcard from '../components/admin/pages/transMony/link/Linkcard';
-// import Main from '../components/admin/pages/paymets/Main';
 
 
 const Login = lazy(() => import('../components/admin/pages/login/Login'));
@@ -16,25 +8,43 @@ const Main = lazy(() => import('../components/admin/pages/main/Main'));
 const Dashboard = lazy(() => import('../components/admin/DashboardOutlet'));
 const LoginNewUserPassword = lazy(() => import('../components/admin/pages/login/LoginNewUserPassword'));
 const LoginPassword = lazy(() => import('../components/admin/pages/login/LoginPassword'));
+const Payments = lazy(() => import('../components/admin/pages/paymets/Payments'));
+const TelephoneNumber = lazy(() => import('../components/admin/pages/transMoney/TelephoneNumber/TelephoneNumber'));
+const Transfer = lazy(() => import('../components/admin/pages/transMoney/Transfer'));
+const Telephone = lazy(() => import('../components/admin/pages/transMoney/phoncard/Telephone'));
+const Score = lazy(() => import('../components/admin/pages/transMoney/scorenumber/Score'));
+const MoneyCard = lazy(() => import('../components/admin/pages/transMoney/mony/Monycard'));
+const LinkCard = lazy(() => import('../components/admin/pages/transMoney/link/Linkcard'));
+// const x = lazy(() => import(''));
+// const x = lazy(() => import(''));
+// const x = lazy(() => import(''));
+// const x = lazy(() => import(''));
+// const x = lazy(() => import(''));
 
 
 const AdminRoutes = () => {
   return (<div>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/confirmation" element={<LoginConfirmation />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/paymet" element={<Payments />} />
-        <Route path="/pass" element={<LoginPassword />} />
-        <Route path="/pass/new" element={<LoginNewUserPassword />} />
-        <Route path="/trans" element={<Translate />} />
-        <Route path="/trans/phone" element={<Telephone />} />
-        <Route path="/trans/card" element={<CardNumber />} />
-        <Route path="/trans/score" element={<Score />} />
-        <Route path="/trans/mony" element={<Monycard />} />
-        <Route path="/trans/link" element={<Linkcard />} />
-      </Routes>
-    </div>);
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/confirmation" element={<LoginConfirmation />} />
+      <Route path="/pass" element={<LoginPassword />} />
+      <Route path="/pass/new" element={<LoginNewUserPassword />} />
+      <Route path="/wallet/*" element={<Dashboard />}>
+        <Route index element={<Main />} />
+        <Route path="payment" element={<Payments />} />
+        <Route path="trans">
+          <Route index element={<Transfer />} />
+          <Route path="card" element={<Telephone  />} />
+          <Route path="phone" element={<TelephoneNumber />} />
+          <Route path="score" element={<Score />} />
+          <Route path="money" element={<MoneyCard />} />
+          <Route path="link" element={<LinkCard />} />
+        </Route>
+
+      </Route>
+
+    </Routes>
+  </div>);
 };
 
 export default AdminRoutes;

@@ -16,7 +16,7 @@ const LoginConfirmation = (props) => {
 
   useEffect(() => {
     if (code.length === 4) {
-      navigate('/password');
+      navigate('/pass');
     }
 
   }, [code]);
