@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import '../telephone.scss';
+import '../scorenumber/score.scss';
 import Cards from '../cards/Cards';
 import { ReactComponent as svg1 } from '../../../../../assets/svg/arrowfatlinesdown 2.svg';
 import { ReactComponent as svg2 } from '../../../../../assets/svg/creditCard.svg';

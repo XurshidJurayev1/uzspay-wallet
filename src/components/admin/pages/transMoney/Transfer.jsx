@@ -2,6 +2,7 @@ import React from 'react';
 // import Navbar from '../../utils/navbar/Navbar';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import './translate.scss';
+import './TelephoneNumber/cardnumber.scss';
 import Cards from './cards/Cards';
 import Inputrans from './Inputrans';
 import { Link } from 'react-router-dom';

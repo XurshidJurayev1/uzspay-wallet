@@ -9,6 +9,7 @@ import Recent from '../../utils/recent/Recent';
 
 import Mainbanner from './Mainbanner';
 import Lastbutton from '../../utils/buttons/Lastbutton';
+import AccardionMobile from '../../utils/sidebar/AccardionMobile';
 
 
 const Main = () => {
@@ -19,10 +20,12 @@ const Main = () => {
       <div className="wrapper">
         <div className="wrapper__sidebar">
           <Sidebar title={text} favorite={[<Sidebarchek />, <Accardion />]} />
-          {/* <Sidebar title={text} favorite={[ <Sidebarchek/>, <Accardion />]} /> */}
+        </div>
+        <div className="wrapper__sidebar__mobile">
+          <Sidebar title={text} favorite={[<Sidebarchek />, <AccardionMobile />]} />
         </div>
         <div className="wrapper__main">
-          {/* <Mainbanner /> */}
+          <Mainbanner />
           <MainIndex />
           <Recent />
           <div className="mt-5">
