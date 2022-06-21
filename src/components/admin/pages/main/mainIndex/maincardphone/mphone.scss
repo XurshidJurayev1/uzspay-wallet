@@ -1,44 +1,71 @@
-$black : #130F26;
-$font : "VelaSans";
-.main__cion *{
-    stroke: #596479;
+$black: #130F26;
+$font: "VelaSans";
+.main__cion * {
+  stroke: #596479;
 }
+
 .mainindex__phone {
-    background: #FFFFFF;
-    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
-    border-radius: 18px;
-    padding: 29px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 500ms;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 29px 22px;
+  display: flex;
+  flex-direction: revert;
+  justify-content: space-between;
+  align-items: center;
+  transition: 500ms;
+
+  @media screen and (max-width: 786px) {
+    flex-direction: column-reverse;
+    padding: 15px 15px 13px;
+    align-items: flex-start;
+  }
 }
+
 .mainindex__phone:hover {
-    background: #423AD0;
-    cursor: pointer;
-    box-shadow:  0 0 5px grey;
+  background: #423AD0;
+  cursor: pointer;
+  box-shadow: 0 0 5px grey;
 }
-.mainindex__phone:hover .mainindex__telephone{
-    color: #fff;
+
+.mainindex__phone:hover .mainindex__telephone {
+  color: #fff;
 }
-.mainindex__phone:hover .main__cion *{
-    stroke: #423AD0;
+
+.mainindex__phone:hover .main__cion * {
+  stroke: #423AD0;
 }
+
 .mainindex__telephone {
-    font-family: $font;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+
+  width: calc(100% - 52px);
+
+  @media screen and (max-width: 786px) {
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    color: $black ;
+    font-size: 14px;
+    line-height: 130%;
+    color: #333333;
+  }
 }
 
 .mainindex__icon {
-    width: 52px;
-    height: 52px;
-    background: #E7EBF3;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 52px !important;
+  height: 52px !important;
+  background: #E7EBF3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 786px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }

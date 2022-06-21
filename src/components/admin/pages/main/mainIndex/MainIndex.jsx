@@ -10,35 +10,35 @@ const MainIndex = () => {
       <div className="mainindex">
         <div className="container__main">
           <h2 className="mainindex__title-p">Платежи и переводы</h2>
-          <div className="row justify-content-between  mainindex-flex-wrap ">
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+          <div className="row justify-content-between  mainindex-flex-scroll ">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
-            <div className="col-md-3 mainindex-flex-wrap-col-md">
+            <div className="col-md-3 mainindex-flex-scroll-col-md">
               <Maincard />
             </div>
 
           </div>
-          <div className="row mt-3">
-            <div className="col-md-4">
+          <div className="row mt-3 mainindex-flex-wrap">
+            <div className="col-md-4 mainindex-flex-wrap-col-md">
               <Mainphonecard />
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mainindex-flex-wrap-col-md">
               <Mainphonecard />
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mainindex-flex-wrap-col-md">
               <Mainphonecard />
             </div>
           </div>

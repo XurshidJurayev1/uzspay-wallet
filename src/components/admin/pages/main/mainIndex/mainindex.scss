@@ -4,6 +4,10 @@ $font: "VelaSans";
 .mainindex {
   padding-bottom: 70px;
 
+  @media screen and (max-width: 786px) {
+    padding-bottom: 40px;
+  }
+
 
   &__title-p {
     font-family: $font;
@@ -25,21 +29,39 @@ $font: "VelaSans";
     }
   }
 
-  &-flex-wrap {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap !important;
-    overflow: scroll;
-    padding-bottom: 15px;
-    margin: 0;
+  &-flex-scroll {
+    justify-content: left !important;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap !important;
+      overflow: scroll;
+      padding-bottom: 15px;
+      margin: 0;
+    }
 
     &-col-md {
-      width: auto !important;
+      margin-bottom: 15px;
+      @media screen and (max-width: 786px) {
+        width: auto !important;
+        margin: 0;
+      }
 
 
     }
 
+
   }
 
+  &-flex-wrap {
+
+    &-col-md {
+      @media screen and (max-width: 786px) {
+        width: 50%;
+        margin-bottom: 13px;
+        padding: 0 6px;
+      }
+    }
+  }
 
 }

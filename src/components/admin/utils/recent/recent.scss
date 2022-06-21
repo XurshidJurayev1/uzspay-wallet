@@ -1,23 +1,45 @@
-$black : #130F26;
-$font : "VelaSans";
+$black: #130F26;
+$font: "VelaSans";
 
 .recent h2 {
-    font-family: $font;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: -0.25px;
+  color: $black;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 786px) {
+    font-style: normal;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 34px;
+    font-size: 19px;
+    line-height: 26px;
     letter-spacing: -0.25px;
-    color: $black ;
-    margin-bottom: 30px;
+    color: #130F26;
+    margin-bottom: 24px;
+  }
 }
 
 .recent__t {
-    font-family: $font;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #738090;
+  margin-bottom: 20px;
+  margin-top: 34px;
+
+  @media screen and (max-width: 786px) {
     font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.2px;
     color: #738090;
-    margin-bottom: 20px;
-    margin-top: 34px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+  }
 }

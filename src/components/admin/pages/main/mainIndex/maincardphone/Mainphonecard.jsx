@@ -7,9 +7,9 @@ const Mainphonecard = () => {
             <div className="mainindex__telephone">
                 Оплатить мобильный телефон
             </div>
-            <div className="mainindex__icon">
-                <Phone className="main__cion"/>
-            </div>
+          <div className="mainindex__icon">
+            <Phone className="main__cion" />
+          </div>
         </div>
     );
 }
