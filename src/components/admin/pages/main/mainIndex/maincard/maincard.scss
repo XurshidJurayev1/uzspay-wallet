@@ -1,23 +1,44 @@
-$black : #130F26;
-$font : "VelaSans";
+$black: #130F26;
+$font: "VelaSans";
 .mainindex__card {
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px 20px;
-    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
-    border-radius: 18px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+
+  @media screen and (max-width: 786px) {
+    background: transparent !important;
+    box-shadow: none;
+    padding: 0;
+  }
+
+
 }
+
 .mainindex__title p {
-    margin: 0;
-    font-family: $font;
+  margin: 0;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $black;
+  margin-top: 15px;
+
+  @media screen and (max-width: 786px) {
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 115%;
     text-align: center;
-    color: $black;
-    margin-top: 15px;
+    letter-spacing: -0.25px;
+    color: #333333;
+    margin-top: 7px;
+  }
+
 }

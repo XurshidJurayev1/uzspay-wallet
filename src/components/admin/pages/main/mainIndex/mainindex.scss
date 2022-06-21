@@ -14,5 +14,32 @@ $font: "VelaSans";
     letter-spacing: -0.25px;
     color: $black;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 786px) {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 26px;
+      letter-spacing: -0.25px;
+      color: #130F26;
+    }
   }
+
+  &-flex-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow: scroll;
+    padding-bottom: 15px;
+    margin: 0;
+
+    &-col-md {
+      width: auto !important;
+
+
+    }
+
+  }
+
+
 }
