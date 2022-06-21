@@ -3,7 +3,7 @@ $font: "VelaSans";
 
 .sidebar__b {
   border-right: 1px solid #E6E6E6;
-  height: 100vh;
+  height: 100%;
 }
 
 .sidebar {
@@ -14,6 +14,8 @@ $font: "VelaSans";
 
   @media screen and (max-width: 786px) {
     padding: 22px 16px;
+    width: 100%;
+    max-width: 100%;
   }
 
 

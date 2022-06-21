@@ -7,6 +7,9 @@
   background-color: #F7F7F7;
 
   &_container {
-
+    @media screen and (max-width: 786px) {
+      margin-top: 65px;
+      min-height: 100vh;
+    }
   }
 }
