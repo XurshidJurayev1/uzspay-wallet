@@ -2,6 +2,20 @@ $black: #130F26;
 $font: "VelaSans";
 .payments__card-main {
   padding-bottom: 70px;
+
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
+}
+
+.payments__card-main_mobile {
+  display: none;
+  @media screen and (max-width: 786px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
 }
 
 .payments__servises-title {
@@ -41,6 +55,10 @@ $font: "VelaSans";
   transition: all .2s ease;
   border: 1px solid transparent;
 
+  @media screen and (max-width: 786px) {
+    padding: 18px 15px 19px;
+  }
+
   &:hover {
     transition: all .2s ease;
     border: 1px solid #3B3B3B;
@@ -48,16 +66,36 @@ $font: "VelaSans";
   }
 
   &-img {
-    width: 52px;
-    height: 52px;
+    width: 52px !important;
+    height: 52px !important;
     background: #E7EBF3;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      @media screen and (max-width: 786px) {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    @media screen and (max-width: 786px) {
+      width: 40px !important;
+      height: 40px !important;
+    }
   }
 
   &-title {
+    @media screen and (max-width: 786px) {
+      width: calc(100% - 22px);
+      margin-right: auto;
+    }
+
     h3 {
       font-family: $font;
       font-style: normal;
@@ -66,6 +104,10 @@ $font: "VelaSans";
       line-height: 30px;
       /* identical to box height */
       color: $black;
+
+      @media screen and (max-width: 786px) {
+        font-size: 19px;
+      }
     }
 
     p {
@@ -76,6 +118,10 @@ $font: "VelaSans";
       line-height: 145%;
       color: #738090;
       max-width: 300px;
+
+      @media screen and (max-width: 786px) {
+        font-size: 14px;
+      }
     }
   }
 }

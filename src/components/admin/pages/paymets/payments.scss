@@ -4,6 +4,10 @@ $font: "VelaSans";
 .payments {
   display: flex;
   background: #F7F7F7;
+
+  @media screen and (max-width: 786px) {
+    flex-direction: column;
+  }
 }
 
 .payments__sidebar {
@@ -11,12 +15,37 @@ $font: "VelaSans";
   position: fixed;
   height: 100%;
   overflow: scroll;
+
+
+  @media screen and (max-width: 786px) {
+    width: 100%;
+    display: none;
+  }
+
+
+}
+
+.payments__servises_col-md {
+  padding: 0;
+}
+
+.payments__favorite {
+  display: none;
+  @media screen and (max-width: 786px) {
+    display: block;
+    margin-bottom: 40px;
+  }
 }
 
 .payments__main {
   width: calc(100% - 423px);
   margin-left: auto;
   padding: 70px 40px 0 40px;
+  @media screen and (max-width: 786px) {
+    width: 95%;
+    margin: auto;
+    padding: 30px 16px;
+  }
 }
 
 .mainindex {
@@ -29,6 +58,10 @@ $font: "VelaSans";
   max-width: 100%;
   margin: auto;
   padding: 0 12px;
+
+  @media screen and (max-width: 786px) {
+    padding: 0;
+  }
 }
 
 .form__main {
@@ -54,5 +87,9 @@ $font: "VelaSans";
   line-height: 22px;
   color: #130f26;
   outline: none;
+
+  @media screen and (max-width: 786px) {
+    font-size: 14px;
+  }
 }
 
