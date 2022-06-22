@@ -159,10 +159,17 @@ $font: "VelaSans";
     &-content {
       display: flex;
       justify-content: space-between;
-      max-width: 289px;
+      max-width: 305px;
       margin-left: auto;
       border-top: 1px solid #E6E6E6;
-      padding: 20px 0;
+      padding: 20px 14px;
+      transition: all .2s ease;
+
+      &:hover {
+        transition: all .2s ease;
+        background: #EAECF0;
+        border-radius: 10px;
+      }
 
       &_s {
         display: block;
@@ -197,14 +204,22 @@ $font: "VelaSans";
 
     &-item {
       border-top: 1px solid #E6E6E6;
-      padding-top: 20px;
+
       cursor: pointer;
     }
 
     &-title {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 20px;
+      align-items: center;
+      padding: 20px 14px;
+      transition: all .2s ease;
+
+      &:hover {
+        transition: all .2s ease;
+        background: #EAECF0;
+        border-radius: 10px;
+      }
     }
 
     &-imgText {
@@ -268,7 +283,13 @@ $font: "VelaSans";
     display: flex;
     align-items: center;
     border-top: 1px solid #E6E6E6;
-    padding: 20px 0;
+    padding: 20px 8px;
+
+    &:hover {
+      background: #EAECF0;
+      border-radius: 10px;
+    }
+
   }
 
   &__img {

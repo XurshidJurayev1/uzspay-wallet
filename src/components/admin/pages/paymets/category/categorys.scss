@@ -1,71 +1,81 @@
-$black : #130F26;
-$font : "VelaSans";
-.payments__card-main{
-    padding-bottom: 70px;
+$black: #130F26;
+$font: "VelaSans";
+.payments__card-main {
+  padding-bottom: 70px;
 }
-.payments__servises-title {
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-    h2 {
-        font-family: $font ;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 34px;
-        letter-spacing: -0.25px;
-        color: $black;
-        margin: 0;
-    }
 
-    a {
-        font-family: $font ;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: right;
-        color: #423AD0;
-    }
+.payments__servises-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: -0.25px;
+    color: $black;
+    margin: 0;
+  }
+
+  a {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: right;
+    color: #423AD0;
+  }
 }
 
 .category__paymets {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 24px 20px 20px 22px;
+  transition: all .2s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    transition: all .2s ease;
+    border: 1px solid #3B3B3B;
+    box-shadow: none;
+  }
+
+  &-img {
+    width: 52px;
+    height: 52px;
+    background: #E7EBF3;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
-    background: #FFFFFF;
-    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
-    border-radius: 18px;
-    padding: 24px 20px 20px 22px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &-img {
-        width: 52px;
-        height: 52px;
-        background: #E7EBF3;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &-title {
+    h3 {
+      font-family: $font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      /* identical to box height */
+      color: $black;
     }
 
-    &-title {
-        h3 {
-            font-family: $font ;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 30px;
-            /* identical to box height */
-            color: $black;
-        }
-
-        p {
-            font-family: $font ;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 145%;
-            color: #738090;
-            max-width: 300px;
-        }
+    p {
+      font-family: $font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 145%;
+      color: #738090;
+      max-width: 300px;
     }
+  }
 }

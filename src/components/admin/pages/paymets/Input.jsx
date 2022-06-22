@@ -1,16 +1,26 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-const placholder = "Имя, название или номер телефона"
+import { ReactComponent as Search } from '../../../../assets/svg/search 2.svg';
+
 
 const Input = () => {
-    return (
-        <form action="" className="form__main">
-            <button className="form__search_btn">
-                <SearchIcon />
-            </button>
-            <input type="search" className="form__corntrol" placeholder={placholder} />
-        </form>
-    );
-}
+
+
+  const searchFunc = (e) => {
+    e.preventDefault();
+    console.log('function');
+  };
+
+  const placeholder = 'Имя, название или номер телефона';
+
+  return (
+    <form className="form__main">
+      <button className="form__search_btn" onClick={(e) => searchFunc(e)}>
+        <Search />
+      </button>
+      <input type="text" className="form__control" placeholder={placeholder} />
+    </form>
+  );
+};
 
 export default Input;

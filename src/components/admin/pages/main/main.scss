@@ -104,7 +104,9 @@ $font: "VelaSans";
   padding: 70px 40px 0 40px;
 
   @media screen and (max-width: 786px) {
-    padding: 30px 16px
+    padding: 30px 16px;
+    width: 95%;
+    margin: auto;
   }
 
 
