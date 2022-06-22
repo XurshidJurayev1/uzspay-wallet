@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../../../assets/images/Logo.png' ;
+import logo from '../../../../assets/svg/Logo.svg' ;
 import user from '../../../../assets/images/user.png' ;
 import notify from '../../../../assets/svg/notify.svg' ;
 import { ReactComponent as Home1 } from '../../../../assets/svg/home 1.svg' ;
@@ -17,9 +17,10 @@ import {
   MDBNavbarLink,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
   const [showBasic, setShowBasic] = useState(false);
   const [main, setMain] = useState(false);
   const [pay, setPay] = useState(false);
@@ -27,13 +28,20 @@ export default function Navbar() {
   console.log(window.location);
 
   useEffect(() => {
-
-    if (window.location.pathname.includes('payment')) {
-      setPay(true);
-    }
-  }, []);
-
-  console.log(window.location.pathname);
+    // if (window.location.pathname === '/wallet') {
+    //   setMain(true);
+    // } else {
+    //   setMain(false);
+    // }
+    //
+    // if (window.location.pathname.includes('payment')) {
+    //   setPay(true);
+    // } else {
+    //   setPay(false);
+    // }
+    console.log('routes');
+  }, [location]);
+  console.log(main, pay);
 
   return (
     <div className="mainNavbar">
@@ -65,7 +73,8 @@ export default function Navbar() {
                 :
                 <Link to="/wallet">
                   <MDBNavbarItem>
-                    <MDBNavbarLink><Home1 className="icon_pay" /> Главная</MDBNavbarLink>
+                    <MDBNavbarLink className="mainNavbar-link-inner-link"><Home1
+                      className="icon_pay" /> Главная</MDBNavbarLink>
                   </MDBNavbarItem>
                 </Link>
             }
@@ -79,7 +88,7 @@ export default function Navbar() {
                 </Link>
                 :
                 <Link to="/wallet/payment">
-                  <MDBNavbarItem active>
+                  <MDBNavbarItem>
                     <MDBNavbarLink><Home className="icon_pay" /> Платежи</MDBNavbarLink>
                   </MDBNavbarItem>
                 </Link>
@@ -92,7 +101,9 @@ export default function Navbar() {
             <div className="mainNavbar__icon">
               <img src={notify} alt="svg" />
             </div>
-            <img src={user} alt="png" />
+            <div className="mainNavbar_profile">
+              <img src={user} alt="png" />
+            </div>
           </form>
         </MDBCollapse>
       </MDBNavbar>

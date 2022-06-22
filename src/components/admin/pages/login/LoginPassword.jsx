@@ -13,9 +13,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 const LoginPassword = (props) => {
   const navigate = useNavigate();
   const [code, setCode] = useState('');
-  const [code2, setCode2] = useState('');
   const [shown, setShown] = useState(false);
-  const [shown2, setShown2] = useState(false);
   const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
 

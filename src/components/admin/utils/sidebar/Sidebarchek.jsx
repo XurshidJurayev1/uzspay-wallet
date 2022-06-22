@@ -11,9 +11,9 @@ const Sidebarchek = () => {
         <p className="sidebar__chek-number">5 459 802 <span>wsm</span></p>
       </div>
       <div className="sidebar__chek-buttons">
-        <Link to="/wallet/trans" className="sidebar__chek-buttons-up sidebar__chek-buttons-up"><Vector2
+        <Link to="/wallet/payment/trans" className="sidebar__chek-buttons-up sidebar__chek-buttons-up"><Vector2
           className="icon__white icon__whitei" /> Пополнить</Link>
-        <Link to="/wallet/trans" className="sidebar__chek-buttons-up sidebar__chek-buttons-up-active"
+        <Link to="/wallet/payment/trans" className="sidebar__chek-buttons-up sidebar__chek-buttons-up-active"
         ><Vector className="icon__white icon__whitet" /> Перевести</Link>
       </div>
     </div>
