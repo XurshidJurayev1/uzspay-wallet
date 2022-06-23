@@ -15,7 +15,7 @@ $font: "VelaSans";
       display: flex;
       justify-content: space-between;
       position: relative;
-      padding: 30px 0px 30px 20px;
+      padding: 30px 0 30px 20px;
       background: rgb(51, 51, 51);
       background: linear-gradient(90deg, rgba(51, 51, 51, 1) 0%, rgba(51, 51, 51, 1) 0%, rgba(86, 78, 221, 1) 100%);
       box-shadow: 2px 3px 10px rgba(75, 70, 166, 0.26);
@@ -82,6 +82,28 @@ $font: "VelaSans";
     display: none;
   }
 
+  &::-webkit-scrollbar {
+    width: 3px;
+    //margin-right: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #E0E0E0;
+    border-radius: 29px;
+    height: 37px;
+
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 }
 

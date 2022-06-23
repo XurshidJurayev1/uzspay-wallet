@@ -92,18 +92,23 @@ $font: "VelaSans";
         transition: 500ms;
 
         &:hover {
-          background: #423AD0;
-          color: #FFFFFF;
+          background: #D9DEE1;
+          color: $black;
 
-          .icon__white * {
-            stroke: white;
-          }
+          //.icon__white * {
+          //  stroke: white;
+          //}
         }
 
         &-active {
-          background: #423AD0;
+          background: #443AD6;
           color: #FFFFFF;
           margin-left: 11px;
+
+          &:hover {
+            background: #352AC3;
+            color: #FFFFFF;
+          }
 
           .icon__white * {
             stroke: white;
@@ -230,7 +235,7 @@ $font: "VelaSans";
       margin-left: 10px;
 
       &_content {
-        height: 0px;
+        height: 0;
         overflow: hidden;
         transition: 500ms;
 
