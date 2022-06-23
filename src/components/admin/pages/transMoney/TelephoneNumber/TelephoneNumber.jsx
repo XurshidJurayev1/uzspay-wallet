@@ -18,6 +18,7 @@ const TelephoneNumber = () => {
   const [message, setMessage] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [summ, setSumm] = useState('');
+
   const handleInput = (e) => {
     const formaterPhoneNumber = formatPhoneNumber(e.target.value);
     setInputValue(formaterPhoneNumber);
@@ -127,13 +128,31 @@ const TelephoneNumber = () => {
                   <ChevronRightIcon />
                 </div>
               </div>
-              <div className="card__otk-content" style={click ? { display: 'block' } : { display: 'none' }}>
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                </ul>
-              </div>
+              {click && <div className="card__otk-content card__otk-content-open">
+              <ul className="card__otk-list">
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+              </ul>
+            </div>}
 
             </div>
           </div>

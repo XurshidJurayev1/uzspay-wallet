@@ -47,7 +47,8 @@ $font: "VelaSans";
     padding: 28px 22px;
     border-radius: 18px;
     cursor: pointer;
-    color: #130F26;;
+    color: #130F26;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
 
     h3 {
       font-family: $font;
@@ -113,7 +114,7 @@ $font: "VelaSans";
       line-height: 49px;
       letter-spacing: -0.25px;
       color: $black;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 }

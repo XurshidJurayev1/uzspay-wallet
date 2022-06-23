@@ -18,7 +18,7 @@ const Login = (props) => {
   const [focus, setFocus] = useState(false);
   const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
-
+  console.log(navigate);
 
   useEffect(() => {
     if (phone.length === 12) {
@@ -40,7 +40,6 @@ const Login = (props) => {
     navigate('/confirmation');
   };
 
-  console.log(focus);
 
 
   return (<div className="login">

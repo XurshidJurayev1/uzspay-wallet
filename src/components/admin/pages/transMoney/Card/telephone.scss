@@ -6,7 +6,7 @@ $font: "VelaSans";
   align-items: center;
   margin-bottom: 20px;
 
-  h2 {
+  h2{
     font-family: $font;
     font-style: normal;
     font-weight: 700;
@@ -21,19 +21,100 @@ $font: "VelaSans";
   }
 }
 
+.translate__title-where {
+  margin-bottom: 20px;
+  font-family: $font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.25px;
+    color: #130F26;
+}
+
+.translate__padd--wrapper{
+  padding-bottom: 100px;
+}
+
+.card{
+  &__otk-list{
+    width: 100%;
+    position: absolute;
+    z-index: 22;
+    top: 15px;
+    background-color: #f6f6f6;
+    list-style: none;
+    padding: 0;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+    border-radius: 10px !important;
+
+  }
+  &__otk-item{
+    border-radius: 10px;
+    padding: 18px 14px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    &:hover{
+      background-color: #EAECF0;
+    }
+    & div{
+      margin-left: 10px;
+      & h4{
+        margin: 0;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #3F3B4E;
+      }
+      & p{
+        margin: 0;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        color: #130F26;
+      }
+    }
+  }
+}
+.card__title-top{
+  margin-bottom: 40px !important;
+}
 .card__otk-content {
+  margin-bottom: 30 !important;
   &-phone {
     background: transparent !important;
-
+    
     &-flex {
       display: flex;
       justify-content: space-between;
-      background: #FFFFFF;
-      border: 1px solid #3F3B4E;
+      background: #EAECF0;
       border-radius: 10px;
       margin-top: 20px;
-      padding: 18px 14px;
+      border: 1px solid transparent;
+      padding: 23px 14px;
+      position: relative;
+      &:hover{
+        background-color:  #E2E3E8 !important;
+      }
+      &:focus-within {
+        border: 1px solid #3F3B4E;
+        background-color: transparent !important;
+      }
+      & input{
+        background-color: inherit;
+      }
     }
+  }
+  &-open{
+  position: relative !important;
+  margin-bottom: 0 !important;
   }
 }
 
@@ -48,21 +129,24 @@ $font: "VelaSans";
   outline: none;
 }
 
-.card__inpit-erors:focus + .card__labale-wsp {
-  top: 25px;
-}
-
 .card__labale-wsp {
   position: absolute;
+  top: 38%;
   transition: 500ms;
   pointer-events: none;
+  font-family: $font;
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #3F3B4E;
 }
+.card__inpit-erors:focus + .card__labale-wsp,  .card__labale-wsp.open-wsp{
+  font-size: 13px;
+ top: 2px;
+}
+
 
 .card__close-cirsle {
   width: 28px;
@@ -88,12 +172,24 @@ $font: "VelaSans";
     border: 1px solid #E6E6E6;
     border-radius: 10px;
     width: 100%;
-    padding: 28px 14px;
+    padding: 23px 14px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: #7D8A9A;
+    border: 1px solid transparent;
+
+    &::placeholder{
+      font-size: 16px;
+    }
+    &:hover{
+      background-color: #E2E3E8;
+    }
+    &:focus{
+      background-color: transparent;
+      border: 1px solid #3F3B4E;
+    }
   }
 
   input:focus {
@@ -104,11 +200,20 @@ $font: "VelaSans";
 
 .card__btn-otm {
   padding: 20px 72px;
+  &:hover{
+    background-color: #D9DEE1;
+    color: #130F26;
+  }
 }
 
 .card__btn-per {
   padding: 20px 0;
   width: calc((100% / 10) * 7);
+  background-color: #443AD6;
+  color: #f6f6f6 !important;
+  &:hover{
+    background-color: #352AC3;
+  }
 }
 
 .card__buttos-two {
@@ -118,10 +223,10 @@ $font: "VelaSans";
 
 }
 
-.card__btn:hover {
-  background: #423AD0;
-  color: white;
-}
+// .card__btn:hover {
+//   background: #423AD0;
+//   color: white;
+// }
 
 .card__btn {
   font-style: normal;
@@ -135,4 +240,14 @@ $font: "VelaSans";
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card__otk-cardNumber{
+  margin-bottom: 30px !important;
+}
+
+@media only screen and (max-width: 830px) {
+  .translate__padd--wrapper{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }

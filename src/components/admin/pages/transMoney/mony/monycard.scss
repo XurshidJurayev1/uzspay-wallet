@@ -3,6 +3,9 @@
   border: 1px solid #E6E6E6;
   border-radius: 10px;
   position: relative;
+  &:hover{
+    background-color: #E2E3E8;
+  }
 }
 .mony__pros-input{
   width: 100%;

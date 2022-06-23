@@ -32,7 +32,7 @@ const Score = () => {
 
             {/*card__otk-select*/}
             <div className="score__input-b">
-              <input type="text" className="score__input" />
+              <input type="text" className="score__input"  />
               <label className="score__card-number">Номер карты</label>
               <div className="card__otk-icon-score">
                 <ChevronRightIcon />

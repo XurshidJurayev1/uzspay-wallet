@@ -104,6 +104,14 @@ $font: "VelaSans";
 
 .card__btn-otm {
   padding: 20px 72px;
+  background-color: transparent;
+  color: #130F26;
+
+  &:hover{
+    background-color: #D9DEE1 !important;
+  color: #130F26 !important;
+
+  }
 }
 
 .card__btn-per {
@@ -111,7 +119,13 @@ $font: "VelaSans";
   width: calc((100% / 10) * 7);
   background: #EAECF0;
   border-radius: 12px;
-  color: #8F99A6;
+  background-color: #443AD6;
+  color: #fff !important;
+  &:hover{
+    background-color: #352AC3 !important;
+    background-color: #fff;
+
+  }
 }
 
 .card__buttos-two {

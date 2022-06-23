@@ -19,7 +19,6 @@ const LoginNewUserPassword = (props) => {
   const [btn, setBtn] = useState(false);
   const { t, i18n } = useTranslation();
 
-
   useEffect(() => {
     if (code === code2 && code.length > 0) {
       setBtn(true);

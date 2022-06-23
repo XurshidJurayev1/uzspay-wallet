@@ -6,6 +6,7 @@ $font: "VelaSans";
   border: 1px solid #E6E6E6;
   border-radius: 10px;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .card__otk-sel {
@@ -19,7 +20,7 @@ $font: "VelaSans";
   //position: absolute;
   //top: 100%;
   //left: 0;
-  margin-bottom: 27px;
+  // margin-bottom: 27px;
   width: 100%;
   background: #fff;
   transition: all .3s ease;
@@ -194,7 +195,9 @@ $font: "VelaSans";
   line-height: 22px;
   color: #130F26;
   z-index: 8;
-
+  &:hover{
+    background-color: #E2E3E8;
+  }
   &-select {
     margin-top: 13px;
     background: #FFFFFF;
@@ -302,7 +305,7 @@ $font: "VelaSans";
 
 .translate__kamu-plac {
   position: absolute;
-  top: 25px;
+  top: 21px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -369,6 +372,9 @@ $font: "VelaSans";
     border: 1px solid #E6E6E6;
     border-radius: 10px;
     transition: all .2s ease;
+    &:hover{
+      background-color: #E2E3E8;
+    }
 
 
     &:focus {
@@ -394,7 +400,7 @@ $font: "VelaSans";
 
   &-place {
     position: absolute;
-    top: 25px;
+    top: 21px;
     padding-left: 30px;
     font-style: normal;
     font-weight: 500;
@@ -417,4 +423,50 @@ $font: "VelaSans";
   }
 }
 
+.card{
+  &__otk-list{
+    width: 100%;
+    position: absolute;
+    z-index: 22;
+    top: 100px;
+    background-color: #f6f6f6;
+    list-style: none;
+    padding: 0;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+    border-radius: 10px !important;
 
+  }
+  &__otk-item{
+    border-radius: 10px;
+    padding: 18px 14px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    &:hover{
+      background-color: #EAECF0;
+    }
+    & div{
+      margin-left: 10px;
+      & h4{
+        margin: 0;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #3F3B4E;
+      }
+      & p{
+        margin: 0;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        color: #130F26;
+      }
+    }
+  }
+}

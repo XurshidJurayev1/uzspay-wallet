@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import './loginNavbar.scss';
 import logo from '../../../../assets/images/Logo.png';
 import rus from '../../../../assets/images/rus.png';
@@ -22,6 +22,27 @@ const LoginNavbar = () => {
     setSelect(false);
     changeLanguage(lang);
   };
+  // jgvgjvv
+  // Fragmentfgd
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   g
+  //   fdg
+  //   d
+  //   static getDerivedStateFromProps(nextProps, prevState) {
+  //     g
+  //     fdggdf
+  //     gdf
+  //   }
+    
+  // }
+  // function getNum(arr){
+  //   let num = arr[0]
+  //   for (let index = 0; index < array.length; index++) {
+  //     const element = array[index];
+  //   }
+  //   return num +1 
+  // }
+  
 
   return (
     <div className="login_navbar">

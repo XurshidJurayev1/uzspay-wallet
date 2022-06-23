@@ -8,6 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import PersonIcon from '@mui/icons-material/Person';
 import CloseIcon from '@mui/icons-material/Close';
 import './telephone.scss';
+import '../translate.scss'
 import { Link } from 'react-router-dom';
 
 const Card = () => {
@@ -54,7 +55,6 @@ const Card = () => {
     setSumm('');
   };
 
-
   const score = 10000;
 
 
@@ -65,7 +65,7 @@ const Card = () => {
       <div className="container__translate">
 
         {/*translate__padd*/}
-        <div className="translate__padd">
+        <div className="translate__padd translate__padd--wrapper">
 
           {/*translate__back*/}
           <div className="translate__back">
@@ -74,12 +74,17 @@ const Card = () => {
 
           {/*translate__mont*/}
           <div className="translate__mont">
-            <h2>Перевести деньги</h2>
+            <h2 className='card__title-top'>Перевести деньги</h2>
           </div>
+          
+          <h2 className="translate__title-where">Откуда</h2>
 
           {/*card__otk-select*/}
           <div className="card__otk-select">
-            <div className="card__otk-sel" onClick={() => setClick(!click)}>
+            <div className="card__otk-sel" onClick={() => {
+              setClick(!click);
+              settClick(false)
+            }}>
               <div className="card__otk">
                 <div className="card__otk-img">
                   <img src={wsm} alt="png" />
@@ -93,11 +98,29 @@ const Card = () => {
                 <ChevronRightIcon />
               </div>
             </div>
-            {click && <div className="card__otk-content">
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+            {click && <div className="card__otk-content card__otk-content-open">
+              <ul className="card__otk-list">
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={card} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
               </ul>
             </div>}
 
@@ -111,9 +134,12 @@ const Card = () => {
           </div>
 
           {/*card__otk-select*/}
-          <div className="card__otk-select">
+          <div className="card__otk-select card__otk-cardNumber">
 
-            <div className="card__otk-sel" onClick={() => settClick(!cclick)}>
+            <div className="card__otk-sel" onClick={() => {
+              settClick(!cclick)
+              setClick(false)
+            }}>
               <div className="card__otk">
                 <div className="card__otk-img">
                   <img src={card} alt="png" />
@@ -127,6 +153,31 @@ const Card = () => {
                 <ChevronRightIcon />
               </div>
             </div>
+            {cclick && <div className="card__otk-content card__otk-content-open">
+              <ul className="card__otk-list">
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={card} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+                <li className='card__otk-item'>
+                  <img src={wsm} alt="png" width={44}/>
+                  <div>
+                    <h4>Kapital Bank TGF  ** 6777</h4>
+                    <p>2 426 789 сум</p>
+                  </div>
+                </li>
+              </ul>
+            </div>}
           </div>
           <div className="card__otk-content card__otk-content-phone">
             <div className="card__otk-content-phone-flex">
@@ -135,8 +186,8 @@ const Card = () => {
                 value={visible}
                 onChange={(e) => handleSumm(e)}
                 type="text"
-                className="card__inpit-erors" />
-              {summ.length > 0 ? null : <label className="card__labale-wsp">Сумма WSM</label>}
+                className="card__inpit-erors" id='input-erors'/>
+              <label htmlFor='input-erors' className={`card__ card__labale-wsp ${visible.length ? 'open-wsp' : ''}`}>Сумма WSM</label>
               <div className="card__close-cirsle" onClick={() => remove()}><CloseIcon /></div>
             </div>
             {Number(summ) < Number(score) ?
