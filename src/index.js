@@ -1,30 +1,27 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter,
-} from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './reducers';
+import { BrowserRouter } from 'react-router-dom';
 import './i18Next';
 import { Box } from '@mui/material';
 import { HashLoader } from 'react-spinners';
 
 const Loader = () => {
-  return (
+  return (<div>
+
     <Box sx={{ width: '100%', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <HashLoader color="#5FB5F3" size={70} speedMultiplier="2" />
     </Box>
-  );
+  </div>);
 };
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Provider store={store}>
-  <Suspense fallback={<Loader />}>
+ReactDOM.render(<React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
-      <App />
-
+      <Suspense fallback={<Loader />}>
+        <App />
+      </Suspense>
     </BrowserRouter>
-  </Suspense>
-</Provider>);
-
+  </Provider>
+</React.StrictMode>, document.getElementById('root'));
