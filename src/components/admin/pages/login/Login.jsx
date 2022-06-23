@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './login.scss';
 import { useTranslation } from 'react-i18next';
-import InputMask from 'react-input-mask';
+// import InputMask from 'react-input-mask';
 import { connect } from 'react-redux';
 import { sendPhone } from '../../../../actions';
 import { useNavigate } from 'react-router-dom';
 import LoginNavbar from './LoginNavbar';
 import PhoneInput from 'react-phone-input-2';
-// import 'react-phone-input-2/lib/style.css';
 import 'react-phone-input-2/lib/material.css';
 
 // import 'react-phone-input-2/lib/bootstrap.css';
@@ -39,7 +38,6 @@ const Login = (props) => {
     props.sendPhone(phone);
     navigate('/confirmation');
   };
-
 
 
   return (<div className="login">
