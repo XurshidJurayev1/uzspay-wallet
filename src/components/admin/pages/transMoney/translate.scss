@@ -49,7 +49,13 @@ $font: "VelaSans";
     cursor: pointer;
     color: #130F26;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
-
+    
+    @media screen and (max-width: 800px){
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 15px;
+    }
     h3 {
       font-family: $font;
       font-style: normal;
@@ -57,9 +63,16 @@ $font: "VelaSans";
       font-size: 16px;
       line-height: 22px;
       color: $black;
-      width: 74%;
-
+      width: 74%;  
+    @media screen and (max-width: 800px){
+      font-size: 14px;
+      margin-top: 8px;
+      margin-bottom: 0;
     }
+    @media screen and (max-width: 800px){
+      width: 95%;
+    }
+    } 
 
     .local__phone {
       width: 52px !important;
@@ -117,6 +130,33 @@ $font: "VelaSans";
       margin-bottom: 40px;
     }
   }
+  &_row .row{
+    @media screen and (max-width: 800px){
+      display: flex !important;
+      align-items: stretch !important;
+    }
+    @media screen and (max-width: 786px){
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 13px !important;
+      justify-content: space-around !important;
+      & div{
+        padding: 0 !important;
+        max-width: 165px;
+      }
+      & div a{
+        max-width: 165px;
+        margin-right: 0 !important;
+      }
+    }
+    & div a{
+      height: 100%;
+    }
+    @media screen and (max-width:528px){
+      margin: 0 auto  ;
+      justify-content: flex-start !important;
+    }
+  }
 }
 
 .form__main {
@@ -142,4 +182,12 @@ $font: "VelaSans";
   color: #8F99A6;
   outline: none;
   width: 300px;
+}
+
+@media screen and (max-width:880px){
+  .translate__padd{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
 }

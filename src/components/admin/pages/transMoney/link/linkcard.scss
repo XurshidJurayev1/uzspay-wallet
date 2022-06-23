@@ -8,3 +8,24 @@ $font:  "VelaSans";
   letter-spacing: -0.25px;
   color: #130F26;
 }
+.link__inputCollect{
+  background-color: #EAECF0;
+  border-radius: 10px;
+  & input:focus + .monyCard__label{
+    top: 2px;
+    font-size: 13px;
+  }
+  position: relative;
+  & label{
+    position: absolute;
+    top: 21px;
+    left: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #7D8A9A;
+    transition: 500ms;
+    pointer-events: none;
+    z-index: 9;
+  }
+}

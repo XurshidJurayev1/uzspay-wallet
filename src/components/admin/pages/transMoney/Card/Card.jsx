@@ -16,6 +16,7 @@ const Card = () => {
   const [cclick, settClick] = useState(false);
   const [summ, setSumm] = useState('');
   const [visible, setVisible] = useState('');
+  const [messageValue, setMessageValue] = useState('');
 
 
   const formatSumm = (value) => {
@@ -49,6 +50,10 @@ const Card = () => {
     setVisible(formatSummNumber);
     setSumm(e.target.value.replace(/ /g, ''));
   };
+  const handleMessage = (evt)=>{
+    let value = evt.target.value
+    setMessageValue(value);
+  }
 
   const remove = () => {
     setVisible('');
@@ -187,7 +192,7 @@ const Card = () => {
                 onChange={(e) => handleSumm(e)}
                 type="text"
                 className="card__inpit-erors" id='input-erors'/>
-              <label htmlFor='input-erors' className={`card__ card__labale-wsp ${visible.length ? 'open-wsp' : ''}`}>Сумма WSM</label>
+              <label htmlFor='input-erors' className={`card__labale-wsp ${visible.length ? "written": ''}`}>Сумма WSM</label>
               <div className="card__close-cirsle" onClick={() => remove()}><CloseIcon /></div>
             </div>
             {Number(summ) < Number(score) ?
@@ -196,8 +201,9 @@ const Card = () => {
           </div>
 
           {/*card__message-user*/}
-          <div className="card__message-user">
-            <input type="text" placeholder="Сообщение получателю" />
+          <div className="card__otk-content-phone-flex">
+            <input className="card__inpit-erors" type="text" onChange={handleMessage} value={messageValue}/>
+            <label className={`card__labale-wsp ${messageValue.length ? "written": ''}`}>Сообщение получателю</label>
           </div>
 
 

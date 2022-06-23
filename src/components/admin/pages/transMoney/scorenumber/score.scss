@@ -10,7 +10,9 @@ $font:  "VelaSans";
 }
 
 .score__input:focus + .score__card-number{
-  top: 0;
+  font-size: 13px;
+  top: 2px;
+
 }
 .card__otk-icon-score{
     transform: rotate(90deg);
@@ -20,7 +22,7 @@ $font:  "VelaSans";
   justify-content: space-between;
   align-items: center;
   background: #EAECF0;
-  padding: 14px 28px;
+  padding: 23px 14px;
   border: 1px solid #E6E6E6;
   border-radius: 10px;
   position: relative;
@@ -36,16 +38,20 @@ $font:  "VelaSans";
     background: inherit;
   }
 }
+.written{
+  top: 2px !important;
+}
 .score__card-number{
   position: absolute;
   pointer-events: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #3F3B4E;
   transition: 500ms;
+  top: 28px;
 }
 
 .score__summ-inout{
@@ -65,7 +71,9 @@ $font:  "VelaSans";
 .score__summa{
   display: flex;
   flex-direction: column;
-  
+  &--b{
+    margin-bottom: 0 !important;
+  }
 }
 .score__title__po h2{
   font-family: $font;

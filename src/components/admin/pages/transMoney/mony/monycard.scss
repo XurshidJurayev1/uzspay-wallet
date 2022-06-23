@@ -12,7 +12,7 @@
   border: 1px solid #EAECF0;
   background: transparent;
   font-size: 18px;
-  padding: 14px 28px;
+  padding: 14px 23px;
   border-radius: 10px;
 }
 .mony__pros-input:focus{
@@ -32,4 +32,25 @@
 }
 .score__title__po-mony{
   margin-top: 44px;
+}
+.monyCard__label{
+  position: absolute;
+    top: 21px;
+    left: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #7D8A9A;
+    transition: 500ms;
+    pointer-events: none;
+    z-index: 9;
+}
+.monyCard__inputCollect{
+  background-color: #EAECF0;
+  border-radius: 10px;
+  & input:focus + .monyCard__label{
+    top: 2px;
+    font-size: 13px;
+  }
+  position: relative;
 }

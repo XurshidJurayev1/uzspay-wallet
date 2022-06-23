@@ -35,7 +35,10 @@ $font: "VelaSans";
 .translate__padd--wrapper{
   padding-bottom: 100px;
 }
-
+.written{
+  top: 2px !important;
+  font-size: 13px !important;
+}
 .card{
   &__otk-list{
     width: 100%;

@@ -5,7 +5,7 @@ import './qwerty.module.scss'
 
 const Cards = (props) => {
   return (
-    <Link to={props.link} className="translate__card translate__card--fill">
+    <Link to={props.link} className="translate__card translate__card--fill cards__responsive">
       <h3>{props.title}</h3>
       <div className="local__phone">
         <props.svg />

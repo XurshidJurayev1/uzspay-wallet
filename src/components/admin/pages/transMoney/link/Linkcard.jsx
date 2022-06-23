@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './linkcard.scss';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Link } from 'react-router-dom';
 
 const Linkcard = () => {
+
+  const [summ, setSumm] = useState('');
+  const handleSumm = (evt)=>{
+    const value = evt.target.value; 
+    setSumm(value);
+  }
   return (
     <div>
       <div className="link">
@@ -31,7 +37,17 @@ const Linkcard = () => {
 
             {/*score__summag*/}
             <div className="score__summa">
-              <input type="text" placeholder="Сумма WMS" className="score__summ-inout" />
+            <div className="link__inputCollect">
+                  <input
+                    type="text"
+                    className="translate__kamu-input"
+                    value={summ}
+                    onChange={handleSumm}
+                  />
+                
+                  <label className={`monyCard__label ${summ.length ? 'written': ''}`}>Сумма WMS</label>
+              </div>
+              {/* <input type="text" placeholder="Сумма WMS" className="score__summ-inout" /> */}
               <span>1 WSM = 1 сум (UZS)</span>
             </div>
 

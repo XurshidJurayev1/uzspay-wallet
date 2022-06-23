@@ -93,7 +93,6 @@ const TelephoneNumber = () => {
     //   phone: '',
     // },
   ];
-  console.log(selected);
 
   const selectToWhom = (item) => {
     setClick2(false);
@@ -187,8 +186,8 @@ const TelephoneNumber = () => {
                     value={inputValue}
                     onClick={() => setClick2(true)}
                   />
-                  {inputValue.length > 0 ? null :
-                    <label className="translate__kamu-plac">Номер телефона или имя</label>}
+                
+                    <label className={`translate__kamu-plac ${inputValue.length ? 'written': ''}`}>Номер телефона или имя</label>
                 </>
               }
 
@@ -262,9 +261,8 @@ const TelephoneNumber = () => {
                 onChange={e => setMessage(e.target.value)}
                 value={message}
               />
-              {message.length > 0 ? null :
-                <label className={message.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>Сообщение
-                  получателю</label>}
+              <label className={message.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>Сообщение
+                  получателю</label>
 
             </div>
             <div className="card__buttos-two">

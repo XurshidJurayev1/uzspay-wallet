@@ -305,14 +305,15 @@ $font: "VelaSans";
 
 .translate__kamu-plac {
   position: absolute;
-  top: 21px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: #7D8A9A;
-  transition: 500ms;
-  pointer-events: none;
-  z-index: 9;
+    top: 21px;
+    left: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #7D8A9A;
+    transition: 500ms;
+    pointer-events: none;
+    z-index: 9;
 }
 
 .translate__kamu-input:focus {
@@ -328,12 +329,13 @@ $font: "VelaSans";
   transition: 500ms;
   pointer-events: none;
   top: 0px;
+  left: 14px !important;
   font-size: 13px;
   color: #3F3B4E;
 }
 
 .translate__kamu-input:focus + .translate__kamu-plac {
-  top: 0px;
+  top: 2px !important;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -389,8 +391,8 @@ $font: "VelaSans";
       font-weight: 500;
       transition: 500ms;
       pointer-events: none;
-      top: 0px;
-      padding-left: 30px;
+      top: 2px;
+      // padding-left: 30px;
       font-size: 13px;
       color: #3F3B4E;
     }
@@ -401,7 +403,7 @@ $font: "VelaSans";
   &-place {
     position: absolute;
     top: 21px;
-    padding-left: 30px;
+    left: 14px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -415,12 +417,18 @@ $font: "VelaSans";
       font-weight: 500;
       transition: 500ms;
       pointer-events: none;
-      top: 0px;
-      padding-left: 30px;
+      top: 2px;
+      left: 14px;
+      // padding-left: 30px;  
       font-size: 13px;
       color: #3F3B4E;
     }
   }
+}
+
+.written{
+  top: 2px !important;
+  font-size: 13px !important;
 }
 
 .card{

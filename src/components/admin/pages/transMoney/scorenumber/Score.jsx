@@ -8,6 +8,18 @@ import { Link } from 'react-router-dom';
 
 const Score = () => {
   const [click, setClick] = useState(false);
+  const [cardNumber, setCardNumber] = useState('');
+  const [summ, setSumm] = useState('')
+
+
+  function handleCardNumber(evt){
+    let value = evt.target.value;
+    setCardNumber(value);
+  }
+  function handleSumm(evt){
+    let value = evt.target.value;
+    setSumm(value);
+  }
   return (
     <div>
       <div className="score">
@@ -32,8 +44,8 @@ const Score = () => {
 
             {/*card__otk-select*/}
             <div className="score__input-b">
-              <input type="text" className="score__input"  />
-              <label className="score__card-number">Номер карты</label>
+              <input type="text" className="score__input" value={cardNumber} onChange={handleCardNumber}/>
+              <label className={`score__card-number ${cardNumber.length ? 'written': ''}`}>Номер карты</label>
               <div className="card__otk-icon-score">
                 <ChevronRightIcon />
               </div>
@@ -46,7 +58,11 @@ const Score = () => {
 
             {/*score__summag*/}
             <div className="score__summa">
-              <input type="text" placeholder="Сумма WSM" className="score__summ-inout" />
+              <div className="score__input-b score__summa--b">
+              <input type="text" className="score__input" value={summ} onChange={handleSumm}/>
+              <label className={`score__card-number ${summ.length ? 'written': ''}`}>Сумма WSM</label>
+
+              </div>
               <span>1 WSM = 1 сум (UZS)</span>
             </div>
 
