@@ -48,6 +48,7 @@ $font: "VelaSans";
   color: $black;
   padding-top: 7px;
   width: calc(100% - 52px);
+  margin-right: 10px;
 
   @media screen and (max-width: 786px) {
     font-style: normal;
@@ -55,6 +56,7 @@ $font: "VelaSans";
     font-size: 14px;
     line-height: 130%;
     color: #333333;
+    margin-right: 0;
   }
 }
 

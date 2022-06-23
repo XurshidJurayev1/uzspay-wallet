@@ -52,7 +52,8 @@ $font: "VelaSans";
 
     &-btn {
       background: #FAFAFA;
-      border: 0.5px solid #130F26;
+      //border: 0.5px solid #130F26;
+      outline: none;
       border-radius: 12px;
       padding: 20px 12px;
       font-family: $font;
@@ -65,9 +66,9 @@ $font: "VelaSans";
       width: 100%;
 
       &:hover {
-        background: #423AD0;
-        color: #fff;
-        border: 0.5px solid #423AD0;
+        background: #D9DEE1;
+        color: #130F26;
+        //border: 0.5px solid #423AD0;
       }
 
       img {
