@@ -7,7 +7,7 @@
   background: rgba(250, 250, 250, 0.86);
   border-bottom: 1px solid #E6E6E6;
   backdrop-filter: blur(30px);
-
+  z-index: 20;
   @media (max-width: 576px) {
     padding: 10px 30px;
     border-bottom: 0px;
@@ -33,6 +33,23 @@
     font-family: 'Euclid Circular A', sans-serif;
     z-index: 100;
 
+    &_black_background {
+      display: none;
+      z-index: 50;
+      background: rgba(0, 0, 0, .5);
+      transition: all .3s ease;
+      @media screen and (max-width: 786px) {
+        display: block;
+        transition: all .3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+      }
+
+    }
+
     &_active {
       display: flex;
       justify-content: space-between;
@@ -40,6 +57,9 @@
       cursor: pointer;
       padding: 7px;
       transition: all .2s ease;
+      z-index: 50;
+      background: rgba(250, 250, 250, 0.86);
+      border-radius: 10px;
 
       &:hover {
         background: #EFEFF0;
@@ -83,18 +103,25 @@
       background: #FFFFFF;
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
-      padding: 24px 43px 24px 26px;
+      padding: 24px 0 24px 0;
+      z-index: 50;
+      top: 55px;
 
       &_item {
         display: flex;
-        //padding: 7px 0;
+        padding-right: 43px;
+        padding-left: 26px;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
         align-items: center;
         cursor: pointer;
         transition: all .2s ease;
 
-        &:hover {
-          background: rgba(250, 250, 250, 0.86);
+        &:hover .login_navbar_language_select_item > p {
+          //background: rgba(250, 250, 250, 0.86);
+          color: #423AD0;
         }
+
 
         &_flag {
           width: 32px;

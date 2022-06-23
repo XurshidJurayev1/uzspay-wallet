@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const LoginNavbar = () => {
     const [select, setSelect] = useState(false);
+    const [background, setBackground] = useState(false);
     const { t, i18n } = useTranslation();
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang);
@@ -16,6 +17,7 @@ const LoginNavbar = () => {
 
     const showSelect = () => {
       setSelect(!select);
+      setBackground(!background);
     };
 
     const changeLang = (lang) => {
@@ -23,12 +25,20 @@ const LoginNavbar = () => {
       changeLanguage(lang);
     };
 
+    const close = () => {
+      setSelect(false);
+      setBackground(false);
+    };
+
     return (
       <div className="login_navbar">
         <div className="login_navbar_logo" style={{
           backgroundImage: `url(${logo})`,
         }} />
-        <div className="login_navbar_language" onBlur={() => setSelect(false)}>
+        <div className="login_navbar_language_black_background"
+             style={background ? { display: 'block' } : { display: 'none' }} onClick={() => close()} />
+        <div className="login_navbar_language">
+
           < div className="login_navbar_language_active"
                 onClick={() => showSelect()}
           >
@@ -79,7 +89,7 @@ const LoginNavbar = () => {
 
           </div>
           <div className="login_navbar_language_select"
-               onFocus={() => setSelect(false)}
+               onBlur={() => setSelect(false)}
                style={select ? { display: 'block' } : { display: 'none' }}>
 
             <div className="login_navbar_language_select_item" onClick={() => changeLang('ru')}>
@@ -98,7 +108,7 @@ const LoginNavbar = () => {
               <div className="login_navbar_language_select_item_flag" style={{
                 backgroundImage: `url(${uzb})`,
               }} />
-              <p >Ӯзбекча</p>
+              <p>Ӯзбекча</p>
             </div>
             <div className="login_navbar_language_select_item" onClick={() => changeLang('en')}>
               <div className="login_navbar_language_select_item_flag" style={{
