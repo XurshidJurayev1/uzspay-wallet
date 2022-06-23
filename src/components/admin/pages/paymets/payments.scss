@@ -1,54 +1,95 @@
-$black : #130F26;
-$font : "VelaSans";
+$black: #130F26;
+$font: "VelaSans";
 
 .payments {
-    display: flex;
-    background: #F7F7F7;
+  display: flex;
+  background: #F7F7F7;
+
+  @media screen and (max-width: 786px) {
+    flex-direction: column;
+  }
 }
 
 .payments__sidebar {
-    width: 30%;
+  width: 423px;
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+
+
+  @media screen and (max-width: 786px) {
+    width: 100%;
+    display: none;
+  }
+
+
+}
+
+.payments__servises_col-md {
+  padding: 0;
+}
+
+.payments__favorite {
+  display: none;
+  @media screen and (max-width: 786px) {
+    display: block;
+    margin-bottom: 40px;
+  }
 }
 
 .payments__main {
-    width: 100%;
-    padding: 70px 40px 0 40px;
+  width: calc(100% - 423px);
+  margin-left: auto;
+  padding: 70px 40px 0 40px;
+  @media screen and (max-width: 786px) {
+    width: 95%;
+    margin: auto;
+    padding: 30px 16px;
+  }
 }
 
 .mainindex {
-    &__card {
-        background: white;
-    }
+  &__card {
+    background: white;
+  }
 }
 
 .container__main {
-    max-width: 100%;
-    margin: auto;
-    padding: 0 12px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 12px;
+
+  @media screen and (max-width: 786px) {
+    padding: 0;
+  }
 }
 
 .form__main {
-    background: #E8EBEF;
-    border: 0.5px solid #E6E6E6;
-    border-radius: 10px;
-    padding: 15px 0 15px 15px;
+  background: #E8EBEF;
+  border: 0.5px solid #E6E6E6;
+  border-radius: 10px;
+  padding: 15px 0 15px 15px;
 }
 
 .form__search_btn {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 }
 
-.form__corntrol {
-    background: transparent;
-    border: none;
-    font-family: $font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    color: #8F99A6;
-    outline: none;
-    width: 300px;
+.form__control {
+  width: calc(100% - 50px);
+  background: transparent;
+  border: none;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #130f26;
+  outline: none;
+
+  @media screen and (max-width: 786px) {
+    font-size: 14px;
+  }
 }
 

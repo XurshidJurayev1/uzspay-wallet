@@ -13,7 +13,8 @@ $font: "VelaSans";
   flex-direction: revert;
   justify-content: space-between;
   align-items: center;
-  transition: 500ms;
+  transition: all .2s ease;
+  border: 1px solid transparent;
 
   @media screen and (max-width: 786px) {
     flex-direction: column-reverse;
@@ -23,18 +24,20 @@ $font: "VelaSans";
 }
 
 .mainindex__phone:hover {
-  background: #423AD0;
-  cursor: pointer;
-  box-shadow: 0 0 5px grey;
+  border: 1px solid #3B3B3B;
+  box-shadow: none;
+  //background: #423AD0;
+  //cursor: pointer;
+  //box-shadow: 0 0 5px grey;
 }
 
-.mainindex__phone:hover .mainindex__telephone {
-  color: #fff;
-}
-
-.mainindex__phone:hover .main__cion * {
-  stroke: #423AD0;
-}
+//.mainindex__phone:hover .mainindex__telephone {
+//  color: #fff;
+//}
+//
+//.mainindex__phone:hover .main__cion * {
+//  stroke: #423AD0;
+//}
 
 .mainindex__telephone {
   font-family: $font;
@@ -43,7 +46,7 @@ $font: "VelaSans";
   font-size: 16px;
   line-height: 22px;
   color: $black;
-
+  padding-top: 7px;
   width: calc(100% - 52px);
 
   @media screen and (max-width: 786px) {

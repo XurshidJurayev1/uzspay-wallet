@@ -1,0 +1,72 @@
+$black: #130F26;
+$font: "VelaSans";
+.payment_index__card {
+  background: white;
+  display: none;
+  transition: all .2s ease;
+
+  &:hover {
+    transition: all .2s ease;
+    border: 1px solid #3B3B3B;
+    box-shadow: none;
+  }
+
+  @media screen and (max-width: 786px) {
+    width: 146px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 15px 15px 22px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 13px;
+
+
+  }
+
+
+}
+
+.payment_index__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #DFE2E8, #DFE2E8);
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.payment_index__title p {
+  margin: 0;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $black;
+  margin-top: 15px;
+
+  @media screen and (max-width: 786px) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #333333;
+    margin-top: 7px;
+  }
+
+}

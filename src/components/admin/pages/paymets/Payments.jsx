@@ -9,6 +9,7 @@ import Categroys from './category/Categroys';
 import Recent from '../../utils/recent/Recent';
 import Lastbutton from '../../utils/buttons/Lastbutton';
 import Input from './Input';
+import PaymentIndexCard from './PaymentIndexCard';
 
 const Payments = () => {
   const text = 'Создать шаблон или автоплатеж';
@@ -40,28 +41,37 @@ const Payments = () => {
                 </div>
               </div>
             </div>
+            <div className="payments__card-main_mobile">
+              <PaymentIndexCard />
+              <PaymentIndexCard />
+              <PaymentIndexCard />
+              <PaymentIndexCard />
+            </div>
+            <div className="payments__favorite">
+              <Favorite />
+            </div>
             <div className="payments__servises">
               <div className="payments__servises-title">
                 <h2>Услуги</h2>
                 <a href="javoscrptvoid">Все категории</a>
               </div>
               <div className="row">
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 payments__servises_col-md">
                   <Categroys />
                 </div>
               </div>

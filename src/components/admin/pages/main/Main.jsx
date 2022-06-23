@@ -25,7 +25,7 @@ const Main = () => {
           <Sidebar title={text} favorite={[<Sidebarchek />, <AccardionMobile />]} />
         </div>
         <div className="wrapper__main">
-          <Mainbanner />
+          {/*<Mainbanner />*/}
           <MainIndex />
           <Recent />
           <div className="mt-5">

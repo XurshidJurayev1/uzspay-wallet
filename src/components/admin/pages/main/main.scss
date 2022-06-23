@@ -73,7 +73,10 @@ $font: "VelaSans";
 }
 
 .wrapper__sidebar {
-  width: 30%;
+  width: 423px;
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
 
   @media screen and(max-width: 786px) {
     display: none;
@@ -96,11 +99,14 @@ $font: "VelaSans";
 
 
 .wrapper__main {
-  width: 100%;
+  width: calc(100% - 423px);
+  margin-left: auto;
   padding: 70px 40px 0 40px;
 
   @media screen and (max-width: 786px) {
-    padding: 30px 16px
+    padding: 30px 16px;
+    width: 95%;
+    margin: auto;
   }
 
 

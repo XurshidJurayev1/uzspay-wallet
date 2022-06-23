@@ -159,10 +159,17 @@ $font: "VelaSans";
     &-content {
       display: flex;
       justify-content: space-between;
-      max-width: 289px;
+      max-width: 305px;
       margin-left: auto;
       border-top: 1px solid #E6E6E6;
-      padding: 20px 0;
+      padding: 20px 14px;
+      transition: all .2s ease;
+
+      &:hover {
+        transition: all .2s ease;
+        background: #EAECF0;
+        border-radius: 10px;
+      }
 
       &_s {
         display: block;
@@ -197,14 +204,22 @@ $font: "VelaSans";
 
     &-item {
       border-top: 1px solid #E6E6E6;
-      padding-top: 20px;
+
       cursor: pointer;
     }
 
     &-title {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 20px;
+      align-items: center;
+      padding: 20px 14px;
+      transition: all .2s ease;
+
+      &:hover {
+        transition: all .2s ease;
+        background: #EAECF0;
+        border-radius: 10px;
+      }
     }
 
     &-imgText {
@@ -253,6 +268,15 @@ $font: "VelaSans";
 }
 
 .favorite {
+
+  &_mobile_scroll {
+    @media screen and (max-width: 786px) {
+      display: flex;
+      justify-content: space-between;
+      overflow: scroll;
+    }
+  }
+
   &__title {
     font-family: $font;
     font-style: normal;
@@ -268,11 +292,36 @@ $font: "VelaSans";
     display: flex;
     align-items: center;
     border-top: 1px solid #E6E6E6;
-    padding: 20px 0;
+    padding: 20px 8px;
+
+    @media screen and (max-width: 786px) {
+      flex-direction: column;
+      width: 75px;
+    }
+
+    &:hover {
+      background: #EAECF0;
+      border-radius: 10px;
+    }
+
   }
 
   &__img {
     margin-right: 13px;
+    width: 40px;
+    height: 40px;
+
+    @media screen and (max-width: 786px) {
+      margin: 0;
+      width: 58px;
+      height: 58px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
   &__text {
@@ -284,6 +333,17 @@ $font: "VelaSans";
       line-height: 25px;
       color: $black;
       display: block;
+
+      @media screen and (max-width: 786px) {
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        letter-spacing: -0.25px;
+        padding-top: 7px;
+        color: #333333;
+      }
     }
 
     &-grey {
@@ -294,6 +354,10 @@ $font: "VelaSans";
       font-size: 14px;
       line-height: 19px;
       color: #848E98;
+
+      @media screen and (max-width: 786px) {
+        display: none;
+      }
     }
   }
 }

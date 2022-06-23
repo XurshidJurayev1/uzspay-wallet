@@ -69,15 +69,17 @@ const Login = (props) => {
           inputProps={{
             name: t('login.placeholder'), required: true, autoFocus: true,
           }}
-          specialLabel={t('login.placeholder')}
+          // specialLabel={t('login.placeholder')}
+          specialLabel={''}
           enableAreaCodes={true}
           enableAreaCodeStretch
           showDropdown={false}
           enableSearch={true}
           value={phone}
           onChange={setPhone}
-          placeholder={t('login.placeholder')}
-          masks={{ uz: '(..) ...-..-..', at: '(....) ...-....' }}
+          placeholder={''}
+          // placeholder={t('login.placeholder')}
+          masks={{ uz: '(..) ...-..-..', at: '(....) ...-..-..' }}
           regions={'asia'}
           country="uz"
         />

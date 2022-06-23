@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './navbarMobile.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../../assets/images/Logo.png';
 import notify from '../../../../assets/svg/notify.svg';
 import main from '../../../../assets/images/user.png';
@@ -10,6 +10,11 @@ import { ReactComponent as Pay1 } from '../../../../assets/svg/home 2.svg';
 import { ReactComponent as PayActive } from '../../../../assets/svg/home 2-active.svg';
 
 const NavbarMobile = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+
+  }, [location]);
   return (
     <div className="navbar-mobile">
       <div className="navbar-mobile-container">

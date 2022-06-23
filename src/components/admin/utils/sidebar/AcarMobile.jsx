@@ -2,7 +2,6 @@ import React from 'react';
 import './AcarMobile.scss';
 
 const AcarMobile = (props) => {
-  console.log(props);
   return (
     <div className="acar-mobile">
       <div className="acar-mobile-header">

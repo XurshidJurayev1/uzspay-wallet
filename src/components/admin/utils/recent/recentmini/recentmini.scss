@@ -1,66 +1,72 @@
-$black : #130F26;
-$font : "VelaSans";
+$black: #130F26;
+$font: "VelaSans";
 
 .recent__block {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid #E6E6E6;
+  transition: all .2s ease;
+
+  &:hover {
+    transition: all .2s ease;
+    background: #EAECF0;
+    border-radius: 10px;
+  }
+
 }
 
 .recent__left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .recent__left-text {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .recent__left-text-a {
-    display: block;
-    font-family: $font;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: capitalize;
-    color: #333333;
-
+  display: block;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #333333;
 
 
 }
 
 .recent__left-text-c {
-    display: block;
-    font-family: $font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: -0.2px;
-    color: #738090;
+  display: block;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+  color: #738090;
 }
 
 .recent__price {
-    font-family: $font;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: right;
-    color: #333333;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: right;
+  color: #333333;
 }
 
 .recent__price-course {
-    display: block;
-    text-align: right;
-    font-family: $font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: -0.2px;
+  display: block;
+  text-align: right;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.2px;
 
-    color: #738090;
+  color: #738090;
 }

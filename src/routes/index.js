@@ -31,15 +31,17 @@ const AdminRoutes = () => {
       <Route path="/pass/new" element={<LoginNewUserPassword />} />
       <Route path="/wallet/*" element={<Dashboard />}>
         <Route index element={<Main />} />
-        <Route path="payment" element={<Payments />} />
-        <Route path="trans">
-          <Route index element={<Transfer />} />
-          <Route path="card" element={<Card />} />
-          <Route path="phone" element={<TelephoneNumber />} />
-          <Route path="fill" element={<FillScore />} />
-          <Route path="score" element={<Score />} />
-          <Route path="money" element={<MoneyCard />} />
-          <Route path="link" element={<LinkCard />} />
+        <Route path="payment">
+          <Route index element={<Payments />} />
+          <Route path="trans">
+            <Route index element={<Transfer />} />
+            <Route path="card" element={<Card />} />
+            <Route path="phone" element={<TelephoneNumber />} />
+            <Route path="fill" element={<FillScore />} />
+            <Route path="score" element={<Score />} />
+            <Route path="money" element={<MoneyCard />} />
+            <Route path="link" element={<LinkCard />} />
+          </Route>
         </Route>
 
       </Route>
