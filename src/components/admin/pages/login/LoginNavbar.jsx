@@ -98,7 +98,7 @@ const LoginNavbar = () => {
               <div className="login_navbar_language_select_item_flag" style={{
                 backgroundImage: `url(${uzb})`,
               }} />
-              <p>Ӯзбекча</p>
+              <p >Ӯзбекча</p>
             </div>
             <div className="login_navbar_language_select_item" onClick={() => changeLang('en')}>
               <div className="login_navbar_language_select_item_flag" style={{

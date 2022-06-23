@@ -18,17 +18,17 @@ const Index = () => {
       <div className="container__translate">
         <div className="translate__padd">
           <div className="translate__back">
-            <Link to="/wallet/trans"><span><ChevronLeftIcon /></span> Назад</Link>
+            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span> Назад</Link>
           </div>
           <div className="translate__mont">
             <h2>Пополнить счёт</h2>
             <div className="translate_row">
               <div className="row">
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/score" title="Пополнить через карту" svg={svg2} />
+                  <Cards link="/wallet/payment/trans/score" title="Пополнить через карту" svg={svg2} />
                 </div>
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/money" title={`Запросить деньги `} svg={svg1} />
+                  <Cards link="/wallet/payment/trans/money" title={`Запросить деньги `} svg={svg1} />
                 </div>
                 <div className="col-md-4">
 
@@ -58,7 +58,7 @@ const Index = () => {
                     arrow={true}
                     delay="1000"
                   >
-                    <Cards link="/wallet/trans/link" title="Создать ссылку для пополнения" svg={svg3} />
+                    <Cards link="/wallet/payment/trans/link" title="Создать ссылку для пополнения" svg={svg3} />
                   </Tooltip>
 
                 </div>

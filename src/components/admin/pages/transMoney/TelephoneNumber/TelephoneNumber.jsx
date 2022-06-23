@@ -4,6 +4,7 @@ import wsm from '../../../../../assets/images/wsm.png';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './cardnumber.scss';
+import '../telephone.scss'
 import { Link } from 'react-router-dom';
 import img1 from '../../../../../assets/images/Ellipse 17.png';
 import CloseIcon from '@mui/icons-material/Close';
@@ -18,6 +19,7 @@ const TelephoneNumber = () => {
   const [message, setMessage] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [summ, setSumm] = useState('');
+
 
   const handleInput = (e) => {
     const formaterPhoneNumber = formatPhoneNumber(e.target.value);
@@ -105,7 +107,7 @@ const TelephoneNumber = () => {
       <div className="container__translate">
         <div className="translate__padd">
           <div className="translate__back">
-            <Link to="/wallet/trans"><span><ChevronLeftIcon /></span> Назад</Link>
+            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span> Назад</Link>
           </div>
           <div className="translate__mont">
             <h2>Перевести деньги</h2>
@@ -129,7 +131,7 @@ const TelephoneNumber = () => {
                 </div>
               </div>
               {click && <div className="card__otk-content card__otk-content-open">
-              <ul className="card__otk-list">
+              <ul className="card__otk-list card__accourdion">
                 <li className='card__otk-item'>
                   <img src={wsm} alt="png" width={44}/>
                   <div>
@@ -265,6 +267,10 @@ const TelephoneNumber = () => {
                   получателю</label>}
 
             </div>
+            <div className="card__buttos-two">
+            <Link to="/wallet/payment/trans" className="card__btn card__btn-otm">Отмена</Link>
+            <a href="#" className="card__btn card__btn-per">Перевести {summ.length > 0 ? summ : 0} WMS</a>
+          </div>
           </div>
         </div>
       </div>

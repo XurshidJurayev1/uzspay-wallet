@@ -25,13 +25,13 @@ const Transfer = () => {
             <div className="translate_row">
               <div className="row">
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/phone" title="По номеру телефона" svg={svg1} />
+                  <Cards link="/wallet/payment/trans/phone" title="По номеру телефона" svg={svg1} />
                 </div>
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/card" title={`По номеру\n                карты`} svg={svg2} />
+                  <Cards link="/wallet/payment/trans/card" title={`По номеру\n                карты`} svg={svg2} />
                 </div>
                 <div className="col-md-4">
-                  <Cards link="/wallet/trans/fill" title="Между своими картами и счетами" svg={svg3} />
+                  <Cards link="/wallet/payment/trans/fill" title="Между своими картами и счетами" svg={svg3} />
                 </div>
               </div>
             </div>

@@ -69,7 +69,7 @@ const Card = () => {
 
           {/*translate__back*/}
           <div className="translate__back">
-            <Link to="/wallet/trans"><span><ChevronLeftIcon /></span> Назад</Link>
+            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span> Назад</Link>
           </div>
 
           {/*translate__mont*/}
@@ -203,7 +203,7 @@ const Card = () => {
 
           {/*Buttos Bottom*/}
           <div className="card__buttos-two">
-            <Link to="/wallet/trans" className="card__btn card__btn-otm">Отмена</Link>
+            <Link to="/wallet/payment/trans" className="card__btn card__btn-otm">Отмена</Link>
             <a href="#" className="card__btn card__btn-per">Перевести {summ.length > 0 ? visible : 0} WMS</a>
           </div>
         </div>

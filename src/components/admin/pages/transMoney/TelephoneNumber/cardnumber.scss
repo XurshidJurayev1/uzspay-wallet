@@ -428,7 +428,7 @@ $font: "VelaSans";
     width: 100%;
     position: absolute;
     z-index: 22;
-    top: 100px;
+    top: 20px;
     background-color: #f6f6f6;
     list-style: none;
     padding: 0;
@@ -468,5 +468,8 @@ $font: "VelaSans";
         color: #130F26;
       }
     }
+  }
+  &__accourdion{
+    top: 100px;
   }
 }
