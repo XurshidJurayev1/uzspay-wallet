@@ -5,6 +5,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './cardnumber.scss';
 import '../telephone.scss'
+import '../translate.scss'
 import { Link } from 'react-router-dom';
 import img1 from '../../../../../assets/images/Ellipse 17.png';
 import CloseIcon from '@mui/icons-material/Close';
@@ -70,28 +71,27 @@ const TelephoneNumber = () => {
   };
 
 
-  const fakeApi = [{
+  const fakeApi = [
+  {
     img: img1, name: 'Арсений морозов', phone: '+998 (97) 733-30-06',
     banks: [
       { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
       { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ],
-  }, {
+    ]
+  }, 
+  {
     img: img1, name: 'Дмитрий Лебедев', phone: '+998 (97) 733-30-06', banks: [
       { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
       { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ],
+    ]
 
-  }, {
+  }, 
+  {
     img: img1, name: 'Глеб Комаров', phone: '+998 (97) 733-30-06', banks: [
       { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
       { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ],
-  }, // {
-    //   img: '',
-    //   name: '',
-    //   phone: '',
-    // },
+    ]
+  },
   ];
 
   const selectToWhom = (item) => {
@@ -99,20 +99,30 @@ const TelephoneNumber = () => {
     setSelected(item);
   };
 
+  const kamuInputRef = React.useRef()
+
+  if(selected) kamuInputRef.current.classList.remove('translate__kamu-input--responsive')
+
+  const handleKamuInput =(evt)=>{
+    setClick2(true)
+    kamuInputRef.current.classList.add('translate__kamu-input--responsive')
+  }
+
 
   return (<div>
     <div className="translate">
       {/*<Navbar />*/}
       <div className="container__translate">
-        <div className="translate__padd">
-          <div className="translate__back">
-            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span> Назад</Link>
+        <div className="translate__padd translate__padd--responsive">
+          <div className="translate__back translate__back--responsive">
+            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>    <div  className="translate__back--txt">Назад</div></Link>
+            <h2 className="translate__back--title">По номеру телефона</h2>
           </div>
-          <div className="translate__mont">
+          <div className="translate__mont translate__mont--responsive">
             <h2>Перевести деньги</h2>
           </div>
           <div className="translate__otk">
-            <h3>Откуда</h3>
+            <h3 className="translate__title-where--responsive">Откуда</h3>
 
             <div className="card__otk-select">
               <div className="card__otk-sel" onClick={() => setClick(!click)}>
@@ -158,11 +168,12 @@ const TelephoneNumber = () => {
             </div>
           </div>
           <div
-            className="translate__kamu"
+            className="translate__kamu translate__kamu--responsive"
 
           >
             <h3>Кому</h3>
             <div
+            ref={kamuInputRef}
               className="translate__kamu-input"
               // onBlur={() => setClick2(false)}
             >
@@ -184,7 +195,7 @@ const TelephoneNumber = () => {
                     className="translate__kamu-input"
                     onChange={e => handleInput(e)}
                     value={inputValue}
-                    onClick={() => setClick2(true)}
+                    onClick={handleKamuInput}
                   />
                 
                     <label className={`translate__kamu-plac ${inputValue.length ? 'written': ''}`}>Номер телефона или имя</label>
@@ -265,7 +276,7 @@ const TelephoneNumber = () => {
                   получателю</label>
 
             </div>
-            <div className="card__buttos-two">
+            <div className="card__buttos-two telephone__btnCollection" >
             <Link to="/wallet/payment/trans" className="card__btn card__btn-otm">Отмена</Link>
             <a href="#" className="card__btn card__btn-per">Перевести {summ.length > 0 ? summ : 0} WMS</a>
           </div>

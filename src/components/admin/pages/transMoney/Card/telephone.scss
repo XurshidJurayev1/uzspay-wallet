@@ -135,6 +135,8 @@ $font: "VelaSans";
 .card__labale-wsp {
   position: absolute;
   top: 38%;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   pointer-events: none;
   font-family: $font;
@@ -238,19 +240,113 @@ $font: "VelaSans";
   line-height: 22px;
   color: #130F26;
   font-family: $font;
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
   transition: 200ms;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .card__otk-cardNumber{
   margin-bottom: 30px !important;
 }
 
-@media only screen and (max-width: 830px) {
+/* @media only screen and (max-width: 830px) {
   .translate__padd--wrapper{
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
 }
+
+@media screen and (max-width: 786px) {
+  .translate__padd--responsive {
+    padding-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .translate__padd--responsive {
+    position: relative;
+    padding-top: 0 !important;
+  }
+  .telephone__btnCollection {
+    display: flex;
+    flex-direction: column;
+    & a {
+      width: 100% !important;
+    }
+  }
+  .translate__kamu--responsive{
+    position: static !important;
+  }
+  .translate__mont--responsive{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .telephone__btnCollection{
+    margin-top: 40px !important;
+  }
+  .translate__back--txt {
+    display: none !important;
+  }
+  .translate__back--responsive {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 18px;
+    left: 15px;
+    z-index: 30;
+    background-color: #F7F7F7;
+    span {
+      background-color: transparent !important;
+    }
+    svg {
+      width: 10rem;
+      height: 50px;
+      color: #423ad0;
+    }
+  }
+  .translate__back--title {
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 28%;
+  }
+  .translate__title-where--responsive{
+    font-size: 19px !important;
+    margin-bottom: 12px;
+  }
+
+  .translate__kamu-input--responsive{
+    position: absolute;
+    top: 0;
+    width: 93%;
+    & .translate__kamu-input-select{
+      height: 450px;
+      margin-top: 0;
+    }
+  }
+  .translate__mont-title--responsive{
+    margin-bottom: 0 !important;
+  }
+  .card__otk-select--responsive{
+    margin-bottom: 32px !important;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .translate__kamu-selected {
+    gap: 16px;
+  }
+}
+ */

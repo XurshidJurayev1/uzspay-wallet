@@ -164,6 +164,9 @@ $font: "VelaSans";
   border: 0.5px solid #E6E6E6;
   border-radius: 10px;
   padding: 15px 0 15px 15px;
+  @media screen and (max-width:385px){
+    display: flex;
+  }
 }
 
 .form__search_btn {
@@ -190,4 +193,90 @@ $font: "VelaSans";
     padding-right: 16px;
   }
   
+}
+
+@media screen and (max-width: 786px) {
+  .translate__padd--responsive {
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .translate__padd--responsive {
+    position: relative;
+    padding-top: 0 !important;
+  }
+  .telephone__btnCollection {
+    display: flex;
+    flex-direction: column;
+    & a {
+      width: 100% !important;
+    }
+  }
+  .translate__kamu--responsive{
+    position: static !important;
+  }
+  .translate__mont--responsive{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .translate__back--txt {
+    display: none !important;
+  }
+  .translate__back--responsive {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 18px;
+    left: 15px;
+    z-index: 30;
+    background-color: #F7F7F7;
+    span {
+      background-color: transparent !important;
+    }
+    svg {
+      width: 10rem;
+      height: 50px;
+      color: #423ad0;
+    }
+  }
+  .translate__back--title {
+    position: absolute;
+    display: block !important;
+    margin: auto;
+    left: 28%;
+  }
+  .translate__otk h3,
+  .translate__kamu h3 {
+    font-size: 19px;
+  }
+  .translate__title-where--responsive{
+    font-size: 19px !important;
+    margin-bottom: 12px;
+  }
+  .translate__kamu-input--responsive, .monyCard__inputCollect--responsive{
+    position: absolute !important;
+    top: 0;
+    width: 93% !important;
+    & .translate__kamu-input-select{
+      height: 450px;
+      margin-top: 0;
+    }
+  }
+  .translate__mont-title--responsive{
+    margin-bottom: 0 !important;
+  }
+  .card__otk-select--responsive{
+    margin-bottom: 32px !important;
+  }
+  
+}
+
+@media screen and (max-width: 365px) {
+  .translate__kamu-selected {
+    gap: 16px;
+  }
 }

@@ -1,9 +1,9 @@
-$black: #130F26;
+$black: #130f26;
 $font: "VelaSans";
 .card__otk-select {
-  background: #EAECF0;
+  background: #eaecf0;
   //position: relative;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
   margin-bottom: 40px;
   position: relative;
@@ -23,7 +23,9 @@ $font: "VelaSans";
   // margin-bottom: 27px;
   width: 100%;
   background: #fff;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .card__otk {
@@ -32,7 +34,9 @@ $font: "VelaSans";
 }
 
 .card__otk-icon {
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   transition: all 0.3s ease;
 }
 
 .card__otk-img {
@@ -50,7 +54,7 @@ $font: "VelaSans";
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  color: #3F3B4E;
+  color: #3f3b4e;
 }
 
 .card__otk-num {
@@ -59,7 +63,7 @@ $font: "VelaSans";
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #130F26;
+  color: #130f26;
 }
 
 .translate__otk h3 {
@@ -69,7 +73,7 @@ $font: "VelaSans";
   font-size: 25px;
   line-height: 34px;
   letter-spacing: -0.25px;
-  color: #130F26;
+  color: #130f26;
   margin-bottom: 20px;
 }
 
@@ -80,13 +84,11 @@ $font: "VelaSans";
   font-size: 25px;
   line-height: 34px;
   letter-spacing: -0.25px;
-  color: #130F26;
+  color: #130f26;
   margin-bottom: 20px;
 }
 
-
 .translate__kamu {
-
   &-selected {
     margin-top: 23px;
     width: 100%;
@@ -95,28 +97,32 @@ $font: "VelaSans";
     justify-content: left;
     align-items: center;
 
-
     &-cards {
       width: 150px;
       height: 91px;
-      background: #FAFAFA;
-      border: 1px solid #BDC3CA;
+      background: #fafafa;
+      border: 1px solid #bdc3ca;
       border-radius: 10px;
       margin-right: 12px;
-      transition: all .2s ease;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
       padding: 12px 12px;
-
 
       &-active {
         width: 150px;
         height: 91px;
         margin-right: 12px;
         background: rgba(254, 254, 254, 0.79);
-        box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.07);
-        border: 1.5px solid #423AD0;
-        filter: drop-shadow(0px 1px 26px rgba(0, 0, 0, 0.07));
+        -webkit-box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.07);
+                box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid #423ad0;
+        -webkit-filter: drop-shadow(0px 1px 26px rgba(0, 0, 0, 0.07));
+                filter: drop-shadow(0px 1px 26px rgba(0, 0, 0, 0.07));
         border-radius: 12px;
-        transition: all .2s ease;
+        -webkit-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
         padding: 12px 12px;
 
         p {
@@ -134,9 +140,8 @@ $font: "VelaSans";
           font-weight: 500;
           font-size: 14px;
           line-height: 18px;
-          color: #8C929B;
+          color: #8c929b;
         }
-
       }
 
       &-icon {
@@ -162,12 +167,9 @@ $font: "VelaSans";
         font-weight: 500;
         font-size: 14px;
         line-height: 18px;
-        color: #8C929B;
+        color: #8c929b;
       }
-
-
     }
-
   }
 }
 
@@ -177,13 +179,15 @@ $font: "VelaSans";
   width: 100%;
   outline: none;
   text-indent: 14px;
-  background: #EAECF0;
-  border: 1px solid #E6E6E6;
+  background: #eaecf0;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
-  transition: all .2s ease;
-
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2 ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-
 
 .translate__kamu-input {
   position: relative;
@@ -193,14 +197,14 @@ $font: "VelaSans";
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #130F26;
+  color: #130f26;
   z-index: 8;
-  &:hover{
-    background-color: #E2E3E8;
+  &:hover {
+    background-color: #e2e3e8;
   }
   &-select {
     margin-top: 13px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 10px;
     border: none;
     padding: 14px 12px;
@@ -210,7 +214,6 @@ $font: "VelaSans";
 
     &::-webkit-scrollbar {
       width: 3px;
-
     }
 
     /* Track */
@@ -220,7 +223,7 @@ $font: "VelaSans";
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: #E0E0E0;
+      background: #e0e0e0;
       border-radius: 29px;
       height: 37px;
     }
@@ -237,9 +240,8 @@ $font: "VelaSans";
       padding: 12px 12px;
       background: transparent;
 
-
       &:hover {
-        background: #F3F3F5;
+        background: #f3f3f5;
         border-radius: 10px;
       }
 
@@ -273,14 +275,14 @@ $font: "VelaSans";
           font-size: 14px;
           line-height: 19px;
           letter-spacing: -0.2px;
-          color: #8C929B;
+          color: #8c929b;
         }
       }
 
       &-back {
         width: 28px !important;
         height: 28px !important;
-        background: #D0D4DB;
+        background: #d0d4db;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -289,8 +291,7 @@ $font: "VelaSans";
         cursor: pointer;
 
         &:hover + .translate__kamu-input-select-option-back > svg {
-          color: #130F26;
-
+          color: #130f26;
         }
 
         svg {
@@ -305,33 +306,39 @@ $font: "VelaSans";
 
 .translate__kamu-plac {
   position: absolute;
-    top: 21px;
-    left: 0px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #7D8A9A;
-    transition: 500ms;
-    pointer-events: none;
-    z-index: 9;
+  top: 21px;
+  left: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7d8a9a;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  pointer-events: none;
+  z-index: 9;
 }
 
 .translate__kamu-input:focus {
-  border: 1px solid #3F3B4E;
+  border: 1px solid #3f3b4e;
   background: #fff;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .translate__kamu-plac-active {
   position: absolute;
   font-style: normal;
   font-weight: 500;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   pointer-events: none;
   top: 0px;
   left: 14px !important;
   font-size: 13px;
-  color: #3F3B4E;
+  color: #3f3b4e;
 }
 
 .translate__kamu-input:focus + .translate__kamu-plac {
@@ -339,7 +346,7 @@ $font: "VelaSans";
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
-  color: #3F3B4E;
+  color: #3f3b4e;
 }
 
 .translate__bank {
@@ -350,7 +357,7 @@ $font: "VelaSans";
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #130F26;
+  color: #130f26;
   margin-bottom: 30px;
   margin-top: 30px;
 
@@ -361,7 +368,7 @@ $font: "VelaSans";
     font-weight: 500;
     font-size: 14px;
     line-height: 124.5%;
-    color: #8C929B;
+    color: #8c929b;
   }
 
   &-input {
@@ -370,34 +377,36 @@ $font: "VelaSans";
     height: 100%;
     outline: none;
     text-indent: 14px;
-    background: #EAECF0;
-    border: 1px solid #E6E6E6;
+    background: #eaecf0;
+    border: 1px solid #e6e6e6;
     border-radius: 10px;
-    transition: all .2s ease;
-    &:hover{
-      background-color: #E2E3E8;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: #e2e3e8;
     }
 
-
     &:focus {
-      border: 1px solid #3F3B4E;
+      border: 1px solid #3f3b4e;
       background: #fff;
-      transition: all .2s ease;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     &:focus + .translate__bank-place {
       position: absolute;
       font-style: normal;
       font-weight: 500;
+      -webkit-transition: 500ms;
+      -o-transition: 500ms;
       transition: 500ms;
       pointer-events: none;
       top: 2px;
-      // padding-left: 30px;
       font-size: 13px;
-      color: #3F3B4E;
+      color: #3f3b4e;
     }
-
-
   }
 
   &-place {
@@ -407,7 +416,9 @@ $font: "VelaSans";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    color: #7D8A9A;
+    color: #7d8a9a;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
     transition: 500ms;
     pointer-events: none;
 
@@ -415,24 +426,25 @@ $font: "VelaSans";
       position: absolute;
       font-style: normal;
       font-weight: 500;
+      -webkit-transition: 500ms;
+      -o-transition: 500ms;
       transition: 500ms;
       pointer-events: none;
       top: 2px;
       left: 14px;
-      // padding-left: 30px;  
       font-size: 13px;
-      color: #3F3B4E;
+      color: #3f3b4e;
     }
   }
 }
 
-.written{
+.written {
   top: 2px !important;
   font-size: 13px !important;
 }
 
-.card{
-  &__otk-list{
+.card {
+  &__otk-list {
     width: 100%;
     position: absolute;
     z-index: 22;
@@ -442,20 +454,19 @@ $font: "VelaSans";
     padding: 0;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     border-radius: 10px !important;
-
   }
-  &__otk-item{
+  &__otk-item {
     border-radius: 10px;
     padding: 18px 14px;
     background-color: inherit;
     display: flex;
     align-items: center;
-    &:hover{
-      background-color: #EAECF0;
+    &:hover {
+      background-color: #eaecf0;
     }
-    & div{
+    & div {
       margin-left: 10px;
-      & h4{
+      & h4 {
         margin: 0;
         font-family: $font;
         font-style: normal;
@@ -463,9 +474,9 @@ $font: "VelaSans";
         font-size: 13px;
         line-height: 18px;
         letter-spacing: 0.2px;
-        color: #3F3B4E;
+        color: #3f3b4e;
       }
-      & p{
+      & p {
         margin: 0;
         font-family: $font;
         font-style: normal;
@@ -473,11 +484,27 @@ $font: "VelaSans";
         font-size: 16px;
         line-height: 22px;
         letter-spacing: -0.2px;
-        color: #130F26;
+        color: #130f26;
       }
     }
   }
-  &__accourdion{
+  &__accourdion {
     top: 100px;
   }
 }
+.translate__back--title {
+  display: none;
+  font-family: $font;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: -0.25px;
+  color: #130f26;
+}
+
+.telephone__btnCollection {
+  gap: 16px;
+}
+
+

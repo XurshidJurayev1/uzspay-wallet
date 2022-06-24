@@ -50,6 +50,8 @@ $font:  "VelaSans";
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #3F3B4E;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   top: 28px;
 }

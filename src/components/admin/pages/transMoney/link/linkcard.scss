@@ -24,6 +24,8 @@ $font:  "VelaSans";
     font-weight: 500;
     font-size: 16px;
     color: #7D8A9A;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
     transition: 500ms;
     pointer-events: none;
     z-index: 9;

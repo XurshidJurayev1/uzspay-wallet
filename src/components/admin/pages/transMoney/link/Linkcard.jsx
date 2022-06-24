@@ -16,22 +16,30 @@ const Linkcard = () => {
       <div className="link">
 
         <div className="container__translate">
-          <div className="translate__padd">
+          <div className="translate__padd  translate__padd--responsive">
 
             {/*translate__back*/}
-            <div className="translate__back">
-              <Link to="/wallet/payment/trans/fill"><span><ChevronLeftIcon /></span> Назад</Link>
+            <div className="translate__back translate__back--responsive">
+              <Link to="/wallet/payment/trans/fill">
+                <span>
+                  <ChevronLeftIcon />
+                </span>{" "}
+                <div className="translate__back--txt">Назад</div>
+              </Link>
+              <h2 style={{left: "13%"}} className="translate__back--title">
+              Создать ссылку для пополнения
+              </h2>
             </div>
 
             {/*translate__mont*/}
-            <div className="translate__mont translate__mont-link">
+            <div className="translate__mont translate__mont--responsive">
               <h2>Создать ссылку для пополнения WMS счёта</h2>
             </div>
 
 
             {/*translate__mont-title*/}
-            <div className="translate__mont-title">
-              <h2 className="tranlate-mont-title-h">Укажите сумму</h2>
+            <div className="translate__mont-title translate__mont-title--responsive">
+              <h2 className="translate__title-where translate__title-where--responsive">Укажите сумму</h2>
             </div>
 
 
@@ -52,9 +60,16 @@ const Linkcard = () => {
             </div>
 
             {/*Buttos Bottom*/}
-            <div className="card__buttos-two">
-              <Link to="/wallet/payment/trans/fill" className="card__btn card__btn-otm">Отмена</Link>
-              <a href="#" className="card__btn card__btn-per"><ContentCopyIcon />Скопировать ссылку на пополнение</a>
+            <div className="card__buttos-two telephone__btnCollection">
+              <Link
+                to="/wallet/payment/trans/fill"
+                className="card__btn card__btn-otm"
+              >
+                Отмена
+              </Link>
+              <a href="#" className="card__btn card__btn-per">
+                Перевести {summ.length > 0 ? summ : 0} WMS
+              </a>
             </div>
           </div>
         </div>

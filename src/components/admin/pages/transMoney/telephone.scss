@@ -54,6 +54,8 @@ $font: "VelaSans";
 
 .card__labale-wsp {
   position: absolute;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   pointer-events: none;
   font-style: normal;
@@ -147,9 +149,17 @@ $font: "VelaSans";
   line-height: 22px;
   color: #130F26;
   font-family: $font;
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
   transition: 200ms;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
