@@ -147,6 +147,16 @@
       padding-top: 225px;
     }
 
+    &_background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.14);
+      z-index: 50;
+      width: 100%;
+      height: 100%;
+    }
+
     &_register {
       display: flex;
       flex-direction: column;

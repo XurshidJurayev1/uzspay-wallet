@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { ReactComponent as Search } from '../../../../assets/svg/search 2.svg';
+import { ReactComponent as Search } from '../../../../assets/svg/search2.svg';
 
 
 const Input = () => {
