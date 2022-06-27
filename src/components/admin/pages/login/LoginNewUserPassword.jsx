@@ -44,7 +44,7 @@ const LoginNewUserPassword = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
-    navigate('/main');
+    navigate('/wallet');
   };
 
 

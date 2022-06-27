@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import "./monycard.scss";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { Link } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
-import img1 from "../../../../../assets/images/Ellipse 17.png";
-import wmsIcon from "../../../../../assets/images/wms icon.png";
-import kapital from "../../../../../assets/images/Kapitalbank-Logo_Wh 1.png";
+import React, { useState } from 'react';
+import './monycard.scss';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import img1 from '../../../../../assets/images/Ellipse 17.png';
+import wmsIcon from '../../../../../assets/images/wms icon.png';
+import kapital from '../../../../../assets/images/Kapitalbank-Logo_Wh 1.png';
 
 const Monycard = () => {
-  const [selected, setSelected] = useState("");
-  const [inputValue, setInputValue] = useState("");
+  const [selected, setSelected] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [click2, setClick2] = useState(false);
-  const [summ, setSumm] = useState("");
+  const [summ, setSumm] = useState('');
 
   const handleSumm = (evt) => {
     const value = evt.target.value;
@@ -20,7 +20,7 @@ const Monycard = () => {
 
   const formatPhoneNumber = (value) => {
     if (!value) return value;
-    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumber = value.replace(/[^\d]/g, '');
     const phoneNumberLength = phoneNumber.length;
     if (phoneNumberLength < 4) {
       return phoneNumber;
@@ -28,10 +28,7 @@ const Monycard = () => {
     if (phoneNumberLength < 7) {
       return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
     }
-    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
-      3,
-      6
-    )}-${phoneNumber.slice(6, 10)}`;
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
   };
 
   const handleInput = (e) => {
@@ -44,57 +41,57 @@ const Monycard = () => {
     setSelected(item);
   };
 
-  const fakeApi = [
-    {
-      img: img1,
-      name: "Арсений морозов",
-      phone: "+998 (97) 733-30-06",
-      banks: [
-        { bank: "WebSum", icon: wmsIcon, nm: "Arseniy M." },
-        { bank: "Kapital Bank", icon: kapital, nm: "Arseniy M. TGF" },
-      ],
-    },
-    {
-      img: img1,
-      name: "Дмитрий Лебедев",
-      phone: "+998 (97) 733-30-06",
-      banks: [
-        { bank: "WebSum", icon: wmsIcon, nm: "Arseniy M." },
-        { bank: "Kapital Bank", icon: kapital, nm: "Arseniy M. TGF" },
-      ],
-    },
-    {
-      img: img1,
-      name: "Глеб Комаров",
-      phone: "+998 (97) 733-30-06",
-      banks: [
-        { bank: "WebSum", icon: wmsIcon, nm: "Arseniy M." },
-        { bank: "Kapital Bank", icon: kapital, nm: "Arseniy M. TGF" },
-      ],
-    },
-  ];
+  const fakeApi = [{
+    img: img1,
+    name: 'Арсений морозов',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank',
+      icon: kapital,
+      nm: 'Arseniy M. TGF',
+    }],
+  }, {
+    img: img1,
+    name: 'Дмитрий Лебедев',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank',
+      icon: kapital,
+      nm: 'Arseniy M. TGF',
+    }],
+  }, {
+    img: img1,
+    name: 'Глеб Комаров',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank',
+      icon: kapital,
+      nm: 'Arseniy M. TGF',
+    }],
+  }];
 
   const telNumRef = React.useRef();
-  if (selected)
-    telNumRef.current.classList.remove("monyCard__inputCollect--responsive");
+  if (selected) telNumRef.current.classList.remove('monyCard__inputCollect--responsive');
 
   const handleTelNumInput = (evt) => {
     setClick2(true);
-    telNumRef.current.classList.add("monyCard__inputCollect--responsive");
+    telNumRef.current.classList.add('monyCard__inputCollect--responsive');
   };
-  return (
-    <div>
+  return (<div>
       <div className="mony">
         <div className="container__translate">
           <div className="translate__padd translate__padd--responsive">
             {/*translate__back*/}
             <div className="translate__back translate__back--responsive">
-              <Link to="/wallet/payment/trans/fill">
+              {click2 ? <p onClick={() => setClick2(false)} className="translate__back__otmena">
+                Отмена
+              </p> : <Link to="/wallet/payment/trans/fill">
                 <span>
                   <ChevronLeftIcon />
-                </span>{" "}
+                </span>{' '}
                 <div className="translate__back--txt">Назад</div>
-              </Link>
+              </Link>}
+
               <h2 className="translate__back--title">Запросить деньги</h2>
             </div>
 
@@ -116,12 +113,10 @@ const Monycard = () => {
               <label className="mony__card-labale">Номер телефона или имя</label>
 
             </div> */}
-            <div ref={telNumRef} className="monyCard__inputCollect">
-              {selected ? (
-                <div
-                  onBlur={() => setClick2(false)}
+            <div className={`monyCard__inputCollect ${selected && 'monyCard__inputCollect--responsive'}`}>
+              {selected ? (<div
                   className="translate__kamu-input-select-option"
-                  style={{ backgroundColor: "transparent" }}
+                  style={{ backgroundColor: 'transparent' }}
                 >
                   <div
                     className="translate__kamu-input-select-option-avatar"
@@ -133,13 +128,11 @@ const Monycard = () => {
                   </div>
                   <div
                     className="translate__kamu-input-select-option-back"
-                    onClick={() => setSelected("")}
+                    onClick={() => setSelected('')}
                   >
                     <CloseIcon />
                   </div>
-                </div>
-              ) : (
-                <>
+                </div>) : (<>
                   <input
                     type="text"
                     className="translate__kamu-input"
@@ -149,24 +142,19 @@ const Monycard = () => {
                   />
 
                   <label
-                    className={`monyCard__label ${
-                      inputValue.length ? "written" : ""
-                    }`}
+                    className={`monyCard__label ${inputValue.length ? 'written' : ''}`}
                   >
                     Номер телефона или имя
                   </label>
-                </>
-              )}
+                </>)}
             </div>
 
             <div
               className="translate__kamu-input-select translate__kamu-input-select--responsive"
-              style={click2 ? { display: "block" } : { display: "none" }}
-              onBlur={() => setClick2(false)}
+              style={click2 ? { display: 'block' } : { display: 'none' }}
             >
               {fakeApi.map((item, idx) => {
-                return (
-                  <div
+                return (<div
                     className="translate__kamu-input-select-option"
                     key={idx}
                     onClick={() => selectToWhom(item)}
@@ -179,8 +167,7 @@ const Monycard = () => {
                       <p>{item.name}</p>
                       <span>{item.phone}</span>
                     </div>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
 
@@ -201,7 +188,7 @@ const Monycard = () => {
                 />
 
                 <label
-                  className={`monyCard__label ${summ.length ? "written" : ""}`}
+                  className={`monyCard__label ${summ.length ? 'written' : ''}`}
                 >
                   Сумма WSM
                 </label>
@@ -225,8 +212,7 @@ const Monycard = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
 
 export default Monycard;

@@ -23,6 +23,7 @@ const LoginNavbar = () => {
     const changeLang = (lang) => {
       setSelect(false);
       changeLanguage(lang);
+      setBackground(false);
     };
 
     const close = () => {

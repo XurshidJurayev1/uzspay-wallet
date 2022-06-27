@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import Navbar from "../../../utils/navbar/Navbar";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import wsm from "../../../../../assets/images/wsm.png";
-import card from "../../../../../assets/images/card.png";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import PersonIcon from "@mui/icons-material/Person";
-import CloseIcon from "@mui/icons-material/Close";
-import "./telephone.scss";
-import "../translate.scss";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Navbar from '../../../utils/navbar/Navbar';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import wsm from '../../../../../assets/images/wsm.png';
+import card from '../../../../../assets/images/card.png';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import PersonIcon from '@mui/icons-material/Person';
+import CloseIcon from '@mui/icons-material/Close';
+import './telephone.scss';
+import '../translate.scss';
+import { Link } from 'react-router-dom';
 
 const Card = () => {
   const [click, setClick] = useState(false);
   const [cclick, settClick] = useState(false);
-  const [summ, setSumm] = useState("");
-  const [visible, setVisible] = useState("");
-  const [messageValue, setMessageValue] = useState("");
+  const [summ, setSumm] = useState('');
+  const [visible, setVisible] = useState('');
+  const [messageValue, setMessageValue] = useState('');
 
   const formatSumm = (value) => {
     if (!value) return value;
-    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumber = value.replace(/[^\d]/g, '');
     const phoneNumberLength = phoneNumber.length;
     if (phoneNumberLength < 4) {
       return phoneNumber;
@@ -36,26 +36,26 @@ const Card = () => {
     if (phoneNumberLength === 7) {
       return `${phoneNumber.slice(0, 1)} ${phoneNumber.slice(
         1,
-        4
+        4,
       )} ${phoneNumber.slice(4, 7)}`;
     }
     if (phoneNumberLength < 9) {
       return `${phoneNumber.slice(0, 2)} ${phoneNumber.slice(
         2,
-        5
+        5,
       )} ${phoneNumber.slice(5)} `;
     }
     // return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
     return `${phoneNumber.slice(0, 3)} ${phoneNumber.slice(
       3,
-      6
+      6,
     )} ${phoneNumber.slice(6, 9)}  `;
   };
 
   const handleSumm = (e) => {
     const formatSummNumber = formatSumm(e.target.value);
     setVisible(formatSummNumber);
-    setSumm(e.target.value.replace(/ /g, ""));
+    setSumm(e.target.value.replace(/ /g, ''));
   };
   const handleMessage = (evt) => {
     let value = evt.target.value;
@@ -63,8 +63,8 @@ const Card = () => {
   };
 
   const remove = () => {
-    setVisible("");
-    setSumm("");
+    setVisible('');
+    setSumm('');
   };
 
   const score = 10000;
@@ -75,6 +75,17 @@ const Card = () => {
         {/*<Navbar />*/}
 
         <div className="container__translate">
+          <div style={click || cclick ? {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            minHeight: '100vh',
+            minWidth: '100vw',
+            background: 'transparent',
+          } : null} onClick={() => {
+            setClick(false);
+            settClick(false);
+          }} />
           {/*translate__padd*/}
           <div className="translate__padd translate__padd--wrapper translate__padd--responsive">
             {/*translate__back*/}
@@ -82,7 +93,7 @@ const Card = () => {
               <Link to="/wallet/payment/trans">
                 <span>
                   <ChevronLeftIcon />
-                </span>{" "}
+                </span>{' '}
                 <div className="translate__back--txt">Назад</div>
               </Link>
               <h2 className="translate__back--title">По номеру карты</h2>
@@ -208,7 +219,7 @@ const Card = () => {
               <div className="card__otk-content-phone-flex">
                 <input
                   style={
-                    summ > score ? { color: "#F5095E" } : { color: "#130F26" }
+                    summ > score ? { color: '#F5095E' } : { color: '#130F26' }
                   }
                   value={visible}
                   onChange={(e) => handleSumm(e)}
@@ -219,7 +230,7 @@ const Card = () => {
                 <label
                   htmlFor="input-erors"
                   className={`card__labale-wsp ${
-                    visible.length ? "written" : ""
+                    visible.length ? 'written' : ''
                   }`}
                 >
                   Сумма WSM
@@ -230,7 +241,7 @@ const Card = () => {
               </div>
               {Number(summ) < Number(score) ? (
                 <p>
-                  Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)}{" "}
+                  Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)}{' '}
                   UZS
                 </p>
               ) : null}
@@ -251,7 +262,7 @@ const Card = () => {
               />
               <label
                 className={`card__labale-wsp ${
-                  messageValue.length ? "written" : ""
+                  messageValue.length ? 'written' : ''
                 }`}
               >
                 Сообщение получателю

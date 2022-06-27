@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../../utils/navbar/Navbar';
 import wsm from '../../../../../assets/images/wsm.png';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './cardnumber.scss';
-import '../telephone.scss'
-import '../translate.scss'
+import '../telephone.scss';
+import '../translate.scss';
 import { Link } from 'react-router-dom';
 import img1 from '../../../../../assets/images/Ellipse 17.png';
 import CloseIcon from '@mui/icons-material/Close';
@@ -71,52 +71,70 @@ const TelephoneNumber = () => {
   };
 
 
-  const fakeApi = [
-  {
-    img: img1, name: 'Арсений морозов', phone: '+998 (97) 733-30-06',
-    banks: [
-      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
-      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ]
-  }, 
-  {
-    img: img1, name: 'Дмитрий Лебедев', phone: '+998 (97) 733-30-06', banks: [
-      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
-      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ]
+  const fakeApi = [{
+    img: img1,
+    name: 'Арсений морозов',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF',
+    }],
+  }, {
+    img: img1,
+    name: 'Дмитрий Лебедев',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF',
+    }],
 
-  }, 
-  {
-    img: img1, name: 'Глеб Комаров', phone: '+998 (97) 733-30-06', banks: [
-      { bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' },
-      { bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF' },
-    ]
-  },
-  ];
+  }, {
+    img: img1,
+    name: 'Глеб Комаров',
+    phone: '+998 (97) 733-30-06',
+    banks: [{ bank: 'WebSum', icon: wmsIcon, nm: 'Arseniy M.' }, {
+      bank: 'Kapital Bank', icon: kapital, nm: 'Arseniy M. TGF',
+    }],
+  }];
 
   const selectToWhom = (item) => {
     setClick2(false);
     setSelected(item);
   };
 
-  const kamuInputRef = React.useRef()
 
-  if(selected) kamuInputRef.current.classList.remove('translate__kamu-input--responsive')
+  // const kamuInputRef = React.useRef();
+  //
+  //
+  // useEffect(() => {
+  //   if (selected || !click2) kamuInputRef.current.classList.remove('translate__kamu-input--responsive');
+  //
+  // }, [kamuInputRef]);
 
-  const handleKamuInput =(evt)=>{
-    setClick2(true)
-    kamuInputRef.current.classList.add('translate__kamu-input--responsive')
-  }
+
+  const handleKamuInput = (evt) => {
+    setClick2(true);
+    // kamuInputRef.current.classList.add('translate__kamu-input--responsive');
+  };
 
 
   return (<div>
     <div className="translate">
       {/*<Navbar />*/}
       <div className="container__translate">
+        <div style={click || click2 ? {
+          position: 'absolute', top: '0', left: '0', minHeight: '100vh', minWidth: '100vw', background: 'transparent',
+        } : null} onClick={() => {
+          setClick(false);
+          setClick2(false);
+        }} />
         <div className="translate__padd translate__padd--responsive">
           <div className="translate__back translate__back--responsive">
-            <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>    <div  className="translate__back--txt">Назад</div></Link>
-            <h2 className="translate__back--title">По номеру телефона</h2>
+            {click2 ? <p onClick={() => setClick2(false)} className="translate__back__otmena">
+              Отмена
+            </p> : <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>
+              <div className="translate__back--txt">Назад</div>
+            </Link>}
+            <h2 className="translate__back--title">По номеру телефона
+            </h2>
           </div>
           <div className="translate__mont translate__mont--responsive">
             <h2>Перевести деньги</h2>
@@ -140,30 +158,30 @@ const TelephoneNumber = () => {
                 </div>
               </div>
               {click && <div className="card__otk-content card__otk-content-open">
-              <ul className="card__otk-list card__accourdion">
-                <li className='card__otk-item'>
-                  <img src={wsm} alt="png" width={44}/>
-                  <div>
-                    <h4>Kapital Bank TGF  ** 6777</h4>
-                    <p>2 426 789 сум</p>
-                  </div>
-                </li>
-                <li className='card__otk-item'>
-                  <img src={wsm} alt="png" width={44}/>
-                  <div>
-                    <h4>Kapital Bank TGF  ** 6777</h4>
-                    <p>2 426 789 сум</p>
-                  </div>
-                </li>
-                <li className='card__otk-item'>
-                  <img src={wsm} alt="png" width={44}/>
-                  <div>
-                    <h4>Kapital Bank TGF  ** 6777</h4>
-                    <p>2 426 789 сум</p>
-                  </div>
-                </li>
-              </ul>
-            </div>}
+                <ul className="card__otk-list card__accourdion">
+                  <li className="card__otk-item">
+                    <img src={wsm} alt="png" width={44} />
+                    <div>
+                      <h4>Kapital Bank TGF ** 6777</h4>
+                      <p>2 426 789 сум</p>
+                    </div>
+                  </li>
+                  <li className="card__otk-item">
+                    <img src={wsm} alt="png" width={44} />
+                    <div>
+                      <h4>Kapital Bank TGF ** 6777</h4>
+                      <p>2 426 789 сум</p>
+                    </div>
+                  </li>
+                  <li className="card__otk-item">
+                    <img src={wsm} alt="png" width={44} />
+                    <div>
+                      <h4>Kapital Bank TGF ** 6777</h4>
+                      <p>2 426 789 сум</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>}
 
             </div>
           </div>
@@ -173,9 +191,8 @@ const TelephoneNumber = () => {
           >
             <h3>Кому</h3>
             <div
-            ref={kamuInputRef}
-              className="translate__kamu-input"
-              // onBlur={() => setClick2(false)}
+              // ref={kamuInputRef}
+              className={`translate__kamu-input ${click2 && 'translate__kamu-input--responsive'}`}
             >
               {/*<input onChange={e => handleInput(e)} value={inputValue} type="text" />*/}
               {selected ?
@@ -197,51 +214,43 @@ const TelephoneNumber = () => {
                     value={inputValue}
                     onClick={handleKamuInput}
                   />
-                
-                    <label className={`translate__kamu-plac ${inputValue.length ? 'written': ''}`}>Номер телефона или имя</label>
-                </>
-              }
+
+                  <label className={`translate__kamu-plac ${inputValue.length ? 'written' : ''}`}>Номер телефона или
+                    имя</label>
+                </>}
 
               <div className="translate__kamu-input-select" style={click2 ? { display: 'block' } : { display: 'none' }}
                    onBlur={() => setClick2(false)}>
                 {fakeApi.map((item, idx) => {
-                  return (
-                    <div className="translate__kamu-input-select-option"
-                         key={idx}
-                         onClick={() => selectToWhom(item)}>
-                      <div className="translate__kamu-input-select-option-avatar"
-                           style={{ backgroundImage: `url(${item.img})` }} />
-                      <div className="translate__kamu-input-select-option-people">
-                        <p>{item.name}</p>
-                        <span>{item.phone}</span>
-                      </div>
-                    </div>);
+                  return (<div className="translate__kamu-input-select-option"
+                               key={idx}
+                               onClick={() => selectToWhom(item)}>
+                    <div className="translate__kamu-input-select-option-avatar"
+                         style={{ backgroundImage: `url(${item.img})` }} />
+                    <div className="translate__kamu-input-select-option-people">
+                      <p>{item.name}</p>
+                      <span>{item.phone}</span>
+                    </div>
+                  </div>);
                 })}
               </div>
             </div>
-            {
-              selected &&
-              <div className="translate__kamu-selected">
-                {
-                  selected.banks.map((bank, idx) => {
-                    return (
-                      <div
-                        className={activeCard === idx ? 'translate__kamu-selected-cards-active' : 'translate__kamu-selected-cards'}
-                        onClick={() => setActiveCard(idx)}>
-                        <div className="translate__kamu-selected-cards-icon"
-                             style={{ backgroundImage: `url(${bank.icon})` }} />
-                        <p>
-                          {bank.bank}
-                        </p>
-                        <span>
+            {selected && <div className="translate__kamu-selected">
+              {selected.banks.map((bank, idx) => {
+                return (<div
+                  className={activeCard === idx ? 'translate__kamu-selected-cards-active' : 'translate__kamu-selected-cards'}
+                  onClick={() => setActiveCard(idx)}>
+                  <div className="translate__kamu-selected-cards-icon"
+                       style={{ backgroundImage: `url(${bank.icon})` }} />
+                  <p>
+                    {bank.bank}
+                  </p>
+                  <span>
                           {bank.nm}
                         </span>
-                      </div>
-                    );
-                  })
-                }
-              </div>
-            }
+                </div>);
+              })}
+            </div>}
           </div>
           <div className="translate__bank">
             <input
@@ -254,13 +263,9 @@ const TelephoneNumber = () => {
             <label className={summ.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>
               Сумма WMS
             </label>
-            {
-              summ.length > 0 ?
-                <p>Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)} UZS</p>
-                :
+            {summ.length > 0 ? <p>Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)} UZS</p> :
 
-                <p>Размер комиссии будет уточнен после ввода реквизитов платежа.</p>
-            }
+              <p>Размер комиссии будет уточнен после ввода реквизитов платежа.</p>}
           </div>
           <div style={{
             marginTop: '60px',
@@ -273,13 +278,13 @@ const TelephoneNumber = () => {
                 value={message}
               />
               <label className={message.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>Сообщение
-                  получателю</label>
+                получателю</label>
 
             </div>
-            <div className="card__buttos-two telephone__btnCollection" >
-            <Link to="/wallet/payment/trans" className="card__btn card__btn-otm">Отмена</Link>
-            <a href="#" className="card__btn card__btn-per">Перевести {summ.length > 0 ? summ : 0} WMS</a>
-          </div>
+            <div className="card__buttos-two telephone__btnCollection">
+              <Link to="/wallet/payment/trans" className="card__btn card__btn-otm">Отмена</Link>
+              <a href="#" className="card__btn card__btn-per">Перевести {summ.length > 0 ? summ : 0} WMS</a>
+            </div>
           </div>
         </div>
       </div>

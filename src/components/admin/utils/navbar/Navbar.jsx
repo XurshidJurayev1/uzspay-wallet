@@ -8,24 +8,14 @@ import { ReactComponent as Home } from '../../../../assets/svg/home 2.svg' ;
 import { ReactComponent as HomeActive } from '../../../../assets/svg/home 2-active.svg' ;
 import './navbar.scss';
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBCollapse,
+  MDBNavbar, MDBNavbarBrand, MDBNavbarToggler, MDBIcon, MDBNavbarNav, MDBNavbarItem, MDBNavbarLink, MDBCollapse,
 } from 'mdb-react-ui-kit';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
   const [showBasic, setShowBasic] = useState(false);
-  const [main, setMain] = useState(false);
-  const [pay, setPay] = useState(false);
 
-  console.log(window.location);
 
   useEffect(() => {
     // if (window.location.pathname === '/wallet') {
@@ -39,12 +29,9 @@ export default function Navbar() {
     // } else {
     //   setPay(false);
     // }
-    console.log('routes');
   }, [location]);
-  console.log(main, pay);
 
-  return (
-    <div className="mainNavbar">
+  return (<div className="mainNavbar">
       <MDBNavbar expand="lg">
         <Link to="/wallet">
           <MDBNavbarBrand href="#">
@@ -63,36 +50,26 @@ export default function Navbar() {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mainNavbar__nav">
 
-            {
-              window.location.pathname === '/wallet' ?
-                <Link to="/wallet">
-                  <MDBNavbarItem active>
-                    <MDBNavbarLink><Home1Active className="icon_pay" /> Главная</MDBNavbarLink>
-                  </MDBNavbarItem>
-                </Link>
-                :
-                <Link to="/wallet">
-                  <MDBNavbarItem>
-                    <MDBNavbarLink className="mainNavbar-link-inner-link"><Home1
-                      className="icon_pay" /> Главная</MDBNavbarLink>
-                  </MDBNavbarItem>
-                </Link>
-            }
+            {window.location.pathname === '/wallet' ? <Link to="/wallet">
+              <MDBNavbarItem active>
+                <MDBNavbarLink><Home1Active className="icon_pay" /> Главная</MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link> : <Link to="/wallet">
+              <MDBNavbarItem>
+                <MDBNavbarLink className="mainNavbar-link-inner-link"><Home1
+                  className="icon_pay" /> Главная</MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link>}
 
-            {
-              window.location.pathname.includes('payment') ?
-                <Link to="/wallet/payment">
-                  <MDBNavbarItem active>
-                    <MDBNavbarLink><HomeActive className="icon_pay" /> Платежи</MDBNavbarLink>
-                  </MDBNavbarItem>
-                </Link>
-                :
-                <Link to="/wallet/payment">
-                  <MDBNavbarItem>
-                    <MDBNavbarLink><Home className="icon_pay" /> Платежи</MDBNavbarLink>
-                  </MDBNavbarItem>
-                </Link>
-            }
+            {window.location.pathname.includes('payment') ? <Link to="/wallet/payment">
+              <MDBNavbarItem active>
+                <MDBNavbarLink><HomeActive className="icon_pay" /> Платежи</MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link> : <Link to="/wallet/payment">
+              <MDBNavbarItem>
+                <MDBNavbarLink><Home className="icon_pay" /> Платежи</MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link>}
 
 
           </MDBNavbarNav>
@@ -107,6 +84,5 @@ export default function Navbar() {
           </form>
         </MDBCollapse>
       </MDBNavbar>
-    </div>
-  );
+    </div>);
 }

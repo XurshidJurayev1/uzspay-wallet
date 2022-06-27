@@ -16,9 +16,8 @@ const Score = lazy(() => import('../components/admin/pages/transMoney/scorenumbe
 const MoneyCard = lazy(() => import('../components/admin/pages/transMoney/mony/Monycard'));
 const LinkCard = lazy(() => import('../components/admin/pages/transMoney/link/Linkcard'));
 const FillScore = lazy(() => import('../components/admin/pages/transMoney/FillScore'));
-const Check = lazy(()=> import('../components/admin/pages/transMoney/check/check'))
-// const x = lazy(() => import(''));
-// const x = lazy(() => import(''));
+const Check = lazy(() => import('../components/admin/pages/transMoney/check/check'));
+const SendMoney = lazy(() => import('../components/admin/pages/transMoney/sendMoney/SendMoney'));
 // const x = lazy(() => import(''));
 // const x = lazy(() => import(''));
 
@@ -34,6 +33,7 @@ const AdminRoutes = () => {
         <Route index element={<Main />} />
         <Route path="payment">
           <Route index element={<Payments />} />
+          <Route path="send" element={<SendMoney />} />
           <Route path="trans">
             <Route index element={<Transfer />} />
             <Route path="card" element={<Card />} />
@@ -43,9 +43,8 @@ const AdminRoutes = () => {
             <Route path="money" element={<MoneyCard />} />
             <Route path="link" element={<LinkCard />} />
           </Route>
-          <Route path='check' element={<Check />} />
+          <Route path="check" element={<Check />} />
         </Route>
-
       </Route>
 
     </Routes>

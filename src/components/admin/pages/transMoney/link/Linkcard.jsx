@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './linkcard.scss';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Link } from 'react-router-dom';
+import InputMask from 'react-input-mask';
+
 
 const Linkcard = () => {
 
   const [summ, setSumm] = useState('');
-  const handleSumm = (evt)=>{
-    const value = evt.target.value; 
+  const handleSumm = (evt) => {
+    const value = evt.target.value;
     setSumm(value);
-  }
+  };
   return (
     <div>
       <div className="link">
@@ -23,11 +25,11 @@ const Linkcard = () => {
               <Link to="/wallet/payment/trans/fill">
                 <span>
                   <ChevronLeftIcon />
-                </span>{" "}
+                </span>{' '}
                 <div className="translate__back--txt">Назад</div>
               </Link>
-              <h2 style={{left: "13%"}} className="translate__back--title">
-              Создать ссылку для пополнения
+              <h2 style={{ left: '13%' }} className="translate__back--title">
+                Создать ссылку для пополнения
               </h2>
             </div>
 
@@ -45,15 +47,16 @@ const Linkcard = () => {
 
             {/*score__summag*/}
             <div className="score__summa">
-            <div className="link__inputCollect">
-                  <input
-                    type="text"
-                    className="translate__kamu-input"
-                    value={summ}
-                    onChange={handleSumm}
-                  />
-                
-                  <label className={`monyCard__label ${summ.length ? 'written': ''}`}>Сумма WMS</label>
+              <div className="link__inputCollect">
+                <InputMask
+                  maskChar={null}
+                  mask="999 999 999"
+                  className="translate__kamu-input"
+                  value={summ}
+                  onChange={handleSumm}
+                />
+
+                <label className={`monyCard__label ${summ.length ? 'written' : ''}`}>Сумма WMS</label>
               </div>
               {/* <input type="text" placeholder="Сумма WMS" className="score__summ-inout" /> */}
               <span>1 WSM = 1 сум (UZS)</span>
@@ -67,9 +70,10 @@ const Linkcard = () => {
               >
                 Отмена
               </Link>
-              <a href="#" className="card__btn card__btn-per">
-                Перевести {summ.length > 0 ? summ : 0} WMS
-              </a>
+              <Link to="#" className="card__btn card__btn-per">
+                <ContentCopyIcon />
+                Скопировать ссылку на пополнение {summ.length > 0 ? summ : 0} WMS
+              </Link>
             </div>
           </div>
         </div>

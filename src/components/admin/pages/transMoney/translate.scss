@@ -107,6 +107,15 @@ $font: "VelaSans";
   &__back {
     margin-bottom: 40px;
 
+    &__otmena {
+      font-family: 'VelaSans', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+      color: #423AD0;
+    }
+
     a {
       display: flex;
       align-items: center;
