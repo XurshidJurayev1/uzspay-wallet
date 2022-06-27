@@ -38,7 +38,6 @@ const Login = (props) => {
     .filter(i => Number(stringNew) === 0 ? i.name.toLowerCase().includes(countrySearch.toLowerCase()) : String(i.code).toLowerCase().includes(countrySearch.toLowerCase()));
 
 
-  console.log(countrysArr);
   useEffect(() => {
     if (code.code > 0 && phone.replace('(', '').replace(')', '').replaceAll(' ', '').replaceAll('-', '').length === 9) {
       setBtn(true);
@@ -88,7 +87,7 @@ const Login = (props) => {
             />
           </div>
 
-          <div className="country-input_select" style={openCode ? { display: 'block' } : { display: 'none' }}>
+          <div className="country-input_select" style={openCode ? { display: 'block' } : { display: 'none' }} >
             <div className="country-input_select_search">
               <div className="country-input_select_search_input">
                 <div className="country-input_select_search_input_search"

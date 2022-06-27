@@ -49,13 +49,14 @@ $font: "VelaSans";
     cursor: pointer;
     color: #130F26;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
-    
-    @media screen and (max-width: 800px){
+
+    @media screen and (max-width: 800px) {
       flex-direction: column-reverse;
       flex-wrap: wrap;
       align-items: flex-start;
       padding: 15px;
     }
+
     h3 {
       font-family: $font;
       font-style: normal;
@@ -63,16 +64,16 @@ $font: "VelaSans";
       font-size: 16px;
       line-height: 22px;
       color: $black;
-      width: 74%;  
-    @media screen and (max-width: 800px){
-      font-size: 14px;
-      margin-top: 8px;
-      margin-bottom: 0;
+      width: 74%;
+      @media screen and (max-width: 800px) {
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: 800px) {
+        width: 95%;
+      }
     }
-    @media screen and (max-width: 800px){
-      width: 95%;
-    }
-    } 
 
     .local__phone {
       width: 52px !important;
@@ -95,6 +96,15 @@ $font: "VelaSans";
 
   &__back {
     margin-bottom: 40px;
+
+    &__otmena {
+      font-family: 'VelaSans', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+      color: #423AD0;
+    }
 
     a {
       display: flex;
@@ -130,30 +140,33 @@ $font: "VelaSans";
       margin-bottom: 40px;
     }
   }
-  &_row .row{
-    @media screen and (max-width: 800px){
+
+  &_row .row {
+    @media screen and (max-width: 800px) {
       display: flex !important;
       align-items: stretch !important;
     }
-    @media screen and (max-width: 786px){
+    @media screen and (max-width: 786px) {
       display: flex !important;
       flex-direction: row !important;
       gap: 13px !important;
       justify-content: space-around !important;
-      & div{
+      & div {
         padding: 0 !important;
         max-width: 165px;
       }
-      & div a{
+      & div a {
         max-width: 165px;
         margin-right: 0 !important;
       }
     }
-    & div a{
+
+    & div a {
       height: 100%;
     }
-    @media screen and (max-width:528px){
-      margin: 0 auto  ;
+
+    @media screen and (max-width: 528px) {
+      margin: 0 auto;
       justify-content: flex-start !important;
     }
   }
@@ -164,7 +177,7 @@ $font: "VelaSans";
   border: 0.5px solid #E6E6E6;
   border-radius: 10px;
   padding: 15px 0 15px 15px;
-  @media screen and (max-width:385px){
+  @media screen and (max-width: 385px) {
     display: flex;
   }
 }
@@ -187,12 +200,12 @@ $font: "VelaSans";
   width: 300px;
 }
 
-@media screen and (max-width:880px){
-  .translate__padd{
+@media screen and (max-width: 880px) {
+  .translate__padd {
     padding-left: 16px;
     padding-right: 16px;
   }
-  
+
 }
 
 @media screen and (max-width: 786px) {
@@ -209,14 +222,15 @@ $font: "VelaSans";
   .telephone__btnCollection {
     display: flex;
     flex-direction: column;
+
     & a {
       width: 100% !important;
     }
   }
-  .translate__kamu--responsive{
+  .translate__kamu--responsive {
     position: static !important;
   }
-  .translate__mont--responsive{
+  .translate__mont--responsive {
     display: none;
   }
 }
@@ -234,9 +248,11 @@ $font: "VelaSans";
     left: 15px;
     z-index: 30;
     background-color: #F7F7F7;
+
     span {
       background-color: transparent !important;
     }
+
     svg {
       width: 10rem;
       height: 50px;
@@ -253,26 +269,27 @@ $font: "VelaSans";
   .translate__kamu h3 {
     font-size: 19px;
   }
-  .translate__title-where--responsive{
+  .translate__title-where--responsive {
     font-size: 19px !important;
     margin-bottom: 12px;
   }
-  .translate__kamu-input--responsive, .monyCard__inputCollect--responsive{
+  .translate__kamu-input--responsive, .monyCard__inputCollect--responsive {
     position: absolute !important;
     top: 0;
     width: 93% !important;
-    & .translate__kamu-input-select{
+
+    & .translate__kamu-input-select {
       height: 450px;
       margin-top: 0;
     }
   }
-  .translate__mont-title--responsive{
+  .translate__mont-title--responsive {
     margin-bottom: 0 !important;
   }
-  .card__otk-select--responsive{
+  .card__otk-select--responsive {
     margin-bottom: 32px !important;
   }
-  
+
 }
 
 @media screen and (max-width: 365px) {

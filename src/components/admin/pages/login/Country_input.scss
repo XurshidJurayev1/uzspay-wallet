@@ -85,7 +85,11 @@
     border: 1px solid #E0E0E0;
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
-    z-index: 60;
+    z-index: 70;
+
+    @media screen and (max-width: 786px) {
+      top: -200px;
+    }
 
     &_item {
       display: flex;

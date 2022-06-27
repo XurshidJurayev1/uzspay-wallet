@@ -16,7 +16,7 @@ const Score = lazy(() => import('../components/admin/pages/transMoney/scorenumbe
 const MoneyCard = lazy(() => import('../components/admin/pages/transMoney/mony/Monycard'));
 const LinkCard = lazy(() => import('../components/admin/pages/transMoney/link/Linkcard'));
 const FillScore = lazy(() => import('../components/admin/pages/transMoney/FillScore'));
-// const x = lazy(() => import(''));
+const SendMoney = lazy(() => import('../components/admin/pages/transMoney/sendMoney/SendMoney'));
 // const x = lazy(() => import(''));
 // const x = lazy(() => import(''));
 // const x = lazy(() => import(''));
@@ -33,6 +33,7 @@ const AdminRoutes = () => {
         <Route index element={<Main />} />
         <Route path="payment">
           <Route index element={<Payments />} />
+          <Route path="send" element={<SendMoney />} />
           <Route path="trans">
             <Route index element={<Transfer />} />
             <Route path="card" element={<Card />} />
