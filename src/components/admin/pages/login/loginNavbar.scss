@@ -36,9 +36,16 @@
     &_black_background {
       display: none;
       z-index: 50;
-      background: rgba(0, 0, 0, .5);
+
       transition: all .3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent;
+      min-height: 100vh;
+      min-width: 100vw;
       @media screen and (max-width: 786px) {
+        background: rgba(0, 0, 0, .5);
         display: block;
         transition: all .3s ease;
         position: absolute;

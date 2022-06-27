@@ -43,7 +43,6 @@ const AdminRoutes = () => {
             <Route path="link" element={<LinkCard />} />
           </Route>
         </Route>
-
       </Route>
 
     </Routes>

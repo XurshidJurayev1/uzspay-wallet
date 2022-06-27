@@ -50,12 +50,12 @@ export const countrys = [
     short: 'tj',
     flag: tj,
   },
-  {
-    name: '',
-    code: '',
-    short: '',
-    flag: '',
-  },
+  // {
+  //   name: '',
+  //   code: '',
+  //   short: '',
+  //   flag: '',
+  // },
 ];
 //
 // {

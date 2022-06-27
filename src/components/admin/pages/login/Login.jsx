@@ -33,9 +33,12 @@ const Login = (props) => {
   let stringNew = string.replace(/[^0-9]/g, '');
   console.log(Number(stringNew));
 
-  const countrysArr = countrys
-    .filter(i => Number(stringNew) === 0 ? i.name.toLowerCase().includes(countrySearch) : i.code === countrySearch);
 
+  const countrysArr = countrys
+    .filter(i => Number(stringNew) === 0 ? i.name.toLowerCase().includes(countrySearch.toLowerCase()) : String(i.code).toLowerCase().includes(countrySearch.toLowerCase()));
+
+
+  console.log(countrysArr);
   useEffect(() => {
     if (code.code > 0 && phone.replace('(', '').replace(')', '').replaceAll(' ', '').replaceAll('-', '').length === 9) {
       setBtn(true);
@@ -67,7 +70,7 @@ const Login = (props) => {
     <div className="login_content">
       <div className="login_content_background" style={openCode ? { display: 'block' } : { display: 'none' }}
            onClick={() => setOpenCode(false)} />
-      <div className="login_content_register">
+      <div className="login_content_register" style={openCode ? { zIndex: 'auto' } : null}>
 
         <h4>
           {t('login.title')}
@@ -101,7 +104,7 @@ const Login = (props) => {
               </div>
               <button className="country-input_select_search_btn" onClick={() => setOpenCode(false)}>Отмена</button>
             </div>
-            {countrysArr.length > 0 ? countrys.map((item, idx) => {
+            {countrysArr.length > 0 ? countrysArr.map((item, idx) => {
               return (<div className="country-input_select_item" key={idx} onClick={() => {
                 setCode(item);
                 setOpenCode(false);

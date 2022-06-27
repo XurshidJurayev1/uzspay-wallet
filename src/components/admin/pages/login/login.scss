@@ -143,6 +143,10 @@
     padding-top: 130px;
     //padding-bottom: 176px;
 
+    &:hover .login_content_register {
+      z-index: 1;
+    }
+
     @media screen and (max-width: 576px) {
       padding-top: 225px;
     }
@@ -168,6 +172,7 @@
       border-radius: 12px;
       margin-bottom: 176px;
       width: 486px;
+      z-index: -1;
 
       @media (max-width: 576px) {
         box-shadow: none;
@@ -330,7 +335,7 @@
         width: 30px;
         height: 30px;
         @media (max-width: 576px) {
-          display: none;
+          //display: none;
         }
       }
 
