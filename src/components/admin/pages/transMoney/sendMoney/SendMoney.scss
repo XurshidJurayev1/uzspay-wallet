@@ -9,6 +9,11 @@
     height: 100%;
     font-family: 'VelaSans';
 
+    @media screen and (max-width: 786px) {
+      width: 95%;
+      margin: auto;
+    }
+
     &-title {
       font-style: normal;
       font-weight: 700;
