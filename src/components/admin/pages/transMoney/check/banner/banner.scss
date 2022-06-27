@@ -1,0 +1,71 @@
+$font: "VelaSans";
+
+.banner {
+  &__card {
+    position: relative;
+    width: 100%;
+    margin-top: 26px;
+    padding: 25px;
+    background: radial-gradient(364.29% 2440.78% at 62.72% 168.25%, #DEE1E8 0%, #EAECF0 74.71%);
+    border-radius: 18px;
+    overflow: hidden;
+    @media screen and (max-width: 748px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    padding: 17px 32px !important;
+    border-color: transparent;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FAFAFA;
+    background: #423AD0;
+    border-radius: 10px;
+    order: 2;
+    @media screen and (max-width: 520px) {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    & h2 {
+      font-family: $font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 126%;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    & p {
+      font-family: $font;
+      max-width: 291px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #333333;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 27px;
+    border-radius: 2px;
+    max-width: 334px;
+    @media screen and (max-width: 748px) {
+      order: -1;
+      position: static;
+      max-width: 306px;
+    }
+  }
+}
