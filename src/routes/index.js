@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 
 const Login = lazy(() => import('../components/admin/pages/login/Login'));
@@ -22,7 +23,14 @@ const SendMoney = lazy(() => import('../components/admin/pages/transMoney/sendMo
 // const x = lazy(() => import(''));
 
 
-const AdminRoutes = () => {
+const AdminRoutes = (props) => {
+  // const navigate = useNavigate();
+  //
+  // if (!props.phone) {
+  //   navigate('/');
+  // }
+
+
   return (<div>
     <Routes>
       <Route path="/" element={<Login />} />
@@ -51,4 +59,10 @@ const AdminRoutes = () => {
   </div>);
 };
 
-export default AdminRoutes;
+const mapStateToProps = (state) => {
+  return {
+    phone: state.send,
+  };
+};
+
+export default connect(mapStateToProps, {})(AdminRoutes);

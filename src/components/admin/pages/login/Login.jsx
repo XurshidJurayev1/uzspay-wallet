@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, useEffect, useState } from 'react';
 import './login.scss';
 import './Country_input.scss';
 import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
-import { sendPhone } from '../../../../actions';
+import { checkExistance, sendPhone } from '../../../../actions';
 import { useNavigate } from 'react-router-dom';
 import LoginNavbar from './LoginNavbar';
 import globe from '../../../../assets/svg/globe2.svg';
@@ -12,6 +12,10 @@ import { countrys } from './countrys/Countrys';
 import InputMask from 'react-input-mask';
 import search from '../../../../assets/svg/search2.svg';
 import { ReactComponent as Close } from '../../../../assets/svg/close.svg';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// const { countrys } = lazy(() => import('./countrys/Countrys'));
 
 const Login = (props) => {
   const navigate = useNavigate();
@@ -31,11 +35,10 @@ const Login = (props) => {
 
   let string = countrySearch;
   let stringNew = string.replace(/[^0-9]/g, '');
-  console.log(Number(stringNew));
 
 
   const countrysArr = countrys
-    .filter(i => Number(stringNew) === 0 ? i.name.toLowerCase().includes(countrySearch.toLowerCase()) : String(i.code).toLowerCase().includes(countrySearch.toLowerCase()));
+    .filter(i => Number(stringNew) === 0 ? i.name.toLowerCase().includes(countrySearch.toLowerCase()) : String(i.code).toLowerCase().includes(countrySearch.toLowerCase())) || [];
 
 
   useEffect(() => {
@@ -46,14 +49,40 @@ const Login = (props) => {
 
     }
 
+    if (props.check.success) {
+      if (props.check.data.exists === false) {
 
-  }, [phone, code]);
+
+        navigate('/pass/new');
+      }
+
+      if (props.check.data.exists === true) {
+        navigate('/pass');
+      }
+    }
+    if (!props.check.success) {
+      if (props.check.data) {
+        toast.error(props.check.data.error, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    }
+
+  }, [phone, code, props.check]);
 
 
   const submit = (e) => {
     e.preventDefault();
     props.sendPhone(userPhone);
-    navigate('/confirmation');
+    props.checkExistance(userPhone);
+
+    // navigate('/confirmation');
   };
 
 
@@ -87,7 +116,7 @@ const Login = (props) => {
             />
           </div>
 
-          <div className="country-input_select" style={openCode ? { display: 'block' } : { display: 'none' }} >
+          <div className="country-input_select" style={openCode ? { display: 'block' } : { display: 'none' }}>
             <div className="country-input_select_search">
               <div className="country-input_select_search_input">
                 <div className="country-input_select_search_input_search"
@@ -145,7 +174,9 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    check: state.check,
+  };
 };
 
-export default connect(mapStateToProps, { sendPhone })(Login);
+export default connect(mapStateToProps, { checkExistance, sendPhone })(Login);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import uzb from '../../../../assets/images/uzb_Ra.png';
-import card from '../../../../assets/images/card.png';
+import uzb from '../../../../assets/svg/uzbsvg.svg';
+import card from '../../../../assets/svg/kb.svg';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Acar = () => {

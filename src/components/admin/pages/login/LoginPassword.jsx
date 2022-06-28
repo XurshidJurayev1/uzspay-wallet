@@ -8,6 +8,8 @@ import { Tooltip } from 'react-tippy';
 import { connect } from 'react-redux';
 import back from '../../../../assets/images/caretcircleleft 1.png';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { clearError, fetchLogin, login } from '../../../../actions';
+import { toast } from 'react-toastify';
 
 
 const LoginPassword = (props) => {
@@ -28,12 +30,48 @@ const LoginPassword = (props) => {
       setBtn(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [code]);
+
+    if (!props.error.success) {
+      if (props.error.data) {
+        toast.error(props.error.data.error, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        props.clearError();
+      }
+
+    }
+    if (props.loginRed.success) {
+      if (props.loginRed.data) {
+        toast.success(props.loginRed.data.message, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      navigate('/confirmation');
+    }
+
+  }, [code, props.loginRed, props.error]);
+
+  console.log(props);
 
 
   const submit = (e) => {
     e.preventDefault();
-    navigate('/wallet');
+
+    // props.login(props.phone, code);
+    props.fetchLogin(props.phone, code);
+    // navigate('/wallet');
   };
 
   const name = 'Axmed';
@@ -44,7 +82,7 @@ const LoginPassword = (props) => {
     <div className="login_content">
       <div className="login_content_pass">
         <div
-          onClick={() => navigate('/confirmation')}
+          onClick={() => navigate('/')}
           className="login_content_pass_back"
           style={{
             backgroundImage: `url(${back})`,
@@ -64,24 +102,17 @@ const LoginPassword = (props) => {
           <p className="login_content_pass_wrongPassword">
             {t('login.password2.wrong')}
           </p>
-          {
-            shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} />
-              :
-              <AiOutlineEye onClick={() => setShown(true)} />
-          }
+          {shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} /> :
+            <AiOutlineEye onClick={() => setShown(true)} />}
 
         </div>
 
 
-        {
-          btn ?
-            <button className="login_content_register_active" onClick={(e) => submit(e)}>
-              {t('login.password2.btn')}
-            </button>
-            :
-            <button className="login_content_register_disabled">
-              {t('login.password2.btn')}
-            </button>
+        {btn ? <button className="login_content_register_active" onClick={(e) => submit(e)}>
+          {t('login.password2.btn')}
+        </button> : <button className="login_content_register_disabled">
+          {t('login.password2.btn')}
+        </button>
 
         }
 
@@ -96,8 +127,8 @@ const LoginPassword = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    phone: state.send,
+    phone: state.send, loginRed: state.login, error: state.error,
   };
 };
 
-export default connect(mapStateToProps, {})(LoginPassword);
+export default connect(mapStateToProps, { login, fetchLogin, clearError })(LoginPassword);

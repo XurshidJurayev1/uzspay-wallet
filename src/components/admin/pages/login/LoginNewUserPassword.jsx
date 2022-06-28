@@ -8,6 +8,9 @@ import { Tooltip } from 'react-tippy';
 import { connect } from 'react-redux';
 import back from '../../../../assets/images/caretcircleleft 1.png';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { createNew } from '../../../../reducers/AminReducers';
+import { clearError, createNewUser } from '../../../../actions';
+import { toast } from 'react-toastify';
 
 
 const LoginNewUserPassword = (props) => {
@@ -38,13 +41,59 @@ const LoginNewUserPassword = (props) => {
       setBtn(false);
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [code2]);
+
+    if (!props.error.success) {
+      if (props.error.data) {
+        toast.error(props.error.data.error, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        props.clearError();
+      }
+
+    }
+    if (!props.createNew.success) {
+      if (props.createNew.data) {
+        toast.error(props.check.data.error, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+
+    }
+    if (props.createNew.success) {
+      if (props.createNew.data) {
+        toast.success(props.createNew.data.message, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      navigate('/confirmation');
+    }
+
+
+  }, [code2, props.createNew, props.error]);
 
 
   const submit = (e) => {
     e.preventDefault();
-    navigate('/wallet');
+    props.createNewUser({ phone: props.phone, password: code, password_confirm: code2 });
+    // navigate('/wallet');
   };
 
 
@@ -53,7 +102,7 @@ const LoginNewUserPassword = (props) => {
     <div className="login_content">
       <div className="login_content_pass">
         <div
-          onClick={() => navigate('/confirmation')}
+          onClick={() => navigate('/')}
           className="login_content_pass_back"
           style={{
             backgroundImage: `url(${back})`,
@@ -71,11 +120,8 @@ const LoginNewUserPassword = (props) => {
             onChange={(e) => setCode(e.target.value)}
             placeholder={t('login.password.input')}
           />
-          {
-            shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} />
-              :
-              <AiOutlineEye onClick={() => setShown(true)} />
-          }
+          {shown ? <AiOutlineEyeInvisible onClick={() => setShown(false)} /> :
+            <AiOutlineEye onClick={() => setShown(true)} />}
 
         </div>
         <div className="login_content_pass_password" style={{
@@ -90,24 +136,17 @@ const LoginNewUserPassword = (props) => {
             onChange={(e) => setCode2(e.target.value)}
             placeholder={t('login.password.input2')}
           />
-          {
-            shown2 ? <AiOutlineEyeInvisible onClick={() => setShown2(false)} />
-              :
-              <AiOutlineEye onClick={() => setShown2(true)} />
-          }
+          {shown2 ? <AiOutlineEyeInvisible onClick={() => setShown2(false)} /> :
+            <AiOutlineEye onClick={() => setShown2(true)} />}
 
         </div>
 
 
-        {
-          btn ?
-            <button className="login_content_register_active" onClick={(e) => submit(e)}>
-              {t('login.password.btn')}
-            </button>
-            :
-            <button className="login_content_register_disabled">
-              {t('login.password.btn')}
-            </button>
+        {btn ? <button className="login_content_register_active" onClick={(e) => submit(e)}>
+          {t('login.password.btn')}
+        </button> : <button className="login_content_register_disabled">
+          {t('login.password.btn')}
+        </button>
 
         }
 
@@ -122,8 +161,8 @@ const LoginNewUserPassword = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    phone: state.send,
+    phone: state.send, createNew: state.createNew, error: state.error,
   };
 };
 
-export default connect(mapStateToProps, {})(LoginNewUserPassword);
+export default connect(mapStateToProps, { createNewUser, clearError })(LoginNewUserPassword);

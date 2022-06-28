@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './i18Next';
 import { Box } from '@mui/material';
 import { HashLoader } from 'react-spinners';
+import { ToastContainer } from 'react-toastify';
 
 const Loader = () => {
   return (<div>
@@ -18,6 +19,7 @@ const Loader = () => {
 };
 ReactDOM.render(<React.StrictMode>
   <Provider store={store}>
+    <ToastContainer />
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <App />
