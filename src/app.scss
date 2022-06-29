@@ -1,6 +1,9 @@
+@import '~normalize.css';
+//@import url('./Variables.scss');
+
 body {
   background: #fafafa;
   @media(max-width: 768px) {
-     background: white ;
+    background: white;
   }
 }
