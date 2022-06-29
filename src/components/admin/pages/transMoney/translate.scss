@@ -12,6 +12,7 @@ $font: "VelaSans";
 
   .react-tippy {
     background: rgba(51, 51, 51, 0.96);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     border-radius: 16px;
     max-width: 280px;
@@ -38,8 +39,15 @@ $font: "VelaSans";
 }
 
 .translate__padd--check {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-bottom: 115px;
   @media screen and (max-width: 520px) {
@@ -51,18 +59,31 @@ $font: "VelaSans";
 
   &__card {
     background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 28px 22px;
     border-radius: 18px;
     cursor: pointer;
     color: #130F26;
+    -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
 
     @media screen and (max-width: 800px) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       padding: 15px;
     }
@@ -90,8 +111,14 @@ $font: "VelaSans";
       height: 52px !important;
       background: #E7EBF3;
       border-radius: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
 
       svg {
@@ -117,7 +144,11 @@ $font: "VelaSans";
     }
 
     a {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       color: #738090;
 
@@ -127,10 +158,16 @@ $font: "VelaSans";
 
       span {
         background: #E8EBEF;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         width: 30px;
         height: 30px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         border-radius: 50%;
         margin-right: 13px;
@@ -153,13 +190,23 @@ $font: "VelaSans";
 
   &_row .row {
     @media screen and (max-width: 800px) {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
       display: flex !important;
+      -webkit-box-align: stretch !important;
+      -ms-flex-align: stretch !important;
       align-items: stretch !important;
     }
     @media screen and (max-width: 786px) {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
       display: flex !important;
+      -webkit-box-orient: horizontal !important;
+      -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
       flex-direction: row !important;
       gap: 13px !important;
+      -ms-flex-pack: distribute !important;
       justify-content: space-around !important;
       & div {
         padding: 0 !important;
@@ -177,19 +224,24 @@ $font: "VelaSans";
 
     @media screen and (max-width: 528px) {
       margin: 0 auto;
+      -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
       justify-content: flex-start !important;
     }
   }
 }
 
 .form__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #E8EBEF;
   border: 0.5px solid #E6E6E6;
   border-radius: 10px;
   padding: 15px 0 15px 15px;
-  @media screen and (max-width: 385px) {
-    display: flex;
-  }
 }
 
 .form__search_btn {
@@ -230,7 +282,12 @@ $font: "VelaSans";
     padding-top: 0 !important;
   }
   .telephone__btnCollection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     & a {
@@ -251,13 +308,18 @@ $font: "VelaSans";
   }
   .translate__back--responsive {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: fixed;
     top: 18px;
     left: 15px;
     z-index: 30;
     background-color: #F7F7F7;
+
 
     span {
       background-color: transparent !important;
@@ -274,6 +336,8 @@ $font: "VelaSans";
     display: block !important;
     margin: auto;
     left: 28%;
+    top: 2px;
+    z-index: 30;
   }
   .translate__otk h3,
   .translate__kamu h3 {
@@ -301,6 +365,21 @@ $font: "VelaSans";
   }
 
 }
+
+.back_btn_mobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.back_btn_desktop {
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 365px) {
   .translate__kamu-selected {

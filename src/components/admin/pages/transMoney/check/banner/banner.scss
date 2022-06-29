@@ -6,12 +6,20 @@ $font: "VelaSans";
     width: 100%;
     margin-top: 26px;
     padding: 25px;
+    background: -o-radial-gradient(62.72% 168.25%, 364.29% 2440.78%, #DEE1E8 0%, #EAECF0 74.71%);
     background: radial-gradient(364.29% 2440.78% at 62.72% 168.25%, #DEE1E8 0%, #EAECF0 74.71%);
     border-radius: 18px;
     overflow: hidden;
     @media screen and (max-width: 748px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       gap: 20px;
     }
@@ -27,6 +35,8 @@ $font: "VelaSans";
     color: #FAFAFA;
     background: #423AD0;
     border-radius: 10px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     @media screen and (max-width: 520px) {
       width: 100%;
@@ -63,6 +73,8 @@ $font: "VelaSans";
     border-radius: 2px;
     max-width: 334px;
     @media screen and (max-width: 748px) {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
       order: -1;
       position: static;
       max-width: 306px;

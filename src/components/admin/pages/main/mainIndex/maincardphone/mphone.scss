@@ -57,7 +57,6 @@ $font: "VelaSans";
 }
 
 
-
 .mainindex__telephone {
   font-family: $font;
   font-style: normal;
@@ -87,6 +86,7 @@ $font: "VelaSans";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-shrink: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;

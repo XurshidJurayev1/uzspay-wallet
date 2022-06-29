@@ -10,8 +10,14 @@ $font: "VelaSans";
 }
 
 .card__otk-sel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 18px 14px;
 }
@@ -29,7 +35,11 @@ $font: "VelaSans";
 }
 
 .card__otk {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -92,9 +102,16 @@ $font: "VelaSans";
   &-selected {
     margin-top: 23px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     &-cards {
@@ -183,8 +200,6 @@ $font: "VelaSans";
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2 ease;
-  -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -236,8 +251,14 @@ $font: "VelaSans";
     }
 
     &-option {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 12px 12px;
       background: transparent;
@@ -257,7 +278,12 @@ $font: "VelaSans";
       }
 
       &-people {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 88%;
 
@@ -286,8 +312,14 @@ $font: "VelaSans";
         height: 28px !important;
         background: #d0d4db;
         border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-right: 10px;
         cursor: pointer;
@@ -451,10 +483,11 @@ $font: "VelaSans";
     width: 100%;
     position: absolute;
     z-index: 22;
-    top: 20px;
+    top: 20px !important;
     background-color: #f6f6f6;
     list-style: none;
     padding: 0;
+    -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     border-radius: 10px !important;
   }
@@ -463,7 +496,11 @@ $font: "VelaSans";
     border-radius: 10px;
     padding: 18px 14px;
     background-color: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     &:hover {

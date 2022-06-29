@@ -1,8 +1,14 @@
 $font: "VelaSans";
 
 .translate__mont-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 20px;
 
@@ -24,12 +30,12 @@ $font: "VelaSans";
 .translate__title-where {
   margin-bottom: 20px;
   font-family: $font;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    letter-spacing: -0.25px;
-    color: #130F26;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  letter-spacing: -0.25px;
+  color: #130F26;
 }
 
 .translate__padd--wrapper{
@@ -48,6 +54,7 @@ $font: "VelaSans";
     background-color: #f6f6f6;
     list-style: none;
     padding: 0;
+    -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
     border-radius: 10px !important;
 
@@ -56,7 +63,11 @@ $font: "VelaSans";
     border-radius: 10px;
     padding: 18px 14px;
     background-color: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     &:hover{
       background-color: #EAECF0;
@@ -93,9 +104,13 @@ $font: "VelaSans";
   margin-bottom: 30 !important;
   &-phone {
     background: transparent !important;
-    
+
     &-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       background: #EAECF0;
       border-radius: 10px;
@@ -116,8 +131,8 @@ $font: "VelaSans";
     }
   }
   &-open{
-  position: relative !important;
-  margin-bottom: 0 !important;
+    position: relative !important;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -149,7 +164,7 @@ $font: "VelaSans";
 }
 .card__inpit-erors:focus + .card__labale-wsp,  .card__labale-wsp.open-wsp{
   font-size: 13px;
- top: 2px;
+  top: 2px;
 }
 
 
@@ -158,8 +173,14 @@ $font: "VelaSans";
   height: 28px;
   background: #EAECF0;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -184,6 +205,22 @@ $font: "VelaSans";
     line-height: 22px;
     color: #7D8A9A;
     border: 1px solid transparent;
+
+    &::-webkit-input-placeholder{
+      font-size: 16px;
+    }
+
+    &::-moz-placeholder{
+      font-size: 16px;
+    }
+
+    &:-ms-input-placeholder{
+      font-size: 16px;
+    }
+
+    &::-ms-input-placeholder{
+      font-size: 16px;
+    }
 
     &::placeholder{
       font-size: 16px;
@@ -222,16 +259,15 @@ $font: "VelaSans";
 }
 
 .card__buttos-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 50px;
 
 }
-
-// .card__btn:hover {
-//   background: #423AD0;
-//   color: white;
-// }
 
 .card__btn {
   font-style: normal;
@@ -248,105 +284,13 @@ $font: "VelaSans";
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .card__otk-cardNumber{
   margin-bottom: 30px !important;
 }
 
-/* @media only screen and (max-width: 830px) {
-  .translate__padd--wrapper{
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-}
-
-@media screen and (max-width: 786px) {
-  .translate__padd--responsive {
-    padding-bottom: 90px;
-  }
-}
-
-@media screen and (max-width: 578px) {
-  .translate__padd--responsive {
-    position: relative;
-    padding-top: 0 !important;
-  }
-  .telephone__btnCollection {
-    display: flex;
-    flex-direction: column;
-    & a {
-      width: 100% !important;
-    }
-  }
-  .translate__kamu--responsive{
-    position: static !important;
-  }
-  .translate__mont--responsive{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .telephone__btnCollection{
-    margin-top: 40px !important;
-  }
-  .translate__back--txt {
-    display: none !important;
-  }
-  .translate__back--responsive {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 18px;
-    left: 15px;
-    z-index: 30;
-    background-color: #F7F7F7;
-    span {
-      background-color: transparent !important;
-    }
-    svg {
-      width: 10rem;
-      height: 50px;
-      color: #423ad0;
-    }
-  }
-  .translate__back--title {
-    position: absolute;
-    display: block;
-    margin: auto;
-    left: 28%;
-  }
-  .translate__title-where--responsive{
-    font-size: 19px !important;
-    margin-bottom: 12px;
-  }
-
-  .translate__kamu-input--responsive{
-    position: absolute;
-    top: 0;
-    width: 93%;
-    & .translate__kamu-input-select{
-      height: 450px;
-      margin-top: 0;
-    }
-  }
-  .translate__mont-title--responsive{
-    margin-bottom: 0 !important;
-  }
-  .card__otk-select--responsive{
-    margin-bottom: 32px !important;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .translate__kamu-selected {
-    gap: 16px;
-  }
-}
- */

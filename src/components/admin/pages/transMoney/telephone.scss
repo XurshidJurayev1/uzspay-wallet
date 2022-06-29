@@ -1,8 +1,14 @@
 $font: "VelaSans";
 
 .translate__mont-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 20px;
 
@@ -26,7 +32,11 @@ $font: "VelaSans";
     background: transparent !important;
 
     &-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       background: #FFFFFF;
       border: 1px solid #3F3B4E;
@@ -71,8 +81,14 @@ $font: "VelaSans";
   height: 28px;
   background: #EAECF0;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -111,7 +127,7 @@ $font: "VelaSans";
 
   &:hover{
     background-color: #D9DEE1 !important;
-  color: #130F26 !important;
+    color: #130F26 !important;
 
   }
 }
@@ -131,7 +147,11 @@ $font: "VelaSans";
 }
 
 .card__buttos-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 50px;
 
@@ -157,9 +177,9 @@ $font: "VelaSans";
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }

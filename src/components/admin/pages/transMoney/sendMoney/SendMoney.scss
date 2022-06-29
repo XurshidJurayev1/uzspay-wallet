@@ -1,3 +1,4 @@
+
 .send-money {
   width: 100%;
   height: 100%;
@@ -33,16 +34,30 @@
       position: relative;
       margin-top: 20px;
       padding: 17px 17px 19px 17px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
       border-radius: 10px;
       color: #fff;
+      background-image: -o-radial-gradient(60.29% 193.8%, 360.85% 2556.7%, #16A546 0%, #2C7EB9 100%);
       background-image: radial-gradient(360.85% 2556.7% at 60.29% 193.8%, #16A546 0%, #2C7EB9 100%);
 
       &-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: left;
+        -ms-flex-pack: left;
         justify-content: left;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         h3 {
@@ -58,8 +73,14 @@
       &-sec {
         width: 15.34px;
         height: 18.9px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         background-repeat: no-repeat;
         background-position: center;
@@ -153,8 +174,6 @@
               border: 1px solid #E6E6E6;
               border-radius: 10px;
               -webkit-transition: all .2s ease;
-              -moz-transition: all .2s ease;
-              -ms-transition: all .2s ease;
               -o-transition: all .2s ease;
               transition: all .2s ease;
               font-style: normal;
@@ -166,8 +185,6 @@
 
               &:focus {
                 -webkit-transition: all .2s ease;
-                -moz-transition: all .2s ease;
-                -ms-transition: all .2s ease;
                 -o-transition: all .2s ease;
                 transition: all .2s ease;
                 background: #FFFFFF;
@@ -237,8 +254,6 @@
                 border-radius: 10px;
                 &:focus {
                   -webkit-transition: all .2s ease;
-                  -moz-transition: all .2s ease;
-                  -ms-transition: all .2s ease;
                   -o-transition: all .2s ease;
                   transition: all .2s ease;
                   background: #FFFFFF;
@@ -295,16 +310,12 @@
               border-radius: 10px;
               outline: none;
               -webkit-transition: all .2s ease;
-              -moz-transition: all .2s ease;
-              -ms-transition: all .2s ease;
               -o-transition: all .2s ease;
               transition: all .2s ease;
 
 
               &:focus {
                 -webkit-transition: all .2s ease;
-                -moz-transition: all .2s ease;
-                -ms-transition: all .2s ease;
                 -o-transition: all .2s ease;
                 transition: all .2s ease;
                 background: #FFFFFF;
@@ -314,8 +325,6 @@
 
               &:focus + .send-money-container-content-input-sum-input-label {
                 -webkit-transition: all .2s ease;
-                -moz-transition: all .2s ease;
-                -ms-transition: all .2s ease;
                 -o-transition: all .2s ease;
                 transition: all .2s ease;
                 top: 4px;
@@ -325,8 +334,6 @@
 
             label {
               -webkit-transition: all .2s ease;
-              -moz-transition: all .2s ease;
-              -ms-transition: all .2s ease;
               -o-transition: all .2s ease;
               transition: all .2s ease;
               font-style: normal;
@@ -353,14 +360,23 @@
       }
 
       &-btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-top: 70px;
 
         @media screen and (max-width: 786px) {
           width: 90%;
           margin: auto;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
         }
 
@@ -370,14 +386,18 @@
           border-radius: 12px;
           cursor: pointer;
           -webkit-transition: all .2s ease;
-          -moz-transition: all .2s ease;
-          -ms-transition: all .2s ease;
           -o-transition: all .2s ease;
           transition: all .2s ease;
 
           @media screen and (max-width: 786px) {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             width: 100%;
             margin-bottom: 10px;
@@ -385,8 +405,6 @@
 
           &:hover {
             -webkit-transition: all .2s ease;
-            -moz-transition: all .2s ease;
-            -ms-transition: all .2s ease;
             -o-transition: all .2s ease;
             transition: all .2s ease;
             background: #D9DEE1;
@@ -395,8 +413,14 @@
         }
 
         &-send {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           padding-top: 20px;
           padding-bottom: 20px;
@@ -406,15 +430,11 @@
           color: #FFFFFF;
           border-radius: 12px;
           -webkit-transition: all .2s ease;
-          -moz-transition: all .2s ease;
-          -ms-transition: all .2s ease;
           -o-transition: all .2s ease;
           transition: all .2s ease;
 
           &:hover {
             -webkit-transition: all .2s ease;
-            -moz-transition: all .2s ease;
-            -ms-transition: all .2s ease;
             -o-transition: all .2s ease;
             transition: all .2s ease;
             background: #352AC3;

@@ -128,11 +128,18 @@ const TelephoneNumber = () => {
         }} />
         <div className="translate__padd translate__padd--responsive">
           <div className="translate__back translate__back--responsive">
-            {click2 ? <p onClick={() => setClick2(false)} className="translate__back__otmena">
-              Отмена
-            </p> : <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>
-              <div className="translate__back--txt">Назад</div>
-            </Link>}
+            <div className="translate__back translate__back--responsive back_btn_mobile">
+              {click2 ? <p onClick={() => setClick2(false)} className="translate__back__otmena">
+                Отмена
+              </p> : <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>
+                <div className="translate__back--txt">Назад</div>
+              </Link>}
+            </div>
+            <div className="translate__back translate__back--responsive back_btn_desktop">
+              <Link to="/wallet/payment/trans"><span><ChevronLeftIcon /></span>
+                <div className="translate__back--txt">Назад</div>
+              </Link>
+            </div>
             <h2 className="translate__back--title">По номеру телефона
             </h2>
           </div>

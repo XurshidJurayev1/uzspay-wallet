@@ -66,6 +66,8 @@ $font: "VelaSans";
   }
 
   &-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
 
     &-col-md {
       @media screen and (max-width: 786px) {
