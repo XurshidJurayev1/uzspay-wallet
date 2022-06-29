@@ -207,5 +207,33 @@ $font: "VelaSans";
     font-size: 14px;
     line-height: 19px;
     color: #423AD0;
+
+    &:hover {
+      background: #F2F4F6;
+      border-radius: 10px;
+      color: #423AD0;
+    }
+  }
+
+  &__tippy {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      padding: 0;
+      gap: 20px;
+      margin: 0;
+
+      & li {
+        text-align: left;
+      }
+    }
   }
 }
+

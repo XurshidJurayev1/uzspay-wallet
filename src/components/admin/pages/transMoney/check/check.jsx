@@ -8,6 +8,8 @@ import { ReactComponent as CopySvg } from '../../../../../assets/svg/copy.svg';
 import { Link } from 'react-router-dom';
 import { ReactComponent as ReceiptSvg } from '../../../../../assets/svg/receipt.svg';
 import Banner from './banner/banner';
+import { Tooltip } from 'react-tippy';
+import styled from '@emotion/styled';
 
 
 const Check = () => {
@@ -71,7 +73,27 @@ const Check = () => {
               <Link className="check__link" to="/wallet/payment/check"> <span
                 className="check__svg"><ReceiptSvg /></span>Сохранить квитанцию</Link>
             </div>
-            <Link className="check__link" to="/wallet/payment/check">Проблемы с транзакцией?</Link>
+            <Tooltip
+              position="top-start"
+              html={(
+                <div className="check__tippy">
+                  <p>
+                    Возможные причины:
+                  </p>
+                  <ul className=' check__tippy-list'>
+                    <li>1. Ваш банк может произвести транзакцию в течении нескольких минут. Иногда до 3х суток</li>
+                    <li>2. Проблемы с вашей картой, проверьте баланс вашей карты</li>
+                    <li>3. Если все выше перечисленное в порядке, обратитесь в службу тех. поддержки:
+                      +998 (97) 733-30-06
+                    </li>
+                  </ul>
+                </div>
+              )}
+              trigger="mouseenter"
+              arrow={true}
+              delay="500"
+            ><Link className="check__link" to="/wallet/payment/check">Проблемы с
+              транзакцией?</Link></Tooltip>
             <Banner />
           </div>
         </div>

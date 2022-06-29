@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 $black: #130F26;
 $font: "VelaSans";
 
@@ -30,10 +37,15 @@ $font: "VelaSans";
   }
 
   &-flex-scroll {
+    -webkit-box-pack: left !important;
+    -ms-flex-pack: left !important;
     justify-content: left !important;
     @media screen and (max-width: 786px) {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: nowrap !important;
       flex-wrap: nowrap !important;
       overflow: scroll;
       padding-bottom: 15px;

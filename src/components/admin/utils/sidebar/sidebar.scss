@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 $black: #130F26;
 $font: "VelaSans";
 
@@ -8,6 +15,7 @@ $font: "VelaSans";
 
 .sidebar {
   background: rgba(250, 250, 250, 0.86);
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   max-width: 423px;
   padding: 70px 30px 100px 50px;
@@ -32,9 +40,15 @@ $font: "VelaSans";
   &__button {
 
     &-circle {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       background: #DFE2E8;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       width: 25px;
       height: 25px;
@@ -46,7 +60,11 @@ $font: "VelaSans";
 
       padding-top: 25px;
       border-top: 1px solid #E6E6E6;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
     }
 
@@ -62,6 +80,8 @@ $font: "VelaSans";
       font-size: 16px;
       line-height: 22px;
       color: $black;
+      -webkit-transition: 500ms;
+      -o-transition: 500ms;
       transition: 500ms;
       width: 100%;
 
@@ -82,23 +102,26 @@ $font: "VelaSans";
 
     &-buttons {
       margin-top: 10px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
 
       &-up {
         background: #FFFFFF;
+        -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
         box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
         border-radius: 12px;
         padding: 16px 26px;
         color: $black;
+        -webkit-transition: 500ms;
+        -o-transition: 500ms;
         transition: 500ms;
 
         &:hover {
           background: #D9DEE1;
           color: $black;
 
-          //.icon__white * {
-          //  stroke: white;
-          //}
+
         }
 
         &-active {
@@ -156,22 +179,34 @@ $font: "VelaSans";
     &-icon {
       &-active {
         svg {
+          -webkit-transition: 500ms;
+          -o-transition: 500ms;
           transition: 500ms;
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
           transform: rotate(90deg);
         }
       }
     }
 
     &-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       max-width: 305px;
       margin-left: auto;
       border-top: 1px solid #E6E6E6;
       padding: 20px 14px;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
       transition: all .2s ease;
 
       &:hover {
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
         transition: all .2s ease;
         background: #EAECF0;
         border-radius: 10px;
@@ -215,13 +250,23 @@ $font: "VelaSans";
     }
 
     &-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 20px 14px;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
       transition: all .2s ease;
 
       &:hover {
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
         transition: all .2s ease;
         background: #EAECF0;
         border-radius: 10px;
@@ -229,6 +274,8 @@ $font: "VelaSans";
     }
 
     &-imgText {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
 
@@ -238,6 +285,8 @@ $font: "VelaSans";
       &_content {
         height: 0;
         overflow: hidden;
+        -webkit-transition: 500ms;
+        -o-transition: 500ms;
         transition: 500ms;
 
         &-show {
@@ -277,7 +326,11 @@ $font: "VelaSans";
 
   &_mobile_scroll {
     @media screen and (max-width: 786px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       overflow: scroll;
     }
@@ -295,12 +348,19 @@ $font: "VelaSans";
   }
 
   &__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-top: 1px solid #E6E6E6;
     padding: 20px 8px;
 
     @media screen and (max-width: 786px) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       width: 75px;
     }

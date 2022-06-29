@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 $font: "VelaSans";
 .last__actions {
   background: #EAEBF0;
@@ -5,10 +12,18 @@ $font: "VelaSans";
   border-radius: 12px;
   width: 100%;
   padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 50px;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
 
   &:hover {
@@ -16,9 +31,7 @@ $font: "VelaSans";
     cursor: pointer;
   }
 
-  //&:hover button{
-  //    color: #fff;
-  //}
+
   button {
     background: transparent;
     border: none;

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .react-tel-input .country-list {
   @media (max-width: 576px) {
     max-width: 100%;
@@ -14,13 +21,20 @@
   }
 
   &_navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
     padding: 20px 43px 20px 50px;
     background: rgba(250, 250, 250, 0.86);
     border-bottom: 1px solid #E6E6E6;
+    -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
 
     @media screen and (max-width: 576px) {
@@ -46,11 +60,19 @@
       font-family: 'Euclid Circular A', sans-serif;
 
       &_active {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         cursor: pointer;
         //padding: 7px;
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
         transition: all .2s ease;
 
         &:hover {
@@ -93,15 +115,22 @@
         position: absolute;
         right: 0;
         background: #FFFFFF;
+        -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
         box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
         border-radius: 12px;
         padding: 24px 43px 24px 26px;
 
         &_item {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           padding-bottom: 14px;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           cursor: pointer;
+          -webkit-transition: all .2s ease;
+          -o-transition: all .2s ease;
           transition: all .2s ease;
 
           &:hover {
@@ -136,9 +165,18 @@
   }
 
   &_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-top: 130px;
     //padding-bottom: 176px;
@@ -162,12 +200,22 @@
     }
 
     &_register {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 35px 30px 45px;
       background: #FFFFFF;
+      -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       margin-bottom: 176px;
@@ -175,6 +223,7 @@
       z-index: -1;
 
       @media (max-width: 576px) {
+        -webkit-box-shadow: none;
         box-shadow: none;
         padding: 0 16px;
         width: 100%;
@@ -202,6 +251,46 @@
         width: 100% !important;
 
 
+        &::-webkit-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+
+        &::-moz-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+
+        &:-ms-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+
+        &::-ms-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+
         &::placeholder {
           font-style: normal;
           font-weight: 500;
@@ -215,6 +304,34 @@
           background: #FFFFFF;
           border: 1px solid #3F3B4E;
           border-radius: 10px;
+
+          &::-webkit-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &::-moz-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &:-ms-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &::-ms-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
 
           &::placeholder {
             opacity: 1;
@@ -278,11 +395,22 @@
         font-size: 16px;
         line-height: 22px;
         color: #8F99A6;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
         flex: none;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
         order: 0;
+        -ms-flex-positive: 0;
         flex-grow: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         cursor: not-allowed !important;
         margin-top: 30px;
@@ -301,20 +429,35 @@
         font-size: 16px;
         line-height: 22px;
         color: #FFFFFF;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
         flex: none;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
         order: 0;
+        -ms-flex-positive: 0;
         flex-grow: 0;
       }
 
     }
 
     &_confirm {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 35px 31px 29px;
       background: #FFFFFF;
+      -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       margin-bottom: 137px;
@@ -322,6 +465,7 @@
       max-width: 486px;
       width: 100%;
       @media (max-width: 576px) {
+        -webkit-box-shadow: none;
         box-shadow: none;
       }
 
@@ -373,6 +517,42 @@
         margin-bottom: 30px;
         outline: none;
 
+        &::-webkit-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+        &::-moz-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+        &:-ms-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
+        &::-ms-input-placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.2px;
+          color: #8F99A6;
+        }
+
         &::placeholder {
           font-style: normal;
           font-weight: 500;
@@ -386,6 +566,34 @@
           background: #FFFFFF;
           border: 1px solid #3F3B4E;
           border-radius: 10px;
+
+          &::-webkit-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &::-moz-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &:-ms-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
+
+          &::-ms-input-placeholder {
+            opacity: 1;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+          }
 
           &::placeholder {
             opacity: 1;
@@ -419,12 +627,22 @@
 
     &_pass {
       max-width: 486px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       padding: 35px 30px 45px;
       background: #FFFFFF;
+      -webkit-box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.06);
       border-radius: 12px;
       margin-bottom: 151px;
@@ -487,10 +705,14 @@
           width: 22px;
           height: 22px;
           color: #8F99A6;
+          -webkit-transition: all .2s ease;
+          -o-transition: all .2s ease;
           transition: all .2s ease;
 
           &:hover {
             color: #130F26;
+            -webkit-transition: all .2s ease;
+            -o-transition: all .2s ease;
             transition: all .2s ease;
           }
         }
@@ -505,6 +727,42 @@
           outline: none;
           width: 100%;
 
+          &::-webkit-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &::-moz-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &:-ms-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &::-ms-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
           &::placeholder {
             font-style: normal;
             font-weight: 500;
@@ -518,6 +776,34 @@
             background: #FFFFFF;
             border: 1px solid #3F3B4E;
             border-radius: 10px;
+
+            &::-webkit-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &::-moz-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &:-ms-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &::-ms-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
 
             &::placeholder {
               opacity: 1;
@@ -542,10 +828,14 @@
           width: 22px;
           height: 22px;
           color: #8F99A6;
+          -webkit-transition: all .2s ease;
+          -o-transition: all .2s ease;
           transition: all .2s ease;
 
           &:hover {
             color: #130F26;
+            -webkit-transition: all .2s ease;
+            -o-transition: all .2s ease;
             transition: all .2s ease;
           }
         }
@@ -560,6 +850,42 @@
           outline: none;
           width: 100%;
 
+          &::-webkit-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &::-moz-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &:-ms-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
+          &::-ms-input-placeholder {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #8F99A6;
+          }
+
           &::placeholder {
             font-style: normal;
             font-weight: 500;
@@ -573,6 +899,34 @@
             background: #FFFFFF;
             border: 1px solid #3F3B4E;
             border-radius: 10px;
+
+            &::-webkit-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &::-moz-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &:-ms-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
+
+            &::-ms-input-placeholder {
+              opacity: 1;
+              position: absolute;
+              top: 10px;
+              left: 15px;
+            }
 
             &::placeholder {
               opacity: 1;
