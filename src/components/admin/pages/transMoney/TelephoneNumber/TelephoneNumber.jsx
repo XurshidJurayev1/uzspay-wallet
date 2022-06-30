@@ -101,15 +101,6 @@ const TelephoneNumber = () => {
   };
 
 
-  // const kamuInputRef = React.useRef();
-  //
-  //
-  // useEffect(() => {
-  //   if (selected || !click2) kamuInputRef.current.classList.remove('translate__kamu-input--responsive');
-  //
-  // }, [kamuInputRef]);
-
-
   const handleKamuInput = (evt) => {
     setClick2(true);
     // kamuInputRef.current.classList.add('translate__kamu-input--responsive');
@@ -268,7 +259,8 @@ const TelephoneNumber = () => {
               value={summ}
 
             />
-            <label className={summ.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>
+            <label
+              className={summ.length > 0 ? 'translate__bank-place-active' : 'translate__bank-place'}>
               Сумма WMS
             </label>
             {summ.length > 0 ? <p>Комиссия 0.3% или {((Number(summ) / 100) * 0.3).toFixed(2)} UZS</p> :

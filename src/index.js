@@ -8,6 +8,7 @@ import './i18Next';
 import { Box } from '@mui/material';
 import { HashLoader } from 'react-spinners';
 import { ToastContainer } from 'react-toastify';
+import 'core-js/stable';
 
 const Loader = () => {
   return (<div>
