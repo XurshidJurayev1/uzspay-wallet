@@ -179,14 +179,25 @@
     -ms-flex-align: center;
     align-items: center;
     padding-top: 130px;
-    //padding-bottom: 176px;
+
 
     &:hover .login_content_register {
       z-index: 1;
+
+    }
+
+    &:hover .login_content_confirm {
+      z-index: 1;
+
+    }
+
+    &:hover .login_content_pass {
+      z-index: 1;
+
     }
 
     @media screen and (max-width: 576px) {
-      padding-top: 225px;
+      padding-top: 125px;
     }
 
     &_background {
@@ -226,6 +237,7 @@
         -webkit-box-shadow: none;
         box-shadow: none;
         padding: 0 16px;
+        margin-bottom: 125px;
         width: 100%;
       }
 
@@ -464,6 +476,7 @@
       position: relative;
       max-width: 486px;
       width: 100%;
+      z-index: -1;
       @media (max-width: 576px) {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -648,6 +661,7 @@
       margin-bottom: 151px;
       position: relative;
       width: 100%;
+      z-index: -1;
 
       &_back {
         @media (max-width: 576px) {

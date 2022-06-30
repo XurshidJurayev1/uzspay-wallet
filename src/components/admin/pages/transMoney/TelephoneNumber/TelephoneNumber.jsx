@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../../../utils/navbar/Navbar';
 import wsm from '../../../../../assets/images/wsm.png';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -261,6 +261,7 @@ const TelephoneNumber = () => {
           </div>
           <div className="translate__bank">
             <input
+
               type="text"
               className="translate__bank-input"
               onChange={e => handleSumm(e)}

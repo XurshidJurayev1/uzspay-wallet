@@ -383,10 +383,10 @@ $font: "VelaSans";
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transform: scale(.9);
+  transform: scale(.8);
   pointer-events: none;
   top: 0px;
-  left: 14px !important;
+  //left: 14px !important;
   color: #3f3b4e;
 }
 
@@ -394,12 +394,13 @@ $font: "VelaSans";
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transform: scale(.9);
+  transform: scale(.8);
   min-width: 200px;
   top: 2px !important;
   font-style: normal;
   font-weight: 500;
   color: #3f3b4e;
+  left: -15px;
 }
 
 .translate__bank {
@@ -455,12 +456,12 @@ $font: "VelaSans";
       font-weight: 500;
       pointer-events: none;
       top: 2px;
-      left: 5px;
+      left: -3px;
+      min-width: 200px;
       -webkit-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out;
       transform: scale(.8);
-      //font-size: 13px;
       color: #3f3b4e;
     }
   }
@@ -487,19 +488,20 @@ $font: "VelaSans";
       font-weight: 500;
       pointer-events: none;
       top: 2px;
-      left: 5px;
-      color: #3f3b4e;
+      left: -2.5px;
+      min-width: 200px;
       -webkit-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out;
       transform: scale(.8);
+      color: #3f3b4e;
     }
   }
 }
 
 .written {
   top: 2px !important;
-  font-size: 13px !important;
+  //font-size: 13px !important;
 }
 
 .card {
